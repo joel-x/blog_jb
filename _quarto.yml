@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+  
+
+website:
+  site-url: https://joel-x.github.io/jb_blog/
+  title: Joel Burbano
+  description: Portafolio Joel Burbano
+  navbar:
+    left: 
+      - about.qmd
+      - blog.qmd
+      - proyects.qmd
+    right:
+      - icon: github
+        href: https://github.com/joel-x
+      - icon: whatsapp
+        href: https://wa.me/593997868351
+      - icon: linkedin
+        href: https://www.linkedin.com/in/jxbsjb
+      - icon: envelope
+        href: mailto:joelburbano@outlook.com
+  search:
+    location: navbar
+    type: textbox
+format:
+  html:
+    theme: custom 
+    css: styles.css
+    dark-mode: true
+
+editor: visual
+

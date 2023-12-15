@@ -1,0 +1,24 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html",
+      "/posts/2023-12-07-tratando-los-datos-keane/index.html",
+      "/posts/2023-12-06-power-bi/index.html",
+      "/posts/2023-07-30-prueba/index.html",
+      "/posts/2020-12-01-r-rmarkdown/index.html"
+    ]
+  },
+  {
+    "listing": "/proyects.html",
+    "items": []
+  }
+]

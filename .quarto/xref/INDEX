@@ -1,0 +1,38 @@
+{
+  "index.qmd": {
+    "index.html": "c86da8d4"
+  },
+  "about.qmd": {
+    "about.html": "1cefc4c1"
+  },
+  "posts/post-with-code/index.qmd": {
+    "index.html": "c3e2653e"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "53af456f"
+  },
+  "blog.qmd": {
+    "blog.html": "e8707528"
+  },
+  "proyects.qmd": {
+    "proyects.html": "c6593381"
+  },
+  "posts/2020-12-01-r-rmarkdown/index.qmd": {
+    "index.html": "6c119689"
+  },
+  "posts/2023-12-07-tratando-los-datos-keane/index.Rmd": {
+    "index.html": "d67d945e"
+  },
+  "posts/2023-07-30-prueba/index.Rmd": {
+    "index.html": "02471e0c"
+  },
+  "posts/2023-07-30-prueba/index.qmd": {
+    "index.html": "8ca696e4"
+  },
+  "posts/2023-12-06-power-bi/index.qmd": {
+    "index.html": "b1742871"
+  },
+  "posts/2023-12-07-tratando-los-datos-keane/index.qmd": {
+    "index.html": "0f7d92cd"
+  }
+}

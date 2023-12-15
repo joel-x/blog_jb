@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Joel Burbano",
+    "section": "",
+    "text": "Ingeniero Matemático\nAnálista de Datos"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Acerca de",
+    "section": "",
+    "text": "👋 ¡Hola! Soy Joel, graduado de Ingeniero Matemático en la Facultad de Ciencias de la Escuela Politécnica Nacional.\n🎓 Durante mi etapa universitaria he adquirido las bases para gestionar modelos de riesgo, modelos econométricos, modelos estadísticos, modelos de programación entera. Así también, he adquirido las bases de matemática actuarial, estadística matemática, investigación operativa. Además, me he capacitado en el manejo de lenguajes de programación tales como: C++, Matlab, R, Python, y también manejo de paquetes estadísticos Statgraphics y Gretl.\n📝 El desarrollo de mi trabajo de titulación se enfoca en desarrollar un modelo de consumo a partir de la Hipótesis de Renta Permanente de Friedman (Novel Economia,1976) y El Ciclo de Vida de Modigliani.\n🎯Mi objetivo es seguir desarrollando mis habilidades en el área estadística, econométrica, actuarial y ciencia de datos, por lo que me encuentro altamente interesado en trabajar en las mencionadas áreas."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 12, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\n  \n\n\n\n\nTratando los datos Keane\n\n\n\n\n\n\n\nEconometría\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nDec 7, 2023\n\n\n\n\n\n\n  \n\n\n\n\nPower BI\n\n\n\n\n\n\n\nPower BI\n\n\nBI\n\n\n\n\n\n\n\n\n\n\n\nDec 6, 2023\n\n\nJoel Burbano\n\n\n\n\n\n\n  \n\n\n\n\nEstadística Descriptiva\n\n\n\n\n\n\n\nEconometría\n\n\nPython\n\n\n\n\n\n\n\n\n\n\n\nJul 30, 2023\n\n\nJoel Burbano\n\n\n\n\n\n\n  \n\n\n\n\nHello R Markdown\n\n\n\n\n\n\n\nR Markdown\n\n\nplot\n\n\nregression\n\n\n\n\n\n\n\n\n\n\n\nDec 1, 2020\n\n\nFrida Gomam\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "proyects.html",
+    "href": "proyects.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "posts/2020-12-01-r-rmarkdown/index.html",
+    "href": "posts/2020-12-01-r-rmarkdown/index.html",
+    "title": "Hello R Markdown",
+    "section": "",
+    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nYou can embed an R code chunk like this:\n\nsummary(cars)\n##      speed           dist       \n##  Min.   : 4.0   Min.   :  2.00  \n##  1st Qu.:12.0   1st Qu.: 26.00  \n##  Median :15.0   Median : 36.00  \n##  Mean   :15.4   Mean   : 42.98  \n##  3rd Qu.:19.0   3rd Qu.: 56.00  \n##  Max.   :25.0   Max.   :120.00\nfit &lt;- lm(dist ~ speed, data = cars)\nfit\n## \n## Call:\n## lm(formula = dist ~ speed, data = cars)\n## \n## Coefficients:\n## (Intercept)        speed  \n##     -17.579        3.932\n\n\n\nIncluding Plots\nYou can also embed plots. See Figure @ref(fig:pie) for example:\n\npar(mar = c(0, 1, 0, 1))\npie(\n  c(280, 60, 20),\n  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),\n  col = c('#0292D8', '#F7EA39', '#C4B632'),\n  init.angle = -50, border = NA\n)\n\n\n\n\nA fancy pie chart.\n\n\n\n\n\nsummary(Orange)\n##  Tree       age         circumference  \n##  3:7   Min.   : 118.0   Min.   : 30.0  \n##  1:7   1st Qu.: 484.0   1st Qu.: 65.5  \n##  5:7   Median :1004.0   Median :115.0  \n##  2:7   Mean   : 922.1   Mean   :115.9  \n##  4:7   3rd Qu.:1372.0   3rd Qu.:161.5  \n##        Max.   :1582.0   Max.   :214.0"
+  },
+  {
+    "objectID": "posts/2023-12-07-tratando-los-datos-keane/index.html",
+    "href": "posts/2023-12-07-tratando-los-datos-keane/index.html",
+    "title": "Tratando los datos Keane",
+    "section": "",
+    "text": "En este post abordaremos un poco los datos keane obtenidos de Gretl\nEmpezaremos por importar las librerias necesarias\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt \nimport seaborn as sb\nfrom scipy import stats\n\nA continuación nos disponemos a visualizar los datos\n\n\n\n\n\n\n\nCrearemos etiquetas para las observaciones de acuerdo a “choice” estudiante=1, hogar=2, cualificado=3, no-cualificado=4, servicio=5\nProcedemos a gráficar la evolución de salarios separado por color de piel\n\n\n\n\n\nEn esta grafica evidenciamos que a lo largo de los años aumenta la discriminación.\nVisualicemos lo siguiente: seleccionando sólo las personas que trabajan se realizara un gráfico de la evolución de los salarios separados por la variable choice\n\n\n\n\n\nSe observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.\nAhora procedamos al análisis de la variable educ para ello primero la Codificaremos de acuerdo a educación básica=1, educación media=2, y educación superior=3.\nSeleccionando solo las personas que trbajan tenemos lo siguiente:"
+  },
+  {
+    "objectID": "posts/2023-07-30-prueba/index.html",
+    "href": "posts/2023-07-30-prueba/index.html",
+    "title": "Estadística Descriptiva",
+    "section": "",
+    "text": "La estadística descriptiva nos permite realizar el análisis exploratorio de la información y el pre-procesamiento de la información antes de tener un modelo de machine learning.\n\nimport pandas as pd\n\n\ndf = pd.read_csv(\"cars.csv\")\ndf.head()\n\n   speed  dist\n0      4     2\n1      4    10\n2      7     4\n3      7    22\n4      8    16"
+  },
+  {
+    "objectID": "posts/2023-12-06-power-bi/index.html",
+    "href": "posts/2023-12-06-power-bi/index.html",
+    "title": "Power BI",
+    "section": "",
+    "text": "Pruebas para publicar power bi"
+  }
+]
