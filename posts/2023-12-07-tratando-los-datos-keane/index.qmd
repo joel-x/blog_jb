@@ -22,9 +22,16 @@ Empezaremos por importar las librerias necesarias
 ```{python}
 import numpy as np
 import pandas as pd
+from scipy import stats
 import matplotlib.pyplot as plt 
 import seaborn as sb
-from scipy import stats
+#para graficar dentro del jupyter notebook
+from IPython import get_ipython
+ipy = get_ipython()
+if ipy is not None:
+    ipy.run_line_magic('matplotlib', 'inline')
+
+
 ```
 
 A continuación nos disponemos a visualizar los datos
@@ -71,7 +78,6 @@ Visualicemos lo siguiente: seleccionando sólo las personas que trabajan se real
 
 ```{python echo=FALSE}
 sb.scatterplot(data=keane[keane["employ"]==1],x="year", y="wage",hue="choice")
-
 ```
 
 Se observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.

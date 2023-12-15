@@ -19,6 +19,8 @@
   },
   {
     "listing": "/proyects.html",
-    "items": []
+    "items": [
+      "/proyects/tesis/index.html"
+    ]
   }
 ]

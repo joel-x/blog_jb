@@ -39,7 +39,7 @@
     "href": "proyects.html",
     "title": "Proyectos",
     "section": "",
-    "text": "No matching items"
+    "text": "Tesis de Grado\n\n\n\n\n\n\n\nEconometría\n\n\nModelos de Consumo\n\n\nCausalidad\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2023\n\n\nJoel Burbano\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2020-12-01-r-rmarkdown/index.html",
@@ -53,7 +53,7 @@
     "href": "posts/2023-12-07-tratando-los-datos-keane/index.html",
     "title": "Tratando los datos Keane",
     "section": "",
-    "text": "En este post abordaremos un poco los datos keane obtenidos de Gretl\nEmpezaremos por importar las librerias necesarias\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt \nimport seaborn as sb\nfrom scipy import stats\n\nA continuación nos disponemos a visualizar los datos\n\n\n\n\n\n\n\nCrearemos etiquetas para las observaciones de acuerdo a “choice” estudiante=1, hogar=2, cualificado=3, no-cualificado=4, servicio=5\nProcedemos a gráficar la evolución de salarios separado por color de piel\n\n\n\n\n\nEn esta grafica evidenciamos que a lo largo de los años aumenta la discriminación.\nVisualicemos lo siguiente: seleccionando sólo las personas que trabajan se realizara un gráfico de la evolución de los salarios separados por la variable choice\n\n\n\n\n\nSe observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.\nAhora procedamos al análisis de la variable educ para ello primero la Codificaremos de acuerdo a educación básica=1, educación media=2, y educación superior=3.\nSeleccionando solo las personas que trbajan tenemos lo siguiente:"
+    "text": "En este post abordaremos un poco los datos keane obtenidos de Gretl\nEmpezaremos por importar las librerias necesarias\n\nimport numpy as np\nimport pandas as pd\nfrom scipy import stats\nimport matplotlib.pyplot as plt \nimport seaborn as sb\n#para graficar dentro del jupyter notebook\nfrom IPython import get_ipython\nipy = get_ipython()\nif ipy is not None:\n    ipy.run_line_magic('matplotlib', 'inline')\n\nA continuación nos disponemos a visualizar los datos\n\n\n\n\n\n\n\nCrearemos etiquetas para las observaciones de acuerdo a “choice” estudiante=1, hogar=2, cualificado=3, no-cualificado=4, servicio=5\nProcedemos a gráficar la evolución de salarios separado por color de piel\n\n\n\n\n\nEn esta grafica evidenciamos que a lo largo de los años aumenta la discriminación.\nVisualicemos lo siguiente: seleccionando sólo las personas que trabajan se realizara un gráfico de la evolución de los salarios separados por la variable choice\n\n\n\n\n\nSe observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.\nAhora procedamos al análisis de la variable educ para ello primero la Codificaremos de acuerdo a educación básica=1, educación media=2, y educación superior=3.\nSeleccionando solo las personas que trbajan tenemos lo siguiente:"
   },
   {
     "objectID": "posts/2023-07-30-prueba/index.html",
@@ -68,5 +68,12 @@
     "title": "Power BI",
     "section": "",
     "text": "Pruebas para publicar power bi"
+  },
+  {
+    "objectID": "proyects/tesis/index.html",
+    "href": "proyects/tesis/index.html",
+    "title": "Tesis de Grado",
+    "section": "",
+    "text": "En este pequeño blog, se hablara de las partes mas importantes desarrolladas en el trabajo de integración curricular"
   }
 ]

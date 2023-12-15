@@ -26,9 +26,13 @@ website:
     type: textbox
 format:
   html:
-    theme: custom 
+    #max-width: fit content(25em)
+    theme:
+      dark: darkly
+      light: flatly
+      
+    linestretch: 1.7
     css: styles.css
-    dark-mode: true
 
 editor: visual
 
