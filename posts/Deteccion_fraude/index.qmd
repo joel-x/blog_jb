@@ -1,0 +1,128 @@
+---
+title: "Detección de fraude con tarjetas de Crédito"
+author: "Joel Burbano"
+date: 2023-12-17
+categories: ['Python']
+---
+
+En el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias recolectadas durante dos días en el mes de de Septiembre del 2013 por European cardholders
+
+Empezaremos por importar las librerias necesarias para realizar el análisis
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sb
+```
+
+Procedemos a leer los datos con pandas
+
+```{python}
+#df: base de datos de las transacciones
+df=pd.read_csv("creditcard.csv.zip")
+```
+
+Verificamos que cantidad de datos tenemos
+
+```{python}
+df.shape
+```
+
+Tenemos que existen 31 columnas (variables) y 284807 filas (registros)
+
+Ahora bien procedemos a revisar la calidad de este conjunto de datos
+
+```{python}
+df.isnull().any()
+```
+
+Observamos que no hay variables con datos nulos.
+
+Ahora bien echemos un vistazo a la variable `Class` la cual contiene la información sobre las transacciones fraudulentas
+
+```{python}
+df["Class"].value_counts()
+```
+
+Notamos que solamente 492 transacciones son fraudulentas
+
+```{python}
+df['Class'].value_counts(normalize=True)
+```
+
+es decir solo el $0.17\%$ de transacciones son fraudulentas
+
+Ahora bien empecemos a intentar predecir
+
+```{python}
+from sklearn.model_selection import train_test_split
+```
+
+```{python}
+X=df.drop(labels='Class',axis=1)
+y=df.loc[:,'Class']
+
+X_train, X_test, y_train, y_test=train_test_split(X,y,test_size=0.3,random_state=1, stratify=y)
+
+```
+
+Ahora bien, se realiza un análisis exploratorio de los datos
+
+```{python}
+X_train['Time'].describe()
+```
+
+Realicemos una conversión de la variable `Time` de segundos a horas para facilitar la interpretación
+
+```{python}
+X_train.loc[:,'Time']=X_train.Time/3600
+X_test.loc[:,'Time']=X_test.Time/3600
+```
+
+```{python}
+plt.figure(figsize=(12,4))
+sb.displot(X_train['Time'],bins=40,kde=False)
+plt.xlim([0,40])
+plt.xticks(np.arange(0,48,6))
+plt.xlabel('Tiempo despues de la primera transacción (h)')
+plt.ylabel('Conteo')
+plt.title('Tiempo de transacciones')
+plt.show()
+```
+
+Notamos que existen dos picos en la gráfica, el primero entre las 10 y 22 primeras horas y el segundo entre las 34 y 40 horas
+
+Analicemos la variable `Amount`
+
+```{python}
+X_train['Amount'].describe()
+```
+
+realicemos una revisión gráfica
+
+primero un histograma
+
+```{python}
+plt.figure(figsize=(12,4))
+sb.displot(X_train['Amount'],bins=50,kde=False)
+plt.ylabel('Conteo')
+plt.title('Montos de Transacción')
+plt.show()
+```
+
+```{python}
+plt.figure(figsize=(12,4))
+sb.boxplot(x=X_train["Amount"])
+plt.show()
+```
+
+Observemos que los datos se encuentran fuertemente sesgados a la derecha. Para asegurarnos calculamos la asimetría
+
+```{python}
+X_train['Amount'].skew()
+```
+
+```{python}
+X_train.head(5)
+```

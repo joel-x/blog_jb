@@ -9,6 +9,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/Deteccion_fraude/index.html",
+      "/posts/Hyperparameters and Model Validation/index.html",
       "/posts/post-with-code/index.html",
       "/posts/welcome/index.html",
       "/posts/2023-12-07-tratando-los-datos-keane/index.html",

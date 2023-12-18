@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="">
+<meta name="author" content="Joel Burbano">
 <meta name="dcterms.date" content="2023-12-07">
 
 <title>Joel Burbano - Tratando los datos Keane</title>
@@ -98,22 +98,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-<script src="../../site_libs/clipboard-2.0.6/clipboard.min.js"></script>
-<link href="../../site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet">
-<script src="../../site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
-<script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="../../site_libs/datatables-binding-0.30/datatables.js"></script>
-<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="../../site_libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
-<link href="../../site_libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet">
-<script src="../../site_libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
-<link href="../../site_libs/dt-ext-fixedcolumns-1.13.4/css/fixedColumns.dataTables.min.css" rel="stylesheet">
-<script src="../../site_libs/dt-ext-fixedcolumns-1.13.4/js/dataTables.fixedColumns.min.js"></script>
-<link href="../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-<script src="../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
-
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -192,6 +176,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Joel Burbano </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
@@ -219,35 +209,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#para graficar dentro del jupyter notebook</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython <span class="im">import</span> get_ipython</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>ipy <span class="op">=</span> get_ipython()</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> ipy <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    ipy.run_line_magic(<span class="st">'matplotlib'</span>, <span class="st">'inline'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pd.options.display.max_columns<span class="op">=</span><span class="va">None</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A continuación nos disponemos a visualizar los datos</p>
 <div class="cell">
-<div class="cell-output-display">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>keane.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   id  numyrs  year  choice  wage  educ  expwc  expbc  expser  manuf  black  \
+0   1       9    81     2.0   NaN    10      0      0       0    0.0      1   
+1   1       9    82     2.0   NaN    10      0      0       0    0.0      1   
+2   1       9    83     2.0   NaN    10      0      0       0    0.0      1   
+3   1       9    84     1.0   NaN    10      0      0       0    0.0      1   
+4   1       9    85     2.0   NaN    11      0      0       0    0.0      1   
 
-<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f805da6166102b31ee2b" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f805da6166102b31ee2b">{"x":{"filter":"none","vertical":false,"extensions":["FixedColumns"],"data":[[1,1,1,1,1,1],[9,9,9,9,9,9],[81,82,83,84,85,86],[2,2,2,1,2,2],[null,null,null,null,null,null],[10,10,10,10,11,11],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[1,1,1,1,1,1],[null,null,null,null,null,null],[0,0,0,1,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[2,2,2,1,2,2]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>id<\/th>\n      <th>numyrs<\/th>\n      <th>year<\/th>\n      <th>choice<\/th>\n      <th>wage<\/th>\n      <th>educ<\/th>\n      <th>expwc<\/th>\n      <th>expbc<\/th>\n      <th>expser<\/th>\n      <th>manuf<\/th>\n      <th>black<\/th>\n      <th>lwage<\/th>\n      <th>enroll<\/th>\n      <th>employ<\/th>\n      <th>attrit<\/th>\n      <th>exper<\/th>\n      <th>expersq<\/th>\n      <th>status<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"info":false,"pageLength":5,"autoWidth":true,"scrollX":true,"paging":false,"searching":false,"initComplete":"function(settings, json) {$(this.api().table().header()).css({'font-size' : '12px','color':'#fff','background-color':'#3C3B3A'});}","columnDefs":[{"className":"dt-right","targets":[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]}],"order":[],"orderClasses":false,"lengthMenu":[5,10,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[0]; $(this.api().cell(row, 0).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[1]; $(this.api().cell(row, 1).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[2]; $(this.api().cell(row, 2).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[3]; $(this.api().cell(row, 3).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[4]; $(this.api().cell(row, 4).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[5]; $(this.api().cell(row, 5).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[7]; $(this.api().cell(row, 7).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[8]; $(this.api().cell(row, 8).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[9]; $(this.api().cell(row, 9).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[10]; $(this.api().cell(row, 10).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[11]; $(this.api().cell(row, 11).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[12]; $(this.api().cell(row, 12).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[13]; $(this.api().cell(row, 13).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[14]; $(this.api().cell(row, 14).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[15]; $(this.api().cell(row, 15).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[16]; $(this.api().cell(row, 16).node()).css({'color':'#F6FBFB','background-color':'#949797'});\nvar value=data[17]; $(this.api().cell(row, 17).node()).css({'color':'#F6FBFB','background-color':'#949797'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+   lwage  enroll  employ  attrit  exper  expersq  status  
+0    NaN       0       0       0      0        0     2.0  
+1    NaN       0       0       0      0        0     2.0  
+2    NaN       0       0       0      0        0     2.0  
+3    NaN       1       0       0      0        0     1.0  
+4    NaN       0       0       0      0        0     2.0  </code></pre>
 </div>
 </div>
 <p>Crearemos etiquetas para las observaciones de acuerdo a “choice” estudiante=1, hogar=2, cualificado=3, no-cualificado=4, servicio=5</p>
 <p>Procedemos a gráficar la evolución de salarios separado por color de piel</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>En esta grafica evidenciamos que a lo largo de los años aumenta la discriminación.</p>
 <p>Visualicemos lo siguiente: seleccionando sólo las personas que trabajan se realizara un gráfico de la evolución de los salarios separados por la variable <code>choice</code></p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-6-3.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-7-3.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Se observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.</p>
@@ -255,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Seleccionando solo las personas que trbajan tenemos lo siguiente:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/unnamed-chunk-8-5.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-9-5.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

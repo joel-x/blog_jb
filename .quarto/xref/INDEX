@@ -37,5 +37,11 @@
   },
   "proyects/tesis/index.qmd": {
     "index.html": "c3ed14c4"
+  },
+  "posts/Deteccion_fraude/index.qmd": {
+    "index.html": "f521bc49"
+  },
+  "posts/Hyperparameters and Model Validation/index.qmd": {
+    "index.html": "3182a1be"
   }
 }

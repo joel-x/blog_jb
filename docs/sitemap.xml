@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joel-x.github.io/jb_blog/index.html</loc>
-    <lastmod>2023-12-15T21:47:13.098Z</lastmod>
+    <lastmod>2023-12-18T17:58:43.481Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/about.html</loc>
-    <lastmod>2023-12-15T21:24:33.730Z</lastmod>
+    <lastmod>2023-12-18T01:50:08.926Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/blog.html</loc>
-    <lastmod>2023-12-15T21:47:14.119Z</lastmod>
+    <lastmod>2023-12-18T17:58:44.548Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2023-12-07-tratando-los-datos-keane/index.html</loc>
-    <lastmod>2023-12-15T21:47:12.335Z</lastmod>
+    <lastmod>2023-12-18T17:58:42.878Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2023-07-30-prueba/index.html</loc>
@@ -43,5 +43,13 @@
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects/tesis/index.html</loc>
     <lastmod>2023-12-15T21:24:11.122Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/Deteccion_fraude/index.html</loc>
+    <lastmod>2023-12-18T01:49:23.121Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/Hyperparameters and Model Validation/index.html</loc>
+    <lastmod>2023-12-18T17:37:10.831Z</lastmod>
   </url>
 </urlset>

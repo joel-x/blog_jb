@@ -1,19 +1,9 @@
 ---
 title: Tratando los datos Keane
-author: ''
+author: 'Joel Burbano'
 date: '2023-12-07'
 categories: ["Econometría","Python"]
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,error = F, message = F, warning = F,comment = "") #c. habitual
-xaringanExtra::use_clipboard()
-library(prettydoc) #Paquete de tema favorito
-library(reticulate) #Paquete de python en R
-use_python("C:\\Users\\JXBS\\AppData\\Local\\Programs\\Python\\Python312\\python.exe")
-library(kableExtra)
-library(htmltools)
-```
 
 En este post abordaremos un poco los datos keane obtenidos de `Gretl`
 
@@ -22,16 +12,10 @@ Empezaremos por importar las librerias necesarias
 ```{python}
 import numpy as np
 import pandas as pd
+pd.options.display.max_columns=None
 from scipy import stats
 import matplotlib.pyplot as plt 
 import seaborn as sb
-#para graficar dentro del jupyter notebook
-from IPython import get_ipython
-ipy = get_ipython()
-if ipy is not None:
-    ipy.run_line_magic('matplotlib', 'inline')
-
-
 ```
 
 A continuación nos disponemos a visualizar los datos
@@ -41,7 +25,11 @@ keane=pd.read_csv("keane.csv")
 
 ```
 
-```{r echo=FALSE}
+```{python }
+keane.head()
+```
+
+```{r eval=FALSE, include=FALSE}
 DT::datatable(head(py$keane),
               rownames = F,
               extensions = 'FixedColumns',
