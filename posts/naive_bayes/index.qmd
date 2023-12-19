@@ -1,0 +1,67 @@
+---
+title: "Naive Bayes Clasificación"
+author: "Joel Burbano"
+date: '2023-12-19'
+categories: [Aprendizaje supervisado,Python,Naive Bayes]
+---
+
+En este post vamos a utilizar los datos `iris` para entrenar un modelo de clasificación y ver que tan bien se puede predecir las etiquetas
+
+En este caso para evitarnos particionar el conjunto a "mano" utilizaremos la función `train_test_split`
+
+Prieramente importamos las librerias necesarias
+
+```{python}
+import numpy as np
+import seaborn as sb
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+```
+
+luego importamos el conjunto de datos
+
+```{python}
+iris=sb.load_dataset('iris')
+X_iris=iris.drop('species',axis=1)
+y_iris=iris['species']
+```
+
+Ahora creamos los datos de entrenamiento y validación
+
+```{python}
+
+Xtrain,Xtest,ytrain,ytest =train_test_split(X_iris,y_iris,random_state=1)
+```
+
+Ahora importamos el modelo que utilizaremos
+
+```{python}
+from sklearn.naive_bayes import GaussianNB
+```
+
+Definimos un nombre
+```{python}
+NB=GaussianNB()
+```
+
+ajustamos el modelo
+
+```{python}
+NB.fit(Xtrain,ytrain)
+```
+predecimos la data que no se utilizo para establecer los parámetros del modelo
+```{python}
+y_NB=NB.predict(Xtest)
+```
+
+Ahora utilizando la métrica de exactitud (accurancy score) evaluaremos que tan bien predice el modelo que se ha creado
+
+```{python}
+from sklearn.metrics import accuracy_score
+```
+
+```{python}
+accuracy_score(ytest,y_NB)
+```
+Vemos que con una exactitud del $97,4\%$ el modelo implementado puede etiquetar los datos requeridos.

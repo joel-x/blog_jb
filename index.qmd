@@ -16,4 +16,6 @@ about:
 
 Ingeniero Matemático
 
-Análista de Datos
+Analista de Datos
+
+Científico de Datos

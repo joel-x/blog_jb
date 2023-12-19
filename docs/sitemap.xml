@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joel-x.github.io/jb_blog/index.html</loc>
-    <lastmod>2023-12-18T17:58:43.481Z</lastmod>
+    <lastmod>2023-12-19T21:34:29.255Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/about.html</loc>
-    <lastmod>2023-12-18T01:50:08.926Z</lastmod>
+    <lastmod>2023-12-19T21:26:39.043Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/blog.html</loc>
-    <lastmod>2023-12-18T17:58:44.548Z</lastmod>
+    <lastmod>2023-12-19T21:34:30.272Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2023-07-30-prueba/index.html</loc>
-    <lastmod>2023-12-15T15:36:51.449Z</lastmod>
+    <lastmod>2023-12-19T21:34:28.536Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2023-12-06-power-bi/index.html</loc>
@@ -51,5 +51,13 @@
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/Hyperparameters and Model Validation/index.html</loc>
     <lastmod>2023-12-18T17:37:10.831Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/Linear_Regression/index.html</loc>
+    <lastmod>2023-12-19T21:29:03.786Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/naive_bayes/index.html</loc>
+    <lastmod>2023-12-19T21:30:59.225Z</lastmod>
   </url>
 </urlset>

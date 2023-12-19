@@ -43,5 +43,11 @@
   },
   "posts/Hyperparameters and Model Validation/index.qmd": {
     "index.html": "3182a1be"
+  },
+  "posts/Linear_Regression/index.qmd": {
+    "index.html": "d8dbe6e5"
+  },
+  "posts/naive_bayes/index.qmd": {
+    "index.html": "7ab6819d"
   }
 }

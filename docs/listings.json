@@ -9,6 +9,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/Linear_Regression/index.html",
+      "/posts/naive_bayes/index.html",
       "/posts/Deteccion_fraude/index.html",
       "/posts/Hyperparameters and Model Validation/index.html",
       "/posts/post-with-code/index.html",

@@ -1,0 +1,81 @@
+---
+title: "Regresión Lineal Simple"
+author: "Joel Burbano"
+date: '2023-12-19'
+categories: [Python, Aprendizaje Supervisado]
+---
+En este post presentamos un ejemplo básico de regresión lineal simple, es decir, el caso de ajustar una línea a datos $x,y$.
+
+Antes que nada importamos las librerias necesarias
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+```
+
+
+
+Primeramente generamos unos puntos para $x$ y para $y$
+
+```{python}
+rng=np.random.RandomState(42)
+x=18*rng.rand(40)
+y=1.5*x-3+rng.rand(40)
+plt.scatter(x,y)
+plt.show()
+```
+
+Ahora definimos los hiperparámetros de nuestro modelo
+
+```{python}
+Lineal=LinearRegression(fit_intercept=True) # La regresión lineal es de la forma y=ax+b, donde b!=0
+```
+Definimos la variable $X$
+
+
+```{python}
+X=x[:,np.newaxis]
+X.shape
+```
+
+Nota: en este caso como estamos trabajando con datos simulados no es necesario definir $y$ puesto que sklearn si nos permite ingresar ese array
+
+Ahor ajustamos el modelo
+
+```{python}
+Lineal.fit(X,y)
+```
+
+Observemos el valor del coeficiente ($a$)
+
+```{python}
+Lineal.coef_
+```
+
+Observemos el valor del intercepto ($b$)
+
+```{python}
+Lineal.intercept_
+```
+Probemos el poder predictivo de nuestro modelo
+
+```{python}
+xfit=np.arange(17,22,0.5)
+Xfit=xfit[:,np.newaxis]
+yfit=Lineal.predict(Xfit)
+```
+
+Ahora realizemos una visualización
+
+```{python}
+def f(x):
+  return 1.51*x-2.6
+
+plt.scatter(x,y)
+plt.scatter(xfit,yfit,color='red')
+plt.plot(range(-1,22),[f(i) for i in range(-1,22)],color='cyan')
+plt.legend(['Datos modelo','Datos predichos','y=ax+b'])
+plt.show()
+```
+

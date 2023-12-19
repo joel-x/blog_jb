@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   
-
+lang: es
 website:
   site-url: https://joel-x.github.io/jb_blog/
   title: Joel Burbano

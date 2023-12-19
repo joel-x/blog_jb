@@ -1,10 +1,8 @@
 {
-  "hash": "6cc219bbc370cf9afa82b7ca4990e727",
+  "hash": "029d8e4ab005a165dfa9345dab33c505",
   "result": {
-    "markdown": "---\ntitle: \"Estadística Descriptiva\"\nauthor: \"Joel Burbano\"\ndate: \"2023-07-30\"\noutput:\n  html_document:\n    df_print: paged\ncategories: [Econometría]\ntags: [Python]\nauthors: []\ndescription: ''\nexternalLink: ''\nseries: []\nslug: []\n---\n\n\n\n\nLa estadística descriptiva nos permite realizar el análisis exploratorio de la información y el pre-procesamiento de la información antes de tener un modelo de machine learning.\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport pandas as pd\n```\n:::\n\n::: {.cell}\n\n```{.python .cell-code}\ndf = pd.read_csv(\"cars.csv\")\ndf.head()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n   speed  dist\n0      4     2\n1      4    10\n2      7     4\n3      7    22\n4      8    16\n```\n:::\n:::\n",
-    "supporting": [
-      "index_files"
-    ],
+    "markdown": "---\ntitle: \"Estadística Descriptiva\"\nauthor: \"Joel Burbano\"\ndate: \"2023-07-30\"\ncategories: [\"Econometría\" ,\"Python\"]\n---\n\n\n\n\nLa estadística descriptiva nos permite realizar el análisis exploratorio de la información y el pre-procesamiento de la información antes de tener un modelo de machine learning.\n\n\n::: {.cell}\n\n```{.python .cell-code}\nimport pandas as pd\n```\n:::\n\n::: {.cell}\n\n```{.python .cell-code}\ndf = pd.read_csv(\"cars.csv\")\ndf.head()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n   speed  dist\n0      4     2\n1      4    10\n2      7     4\n3      7    22\n4      8    16\n```\n:::\n:::\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
