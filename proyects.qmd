@@ -3,7 +3,7 @@ title: "Proyectos"
 listing:
   contents: proyects
   sort: "date desc"
-  type: default
+  type: grid
   categories: true
   sort-ui: false
   filter-ui: false

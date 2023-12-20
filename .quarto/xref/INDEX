@@ -49,5 +49,11 @@
   },
   "posts/naive_bayes/index.qmd": {
     "index.html": "7ab6819d"
+  },
+  "posts/2023-12-20-PCA/index.qmd": {
+    "index.html": "ed60557c"
+  },
+  "posts/2023-12-20-Clustering/index.qmd": {
+    "index.html": "d0458845"
   }
 }

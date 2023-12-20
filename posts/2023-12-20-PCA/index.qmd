@@ -1,0 +1,53 @@
+---
+title: "Analisis de Componentes Principales"
+author: Joel Burbano
+date: '2023-12-20'
+categories: [Python, PCA, Reducción de dimensiones,Aprendizaje No Supervisado]
+---
+
+En este post se pretende reducir dimensiones de una cantidad de datos es decir encontrar una transformación en la cuál se represente de mejor manera los datos reduciendo asi su diemensión
+
+Como ya es costumbre primero importamos las librerias necesarias
+
+```{python}
+import seaborn as sb 
+import numpy as np
+from sklearn.decomposition import PCA
+
+```
+
+Importemos los datos 
+
+```{python}
+iris=sb.load_dataset('iris')
+X_iris=iris.drop('species',axis=1)
+y_iris=iris['species']
+```
+
+Definimos el modelo
+
+```{python}
+ACP=PCA(n_components=2)
+```
+
+Ajustamos el modelo
+
+```{python}
+ACP.fit(X_iris)
+```
+
+transformamos la data 
+```{python}
+X_2d=ACP.transform(X_iris)
+```
+
+Realizamos una representación gráfica
+
+```{python}
+#para facilitarnos el trabajo vamos a extender sobre el data iris los nuevos ejes encontrados
+iris['PCA1']=X_2d[:,0]
+iris['PCA2']=X_2d[:,1]
+sb.lmplot(x="PCA1",y="PCA2",hue='species',data=iris,fit_reg=False)
+```
+
+

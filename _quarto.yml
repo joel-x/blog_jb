@@ -13,8 +13,6 @@ website:
       - blog.qmd
       - proyects.qmd
     right:
-      - icon: github
-        href: https://github.com/joel-x
       - icon: whatsapp
         href: https://wa.me/593997868351
       - icon: linkedin

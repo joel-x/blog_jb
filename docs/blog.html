@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -131,11 +131,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/joel-x" rel="" target=""><i class="bi bi-github" role="img">
-</i> 
- <span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
     <a class="nav-link" href="https://wa.me/593997868351" rel="" target=""><i class="bi bi-whatsapp" role="img">
 </i> 
  <span class="menu-text"></span></a>
@@ -164,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Aprendizaje Supervisado">Aprendizaje Supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Aprendizaje supervisado">Aprendizaje supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="BI">BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Econometría">Econometría <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Naive Bayes">Naive Bayes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Power BI">Power BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(6)</span></div><div class="category" data-category="R Markdown">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="plot">plot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(12)</span></div><div class="category" data-category="Aprendizaje No Supervisado">Aprendizaje No Supervisado <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Aprendizaje Supervisado">Aprendizaje Supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Aprendizaje supervisado">Aprendizaje supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="BI">BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Clusters">Clusters <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Econometría">Econometría <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Naive Bayes">Naive Bayes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="PCA">PCA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Power BI">Power BI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(8)</span></div><div class="category" data-category="R Markdown">R Markdown <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Reducción de dimensiones">Reducción de dimensiones <span class="quarto-category-count">(1)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="plot">plot <span class="quarto-category-count">(1)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -189,21 +184,112 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Python,Aprendizaje Supervisado" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1703021336668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Linear_Regression/index.html"> <p class="card-img-top"><img src="posts\Linear_Regression\index_files\figure-html\cell-3-output-1.png"  class="thumbnail-image card-img"/></p> </a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+       <option value="index" data-direction="asc">Por defecto</option>
+         <option value="listing-title" data-direction="asc">
+          Título
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Fecha - Menos reciente
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Fecha - Más reciente
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Autor/a
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<a href="./posts/Linear_Regression/index.html">
-<h3 class="no-anchor listing-title">
-Regresión Lineal Simple
-</h3>
-<div class="listing-subtitle">
-
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Python,Aprendizaje No Supervisado,Clusters" data-listing-date-sort="1703048400000" data-listing-file-modified-sort="1703095251891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/2023-12-20-Clustering/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\2023-12-20-Clustering\index_files\figure-html\cell-8-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Gaussian Mixture Models
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Aprendizaje No Supervisado'); return false;">
+Aprendizaje No Supervisado
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Clusters'); return false;">
+Clusters
+</div>
+</div>
+<div class="card-text listing-description">
+En este post veremos un modelos de cluster
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Joel Burbano
+</div>
+<div class="listing-date">
+20 dic 2023
+</div>
+</div>
+</div>
 </div>
 </a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Python,PCA,Reducción de dimensiones,Aprendizaje No Supervisado" data-listing-date-sort="1703048400000" data-listing-file-modified-sort="1703093988535" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/2023-12-20-PCA/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\2023-12-20-PCA\index_files\figure-html\cell-7-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Analisis de Componentes Principales
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('PCA'); return false;">
+PCA
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Reducción de dimensiones'); return false;">
+Reducción de dimensiones
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Aprendizaje No Supervisado'); return false;">
+Aprendizaje No Supervisado
+</div>
+</div>
+<div class="card-text listing-description">
+En este…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Joel Burbano
+</div>
+<div class="listing-date">
+20 dic 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Python,Aprendizaje Supervisado" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1703021336668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/Linear_Regression/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\Linear_Regression\index_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Regresión Lineal Simple
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -212,36 +298,29 @@ Python
 Aprendizaje Supervisado
 </div>
 </div>
-<a href="./posts/Linear_Regression/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 En este post presentamos un ejemplo básico de regresión lineal simple, es decir, el caso de ajustar una línea a datos <span class="math inline">\(x,y\)</span>.
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Linear_Regression/index.html">
-<div class="listing-date">
-19 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+19 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Aprendizaje supervisado,Python,Naive Bayes" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1703021020222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/naive_bayes/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/naive_bayes/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="3" data-categories="Aprendizaje supervisado,Python,Naive Bayes" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1703021020222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/naive_bayes/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Naive Bayes Clasificación
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Aprendizaje supervisado'); return false;">
 Aprendizaje supervisado
@@ -253,71 +332,57 @@ Python
 Naive Bayes
 </div>
 </div>
-<a href="./posts/naive_bayes/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 En este post vamos a utilizar los datos <code>iris</code> para entrenar un modelo de clasificación y ver que tan bien se puede predecir las etiquetas
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/naive_bayes/index.html">
-<div class="listing-date">
-19 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+19 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Python" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1702864120440" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/Deteccion_fraude/index.html"> <p class="card-img-top"><img src="posts\Deteccion_fraude\index_files\figure-html\cell-12-output-2.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Deteccion_fraude/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="4" data-categories="Python" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1702864120440" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/Deteccion_fraude/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\Deteccion_fraude\index_files\figure-html\cell-12-output-2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Detección de fraude con tarjetas de Crédito
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
 </div>
 </div>
-<a href="./posts/Deteccion_fraude/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 En el…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Deteccion_fraude/index.html">
-<div class="listing-date">
-17 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+17 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Python,Machine Learning" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1702921025432" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/Hyperparameters and Model Validation/index.html"> <p class="card-img-top"><img src="posts\Hyperparameters and Model Validation\index_files\figure-html\cell-4-output-2.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Hyperparameters and Model Validation/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="5" data-categories="Python,Machine Learning" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1702921025432" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/Hyperparameters and Model Validation/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\Hyperparameters and Model Validation\index_files\figure-html\cell-4-output-2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Hiperparametros y Modelos de Validación
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
 Python
@@ -326,36 +391,31 @@ Python
 Machine Learning
 </div>
 </div>
-<a href="./posts/Hyperparameters and Model Validation/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 Machine Learning se trata de crear models desde los…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Hyperparameters and Model Validation/index.html">
-<div class="listing-date">
-17 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+17 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="news,code,analysis" data-listing-date-sort="1702616400000" data-listing-file-modified-sort="1702647385704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html"> <img src="./posts/post-with-code/image.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/post-with-code/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="6" data-categories="news,code,analysis" data-listing-date-sort="1702616400000" data-listing-file-modified-sort="1702647385704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/post-with-code/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/post-with-code/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Post With Code
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -367,71 +427,57 @@ code
 analysis
 </div>
 </div>
-<a href="./posts/post-with-code/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 This is a post with executable code.
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html">
-<div class="listing-date">
-15 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Harlow Malloc
 </div>
+<div class="listing-date">
+15 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1702357200000" data-listing-file-modified-sort="1702647385701" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img src="posts\welcome\thumbnail.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="7" data-categories="news" data-listing-date-sort="1702357200000" data-listing-file-modified-sort="1702647385701" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/welcome/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\welcome\thumbnail.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Welcome To My Blog
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 This is the first post in a Quarto blog. Welcome!
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
-<div class="listing-date">
-12 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Tristan O’Malley
 </div>
+<div class="listing-date">
+12 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Econometría,Python" data-listing-date-sort="1701925200000" data-listing-file-modified-sort="1702922243471" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/2023-12-07-tratando-los-datos-keane/index.html"> <p class="card-img-top"><img src="posts\2023-12-07-tratando-los-datos-keane\index_files\figure-html\unnamed-chunk-6-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-12-07-tratando-los-datos-keane/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="8" data-categories="Econometría,Python" data-listing-date-sort="1701925200000" data-listing-file-modified-sort="1702922243471" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<a href="./posts/2023-12-07-tratando-los-datos-keane/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\2023-12-07-tratando-los-datos-keane\index_files\figure-html\unnamed-chunk-6-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Tratando los datos Keane
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Econometría'); return false;">
 Econometría
@@ -440,36 +486,29 @@ Econometría
 Python
 </div>
 </div>
-<a href="./posts/2023-12-07-tratando-los-datos-keane/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 En este post abordaremos un poco los datos keane obtenidos de <code>Gretl</code>
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-12-07-tratando-los-datos-keane/index.html">
-<div class="listing-date">
-7 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+7 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="Power BI,BI" data-listing-date-sort="1701838800000" data-listing-file-modified-sort="1702654520564" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2023-12-06-power-bi/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-12-06-power-bi/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="9" data-categories="Power BI,BI" data-listing-date-sort="1701838800000" data-listing-file-modified-sort="1702654520564" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/2023-12-06-power-bi/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Power BI
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Power BI'); return false;">
 Power BI
@@ -478,36 +517,29 @@ Power BI
 BI
 </div>
 </div>
-<a href="./posts/2023-12-06-power-bi/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 Pruebas para publicar power bi
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-12-06-power-bi/index.html">
-<div class="listing-date">
-6 dic 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+6 dic 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="Econometría,Python" data-listing-date-sort="1690693200000" data-listing-file-modified-sort="1702654420909" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2023-07-30-prueba/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2023-07-30-prueba/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="10" data-categories="Econometría,Python" data-listing-date-sort="1690693200000" data-listing-file-modified-sort="1702654420909" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/2023-07-30-prueba/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Estadística Descriptiva
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Econometría'); return false;">
 Econometría
@@ -516,36 +548,29 @@ Econometría
 Python
 </div>
 </div>
-<a href="./posts/2023-07-30-prueba/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 L…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2023-07-30-prueba/index.html">
-<div class="listing-date">
-30 jul 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Joel Burbano
 </div>
+<div class="listing-date">
+30 jul 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="R Markdown,plot,regression" data-listing-date-sort="1606875194000" data-listing-file-modified-sort="1702654124234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2020-12-01-r-rmarkdown/index.html"> <p class="card-img-top"><img src="posts\2020-12-01-r-rmarkdown\index_files\figure-html\pie-1.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/2020-12-01-r-rmarkdown/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="11" data-categories="R Markdown,plot,regression" data-listing-date-sort="1606875194000" data-listing-file-modified-sort="1702654124234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/2020-12-01-r-rmarkdown/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\2020-12-01-r-rmarkdown\index_files\figure-html\pie-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Hello R Markdown
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('R Markdown'); return false;">
 R Markdown
@@ -557,22 +582,20 @@ plot
 regression
 </div>
 </div>
-<a href="./posts/2020-12-01-r-rmarkdown/index.html">
-<div class="listing-description">
+<div class="card-text listing-description">
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmark…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/2020-12-01-r-rmarkdown/index.html">
-<div class="listing-date">
-1 dic 2020
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Frida Gomam
 </div>
-</a>
+<div class="listing-date">
+1 dic 2020
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">

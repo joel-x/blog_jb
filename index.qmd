@@ -4,8 +4,6 @@ image: joeb.jpg
 about:
   template: jolla
   links:
-    - icon: github
-      href: https://github.com/joel-x
     - icon: whatsapp
       href: https://wa.me/593997868351
     - icon: linkedin

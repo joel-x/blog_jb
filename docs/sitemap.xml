@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joel-x.github.io/jb_blog/index.html</loc>
-    <lastmod>2023-12-19T21:34:29.255Z</lastmod>
+    <lastmod>2023-12-20T18:00:54.991Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/about.html</loc>
@@ -10,11 +10,11 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/blog.html</loc>
-    <lastmod>2023-12-19T21:34:30.272Z</lastmod>
+    <lastmod>2023-12-20T18:00:56.813Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects.html</loc>
-    <lastmod>2023-12-15T21:24:09.150Z</lastmod>
+    <lastmod>2023-12-20T17:35:56.296Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2020-12-01-r-rmarkdown/index.html</loc>
@@ -59,5 +59,13 @@
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/naive_bayes/index.html</loc>
     <lastmod>2023-12-19T21:30:59.225Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/2023-12-20-PCA/index.html</loc>
+    <lastmod>2023-12-20T17:40:00.931Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/2023-12-20-Clustering/index.html</loc>
+    <lastmod>2023-12-20T18:00:54.436Z</lastmod>
   </url>
 </urlset>

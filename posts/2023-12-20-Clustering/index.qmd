@@ -1,0 +1,55 @@
+---
+title: Gaussian Mixture Models
+author: Joel Burbano
+date: 2023-12-20
+categories: [Python, Aprendizaje No Supervisado, Clusters ]
+---
+
+En este post veremos un modelos de cluster 
+
+Como ya es costumbre primero importamos las librerias necesarias
+
+```{python}
+import seaborn as sb 
+import numpy as np
+from sklearn.mixture import GaussianMixture
+
+```
+
+Importemos los datos 
+
+```{python}
+iris=sb.load_dataset('iris')
+X_iris=iris.drop('species',axis=1)
+y_iris=iris['species']
+```
+
+Definimos el modelo
+
+```{python}
+Gauss=GaussianMixture(n_components=3,
+covariance_type='full')
+```
+
+Ajustamos el modelo
+
+```{python}
+Gauss.fit(X_iris)
+```
+
+Determinamos las etiquetas
+```{python}
+y_gmm=Gauss.predict(X_iris)
+```
+
+graficamente
+
+```{python}
+iris.head()
+```
+
+```{python}
+iris['cluster']=y_gmm
+sb.lmplot(data=iris,x='sepal_length',y='petal_length',hue='species',col='cluster',fit_reg=False)
+```
+
