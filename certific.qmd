@@ -1,5 +1,5 @@
 ---
-title: Certificados y Cursos
+title: Certificados
 listing:
   contents: certificados
   sort: "date desc"

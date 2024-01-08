@@ -27,8 +27,9 @@ format:
   html:
     #max-width: fit content(25em)
     theme:
-      dark: darkly
       light: flatly
+      dark: darkly
+      
       
     linestretch: 1.7
     css: styles.css
