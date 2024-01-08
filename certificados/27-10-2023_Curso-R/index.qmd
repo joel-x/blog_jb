@@ -1,0 +1,9 @@
+---
+title: R para data scientist avanzado
+date: "10-27-2023"
+categories: [R, Data Science,tidyverse,Series Temporales, Arboles de decisión]
+image: Curso-R.jpg
+description: "  "
+---
+
+![](Curso-R.jpg){width="9in" height="7in"}

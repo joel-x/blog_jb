@@ -1,0 +1,9 @@
+---
+title: Aprende data science Conceptos básicos
+date: "10-12-2023"
+categories: [Ciencia de datos]
+image: DC-basic.svg
+description: "  "
+---
+
+![](DC-basic.pdf){width="9in" height="7in"}

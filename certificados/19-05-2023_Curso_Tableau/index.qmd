@@ -1,0 +1,9 @@
+---
+title: Curso Tableau Desktop
+date: "05-19-2023"
+categories: [Tableau, Bussiness Intelligence]
+image: cert_tableau.svg
+description: "  "
+---
+
+![](cert_tableau.pdf){width="9in" height="7in"}

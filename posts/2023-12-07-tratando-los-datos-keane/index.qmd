@@ -1,83 +1,84 @@
 ---
 title: Tratando los datos Keane
-author: 'Joel Burbano'
-date: '2023-12-07'
+author: Joel Burbano
+date: 2023-12-07
 categories: ["Econometría","Python"]
+description: En este post se realizara un analisis de los datos keane
 ---
+
+<!--- 1. Definición del problema --->
 
 En este post abordaremos un poco los datos keane obtenidos de `Gretl`
 
-Empezaremos por importar las librerias necesarias
+Empezaremos por importar las librerías necesarias
 
 ```{python}
-import numpy as np
+
 import pandas as pd
 pd.options.display.max_columns=None
+
+import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt 
 import seaborn as sb
 ```
 
+<!-- 2 Recopilación de datos -->
+
 A continuación nos disponemos a visualizar los datos
 
 ```{python include=FALSE}
 keane=pd.read_csv("keane.csv")
-
+keane=pd.DataFrame(keane)
 ```
 
 ```{python }
-keane.head()
+keane.head(5)
 ```
 
-```{r eval=FALSE, include=FALSE}
-DT::datatable(head(py$keane),
-              rownames = F,
-              extensions = 'FixedColumns',
-              options = list(
-                info=F,
-                pageLength=5,
-                autoWidth=T,
-                scrollX=T,
-                paging=F,
-                searching=F,
-                initComplete = DT::JS("function(settings, json) {$(this.api().table().header()).css({'font-size' : '12px','color':'#fff','background-color':'#3C3B3A'});}")
-              )) %>% 
-  DT::formatStyle(names(py$keane), backgroundColor="#949797", color = "#F6FBFB")
-```
+<!-- 3 Limpieza y preparación de datos -->
 
 Crearemos etiquetas para las observaciones de acuerdo a "choice" estudiante=1, hogar=2, cualificado=3, no-cualificado=4, servicio=5
 
-```{python echo=FALSE}
+```{python}
 keane["choice"]=np.where(keane["choice"]==1,"estudiante",
          np.where(keane["choice"]==2,"hogar",
                   np.where(keane["choice"]==3,"cualificado",
                            np.where(keane["choice"]==4,"no-cualificado","servicio"))))
 ```
 
+<!-- Análisis de datos-->
+
 Procedemos a gráficar la evolución de salarios separado por color de piel
 
-```{python echo=FALSE}
-sb.scatterplot(data=keane,x="year",y="wage",hue="black")
+```{python}
+sb.scatterplot(data=keane,x="year",y="wage",hue="black",style="black",style_order=[1,0])
+plt.show()
+plt.clf()
 ```
 
-En esta grafica evidenciamos que a lo largo de los años aumenta la discriminación.
+En esta gráfica evidenciamos que a lo largo de los años aumenta la discriminación.
 
 Visualicemos lo siguiente: seleccionando sólo las personas que trabajan se realizara un gráfico de la evolución de los salarios separados por la variable `choice`
 
-```{python echo=FALSE}
+```{python}
 sb.scatterplot(data=keane[keane["employ"]==1],x="year", y="wage",hue="choice")
+plt.show()
+plt.clf()
 ```
 
 Se observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.
 
 Ahora procedamos al análisis de la variable `educ` para ello primero la Codificaremos de acuerdo a educación básica=1, educación media=2, y educación superior=3.
 
-```{python echo=FALSE}
+```{python}
 keane["educCode"]=np.where(keane["educ"]<=9,1,np.where(keane["educ"]<=12,2,3))
 ```
 
-Seleccionando solo las personas que trbajan tenemos lo siguiente:
+Seleccionando solo las personas que trabajan tenemos lo siguiente:
 
-```{python echo=FALSE}
+```{python}
 sb.scatterplot(data=keane[keane["employ"]==1],x="year",y="wage",hue="educCode")
+plt.show()
+plt.clf()
 ```

@@ -1,0 +1,9 @@
+---
+title: Introducción a las habilidades profesionales en análisis de datos
+date: "10-05-2023"
+categories: [Análisis de datos, Analítica de datos, Aptitudes para carreras tecnologicas, Excel, Power BI,]
+image: analisis-de-datos.svg
+description: "  "
+---
+
+![](analisis de datos.pdf){width="9in" height="7in"}

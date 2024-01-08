@@ -1,0 +1,9 @@
+---
+title: Fundamentos profesionales del análisis de datos, por Microsfot y LinkedIn
+date: "10-16-2023"
+categories: [Analítica de datos, Ciencia de datos]
+image: Analisis-Datos.svg
+description: "  "
+---
+
+![](Analisis-Datos.pdf){width="9in" height="7in"}

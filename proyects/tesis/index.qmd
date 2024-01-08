@@ -1,8 +1,0 @@
----
-title: "Tesis de Grado"
-author: "Joel Burbano"
-date: '2023-12-15'
-categories: [Econometría, Modelos de Consumo, Causalidad]
----
-
-En este pequeño blog, se hablara de las partes mas importantes desarrolladas en el trabajo de integración curricular

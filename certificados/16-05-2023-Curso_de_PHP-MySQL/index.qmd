@@ -1,0 +1,9 @@
+---
+title: Curso PHP y MySQL
+date: "05-16-2023"
+categories: [MySQL, PHP]
+image: PHP_y_MySQL.svg
+description: "  "
+---
+
+![Curso PHP y MySQL](PHP_y_MySQL.pdf){width="9in" height="7in"}

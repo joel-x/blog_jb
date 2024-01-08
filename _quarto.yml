@@ -12,6 +12,7 @@ website:
       - about.qmd
       - blog.qmd
       - proyects.qmd
+      - certific.qmd
     right:
       - icon: whatsapp
         href: https://wa.me/593997868351

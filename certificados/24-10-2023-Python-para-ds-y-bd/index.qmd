@@ -1,0 +1,9 @@
+---
+title: Python para data science y big data esencial
+date: "10-24-2023"
+categories: [Python, Data Science, Big Data, pandas,PySpark,sklearn]
+image: Python.svg
+description: "  "
+---
+
+![](Python.pdf){width="9in" height="7in"}

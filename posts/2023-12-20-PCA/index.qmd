@@ -5,9 +5,9 @@ date: '2023-12-20'
 categories: [Python, PCA, Reducción de dimensiones,Aprendizaje No Supervisado]
 ---
 
-En este post se pretende reducir dimensiones de una cantidad de datos es decir encontrar una transformación en la cuál se represente de mejor manera los datos reduciendo asi su diemensión
+En este post se pretende reducir dimensiones de una cantidad de datos es decir encontrar una transformación en la cuál se represente de mejor manera los datos reduciendo así su dimensión
 
-Como ya es costumbre primero importamos las librerias necesarias
+Como ya es costumbre primero importamos las librerías necesarias
 
 ```{python}
 import seaborn as sb 
@@ -16,7 +16,7 @@ from sklearn.decomposition import PCA
 
 ```
 
-Importemos los datos 
+Importemos los datos
 
 ```{python}
 iris=sb.load_dataset('iris')
@@ -36,7 +36,8 @@ Ajustamos el modelo
 ACP.fit(X_iris)
 ```
 
-transformamos la data 
+transformamos la data
+
 ```{python}
 X_2d=ACP.transform(X_iris)
 ```
@@ -49,5 +50,3 @@ iris['PCA1']=X_2d[:,0]
 iris['PCA2']=X_2d[:,1]
 sb.lmplot(x="PCA1",y="PCA2",hue='species',data=iris,fit_reg=False)
 ```
-
-

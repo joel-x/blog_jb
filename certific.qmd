@@ -1,0 +1,10 @@
+---
+title: Certificados y Cursos
+listing:
+  contents: certificados
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+---

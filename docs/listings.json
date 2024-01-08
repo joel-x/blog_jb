@@ -15,18 +15,29 @@
       "/posts/naive_bayes/index.html",
       "/posts/Deteccion_fraude/index.html",
       "/posts/Hyperparameters and Model Validation/index.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
-      "/posts/2023-12-07-tratando-los-datos-keane/index.html",
-      "/posts/2023-12-06-power-bi/index.html",
-      "/posts/2023-07-30-prueba/index.html",
-      "/posts/2020-12-01-r-rmarkdown/index.html"
+      "/posts/2023-12-07-tratando-los-datos-keane/index.html"
     ]
   },
   {
     "listing": "/proyects.html",
     "items": [
-      "/proyects/tesis/index.html"
+      "/proyects/Tesis_JXBS/index.html"
+    ]
+  },
+  {
+    "listing": "/certific.html",
+    "items": [
+      "/certificados/27-10-2023_Curso-R/index.html",
+      "/certificados/24-10-2023-Python-para-ds-y-bd/index.html",
+      "/certificados/16-10-2023-Fundamentos-prof-DA/index.html",
+      "/certificados/12-10-2023-DC-conceptos-basicos/index.html",
+      "/certificados/05-10-2023-Intro-hab-DA/index.html",
+      "/certificados/22-06-2023-Cuso-DS-Python/index.html",
+      "/certificados/25-05-2023_Curso_power-BI/index.html",
+      "/certificados/19-05-2023_Curso_Tableau/index.html",
+      "/certificados/16-05-2023-Curso_de_PHP-MySQL/index.html",
+      "/certificados/16-04-2023-Pronostico-Ventas/index.html",
+      "/certificados/03-09-2020-Curso-R/index.html"
     ]
   }
 ]

@@ -1,0 +1,9 @@
+---
+title: Curso Pronóstico Ventas
+date: "04-16-2023"
+categories: [Pronósticos Ventas, Excel]
+image: certificate.svg
+description: "  "
+---
+
+![Curso Pronoóstico Ventas](certificate.pdf){width="9in" height="7in"}

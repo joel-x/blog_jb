@@ -1,0 +1,9 @@
+---
+title: Curso Power BI
+date: "05-25-2023"
+categories: [Power BI, Bussiness Intelligence]
+image: Power_BI.svg
+description: "  "
+---
+
+![Curso Power BI](Power_BI.pdf){width=9in height=7in}

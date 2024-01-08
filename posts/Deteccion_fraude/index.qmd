@@ -3,6 +3,7 @@ title: "Detección de fraude con tarjetas de Crédito"
 author: "Joel Burbano"
 date: 2023-12-17
 categories: ['Python']
+description: En el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias.
 ---
 
 En el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias recolectadas durante dos días en el mes de de Septiembre del 2013 por European cardholders
@@ -11,6 +12,7 @@ Empezaremos por importar las librerias necesarias para realizar el análisis
 
 ```{python}
 import pandas as pd
+pd.options.display.max_columns=None
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sb

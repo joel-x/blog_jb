@@ -1,0 +1,9 @@
+---
+title: Curso teórico práctico El ambiente de Programación R en el ámbito de la investigación científica
+date: "09-03-2020"
+categories: [R, Data Science, tidyverse, git , Rmarkdown]
+image: certificado_python_jxbs.svg
+description: "  "
+---
+
+![](certificado_python_jxbs.pdf){width="9in" height="7in"}

@@ -1,0 +1,9 @@
+---
+title: Curso Completo de Data Science en Python Desde Cero [2023]
+date: "06-22-2023"
+categories: [Python, Data Science, pandas, sklearn, statsmodels, BeautifulSoup]
+image: certificado_python_jxbs.svg
+description: "  "
+---
+
+![](certificado_python_jxbs.pdf){width="9in" height="7in"}
