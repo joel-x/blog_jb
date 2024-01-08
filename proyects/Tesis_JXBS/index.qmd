@@ -70,7 +70,7 @@ Como se mencionó en la introducción, el modelo de ciclo de vida/renta permanen
 
 [^5]: Al igual que con otros documentos, rechazan enérgicamente la suposición de una perfecta distribución del riesgo.
 
-[^6]:  Según [@Attanasio2010693] esto parece indicar que, de alguna manera, en altas frecuencias los choques salariales son absorbidos y no se reflejan en el consumo.
+[^6]: Según [@Attanasio2010693] esto parece indicar que, de alguna manera, en altas frecuencias los choques salariales son absorbidos y no se reflejan en el consumo.
 
 # Metodología
 

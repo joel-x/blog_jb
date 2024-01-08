@@ -4,6 +4,7 @@ author: "Joel Burbano"
 date: '2023-12-19'
 categories: [Python, Aprendizaje Supervisado]
 ---
+
 En este post presentamos un ejemplo básico de regresión lineal simple, es decir, el caso de ajustar una línea a datos $x,y$.
 
 Antes que nada importamos las librerias necesarias
@@ -13,8 +14,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 ```
-
-
 
 Primeramente generamos unos puntos para $x$ y para $y$
 
@@ -31,8 +30,8 @@ Ahora definimos los hiperparámetros de nuestro modelo
 ```{python}
 Lineal=LinearRegression(fit_intercept=True) # La regresión lineal es de la forma y=ax+b, donde b!=0
 ```
-Definimos la variable $X$
 
+Definimos la variable $X$
 
 ```{python}
 X=x[:,np.newaxis]
@@ -58,6 +57,7 @@ Observemos el valor del intercepto ($b$)
 ```{python}
 Lineal.intercept_
 ```
+
 Probemos el poder predictivo de nuestro modelo
 
 ```{python}
@@ -78,4 +78,3 @@ plt.plot(range(-1,22),[f(i) for i in range(-1,22)],color='cyan')
 plt.legend(['Datos modelo','Datos predichos','y=ax+b'])
 plt.show()
 ```
-

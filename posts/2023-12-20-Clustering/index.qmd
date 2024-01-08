@@ -5,7 +5,7 @@ date: 2023-12-20
 categories: [Python, Aprendizaje No Supervisado, Clusters ]
 ---
 
-En este post veremos un modelos de cluster 
+En este post veremos un modelos de cluster
 
 Como ya es costumbre primero importamos las librerias necesarias
 
@@ -16,7 +16,7 @@ from sklearn.mixture import GaussianMixture
 
 ```
 
-Importemos los datos 
+Importemos los datos
 
 ```{python}
 iris=sb.load_dataset('iris')
@@ -38,6 +38,7 @@ Gauss.fit(X_iris)
 ```
 
 Determinamos las etiquetas
+
 ```{python}
 y_gmm=Gauss.predict(X_iris)
 ```
@@ -52,4 +53,3 @@ iris.head()
 iris['cluster']=y_gmm
 sb.lmplot(data=iris,x='sepal_length',y='petal_length',hue='species',col='cluster',fit_reg=False)
 ```
-

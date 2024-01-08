@@ -41,6 +41,7 @@ from sklearn.naive_bayes import GaussianNB
 ```
 
 Definimos un nombre
+
 ```{python}
 NB=GaussianNB()
 ```
@@ -50,7 +51,9 @@ ajustamos el modelo
 ```{python}
 NB.fit(Xtrain,ytrain)
 ```
+
 predecimos la data que no se utilizo para establecer los parámetros del modelo
+
 ```{python}
 y_NB=NB.predict(Xtest)
 ```
@@ -64,4 +67,5 @@ from sklearn.metrics import accuracy_score
 ```{python}
 accuracy_score(ytest,y_NB)
 ```
+
 Vemos que con una exactitud del $97,4\%$ el modelo implementado puede etiquetar los datos requeridos.

@@ -13,21 +13,24 @@ Machine Learning se trata de crear models desde los datos: por esta razón es ne
 
 Una tabla basica es un arreglo bi-dimensional de datos, en donde cada fila representa un elemento individual del conjunto de datos, y cada columna representa cantidades realacionadas con cada uno de estos elementos.
 
-Por ejemplo la ya conocidada base `iris` 
+Por ejemplo la ya conocidada base `iris`
+
 ```{python}
 import seaborn as sb
 iris=sb.load_dataset('iris')
 iris.head()
 ```
-Aquí, cada fila de la data se refiere a la observación de una flor, y el numero de filas es el total de flores observadas. 
+
+Aquí, cada fila de la data se refiere a la observación de una flor, y el numero de filas es el total de flores observadas.
 
 ## Matriz de caracteristicas (Features matrix)
 
-Esta tabla contienene la información caracteeristica del conjunto de datos en nuestro ejemplo contiene información de flores. Matemáticamente estas caracteristicas pasan a representar las variables independientes de nuestro conjunto de datos generalmente denotado por $X$ 
+Esta tabla contienene la información caracteeristica del conjunto de datos en nuestro ejemplo contiene información de flores. Matemáticamente estas caracteristicas pasan a representar las variables independientes de nuestro conjunto de datos generalmente denotado por $X$
 
 ## Objetivo (Target Array)
 
 Es un arraglo que matemáticamente representa la variable dependiente generalmente notada por $y$
+
 ```{python}
 import matplotlib.pyplot as plt
 ```
@@ -37,7 +40,8 @@ import matplotlib.pyplot as plt
 sb.set()
 sb.pairplot(iris,hue='species',size=1.5)
 ```
-Para usar los datos en Scikit-Learn, tenemos que extraer los matriz $X$ y el objetivo $y$ 
+
+Para usar los datos en Scikit-Learn, tenemos que extraer los matriz $X$ y el objetivo $y$
 
 ```{python}
 X_iris=iris.drop('species',axis=1)
@@ -45,38 +49,34 @@ print(X_iris.shape)
 y_iris=iris['species']
 print(y_iris.shape)
 ```
+
 ## Scikit-Learn's API estimador
 
 La API de Scikit-Learn esta diseñada con los siguientes principios en mente
 
-* Coherencia.- Todos los objetos comparten unaa interfaz común extraida de un conunto limitado de métodos, con documentación consistente.
+-   Coherencia.- Todos los objetos comparten unaa interfaz común extraida de un conunto limitado de métodos, con documentación consistente.
 
-* Inspección
-Todos los valores de parámetros especificados se exponen como atributos públicos. Jerarquía de objetos limitada Sólo los algoritmos están representados por clases de Python; los conjuntos de datos se representan en formatos estándar (matrices NumPy, Pandas DataFrames, matrices dispersas de SciPy) y los nombres de los parámetros utilizan cadenas estándar de Python.
+-   Inspección Todos los valores de parámetros especificados se exponen como atributos públicos. Jerarquía de objetos limitada Sólo los algoritmos están representados por clases de Python; los conjuntos de datos se representan en formatos estándar (matrices NumPy, Pandas DataFrames, matrices dispersas de SciPy) y los nombres de los parámetros utilizan cadenas estándar de Python.
 
-* Composición
-Muchas tareas de aprendizaje automático se pueden expresar como secuencias de algoritmos más fundamentales, y ScikitLearn hace uso de esto siempre que es posible.
+-   Composición Muchas tareas de aprendizaje automático se pueden expresar como secuencias de algoritmos más fundamentales, y ScikitLearn hace uso de esto siempre que es posible.
 
-* Valores predeterminados sensatos Cuando los modelos requieren parámetros especificados por el usuario, la biblioteca define un valor predeterminado apropiado.
+-   Valores predeterminados sensatos Cuando los modelos requieren parámetros especificados por el usuario, la biblioteca define un valor predeterminado apropiado.
 
-
-## Básicos de la API 
-
+## Básicos de la API
 
 Por lo general, los pasos para usar la API del estimador Scikit-Learn son los siguientes (repasaremos algunos ejemplos detallados en las secciones siguientes):
 
-1. Elija una clase de modelo importando la clase de estimador adecuada de ScikitLearn.
+1.  Elija una clase de modelo importando la clase de estimador adecuada de ScikitLearn.
 
-2. Elija los hiperparámetros del modelo creando una instancia de esta clase con los valores deseados.
+2.  Elija los hiperparámetros del modelo creando una instancia de esta clase con los valores deseados.
 
-3. Organice los datos en una matriz de características y un vector objetivo siguiendo la discusión anterior.
+3.  Organice los datos en una matriz de características y un vector objetivo siguiendo la discusión anterior.
 
-4. Ajuste el modelo a sus datos llamando al método fit() de la instancia del modelo.
+4.  Ajuste el modelo a sus datos llamando al método fit() de la instancia del modelo.
 
-5. Aplique el modelo a nuevos datos:
+5.  Aplique el modelo a nuevos datos:
 
 • Para el aprendizaje supervisado, a menudo predecimos etiquetas para datos desconocidos usando el método predict().
-
 
 • Para el aprendizaje no supervisado, a menudo transformamos o inferimos propiedades de los datos utilizando el método transform() o predict().
 
@@ -92,26 +92,28 @@ x=10+rng.rand(50)
 y=2*x-1+rng.rand(50)
 plt.scatter(x,y)
 ```
-1. Escojemos el modelo
+
+1.  Escojemos el modelo
+
 ```{python}
 from sklearn.linear_model import LinearRegression
 ```
 
-2. Escogemos los hiperparametros
+2.  Escogemos los hiperparametros
 
 ```{python}
 model=LinearRegression(fit_intercept=True)
 model
 ```
 
-3. Organizando los datos en variables independientes y variable dependiente
+3.  Organizando los datos en variables independientes y variable dependiente
 
 ```{python}
 X=x[:,np.newaxis]
 X.shape
 ```
 
-4. Ajustando el modelo 
+4.  Ajustando el modelo
 
 ```{python}
 model.fit(X,y)
@@ -124,7 +126,8 @@ model.coef_
 ```{python}
 model.intercept_
 ```
-5. Predicciendo data desconocida
+
+5.  Predicciendo data desconocida
 
 ```{python}
 xfit=np.linspace(-1,11)
@@ -139,4 +142,3 @@ yfit=model.predict(Xfit)
 plt.scatter(x,y)
 plt.plot(xfit,yfit)
 ```
-
