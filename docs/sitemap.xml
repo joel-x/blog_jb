@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joel-x.github.io/jb_blog/index.html</loc>
-    <lastmod>2024-01-08T22:33:12.296Z</lastmod>
+    <lastmod>2024-01-13T13:53:12.020Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/about.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/blog.html</loc>
-    <lastmod>2024-01-08T22:33:14.497Z</lastmod>
+    <lastmod>2024-01-13T13:53:13.628Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects.html</loc>
@@ -119,5 +119,9 @@
   <url>
     <loc>https://joel-x.github.io/jb_blog/certificados/27-10-2023_Curso-R/index.html</loc>
     <lastmod>2024-01-08T17:09:54.283Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/posts/2024-1-13-Accidentes automovilisticos/index.html</loc>
+    <lastmod>2024-01-13T13:53:11.065Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,203 @@
+---
+title: Accidentes automovilisticos Conjunto de datos EDA
+author: Joel burbano
+date: 1-13-2024
+categories: [Python]
+description: En este apartado vamos a analizar datos de accidentes automovilisticos
+---
+
+# Importamos las librerias necesarias
+
+```{python}
+import numpy as np
+import seaborn as sb
+import matplotlib.pyplot as plt
+import pandas as pd
+
+pd.options.display.max_columns=None #para que se despliegue todas las columnas
+
+import warnings 
+warnings.filterwarnings('ignore')
+from matplotlib import cm
+c4=cm.get_cmap('Set3')
+```
+# Cargamos la data
+
+```{python}
+df=pd.read_excel("dataset.xlsx")
+```
+
+Revisemos las 5 primeras filas de datos
+```{python}
+df.head(5)
+```
+
+
+# Procedmos con la limpieza da la data
+
+Realizamos una revisión de duplicados
+```{python}
+df.duplicated().value_counts()
+```
+al parecer tenemos $64$ filas repetidas
+
+ahora observemos la información de los datos 
+
+```{python}
+df.info()
+```
+Veamos el rango de años que contiene la data
+```{python}
+print("Data desde el año",df.Year.min(), " hasta ", df.Year.max() )
+```
+
+Analicemos los tipos de colisión que existen en la data
+
+```{python}
+df['Collision Type'].value_counts()
+```
+# Visualización de la data
+
+## Frecuencia de los tipos de acciedentes
+
+```{python}
+sb.countplot(x=df['Collision Type'],palette='Set3')
+plt.ylabel('Frecuencia')
+plt.xticks(rotation=65)
+plt.title("Frecuencia de tipos de Accidentes")
+plt.show()
+plt.clf()
+```
+Observamos que existe una mayor cantidad de accidentes entre dos vehículos, por otro lado la cantidad de accidentes de bicicletas es la menor.
+
+## Accidentes ocurridos **entre semana** vs **fin de semana**
+
+```{python}
+sb.countplot(x=df['Weekend?'],palette='Accent')
+plt.ylabel('Frecuencia')
+plt.xticks(rotation=65)
+plt.title("Entre semana vs Fin de semana")
+plt.show()
+plt.clf()
+```
+
+
+Observamos que el Fin de semana es cuando mas ocurren accidentes.
+
+## Porcentaje de lesiones por Categoria
+
+```{python}
+les_val=df['Injury Type'].value_counts()
+les_val
+```
+
+```{python}
+plt.pie(les_val,labels=les_val.index,startangle=30,shadow=True,autopct='%1.1f%%',rotatelabels=30,explode=(0.1,0.1,0.1,0.1),colors=[c4(0.9),c4(0.2),c4(0.3),c4(0.6)])
+plt.title('Porcentaje de lesiones por Categoria')
+plt.show()
+plt.clf()
+```
+
+
+Observamos que el $0.2\%$ de accidentes son Fatales. Por otro lado algo que sería de mucho interes saber de cuantos accidentes no se conoce la lesión ocasionada puesto que la probabilidad de no tener lesiones es muy baja.
+
+## Motivo mas comun por el cual suceden accidentes
+
+Primero indagaremos cuantos Factores Primarios existen en la data
+```{python}
+df['Primary Factor'].nunique()
+```
+Dado que existen $55$ Factores Primarios nos quedaremos con el top 20
+```{python}
+pfdf=df['Primary Factor'].value_counts().head(20)
+```
+
+
+```{python}
+fig=plt.figure(figsize=(10,10))
+axis=fig.add_axes([1,1,1,1])
+sb.swarmplot(x=pfdf,y=pfdf.index,ax=axis)
+for i,j in enumerate(pfdf):
+  axis.text(j,i,j)
+plt.xlabel('Ocurrencia')
+plt.title('Motivos principales por los que ocurren accidentes')
+plt.show()
+plt.clf()
+```
+
+
+## Top 30 lugares mas frecuente donde ocurren accidentes
+
+```{python}
+ldf=df['Reported_Location'].value_counts().head(30)
+```
+
+
+```{python}
+fig1=plt.figure()
+axis1=fig1.add_axes([1,1,1,1])
+sb.barplot(x=ldf,y=ldf.index,ax=axis1,palette="viridis")
+for i,j in enumerate(ldf):
+  axis1.text(j,i,j,va='top')
+axis1.set_xlabel('Frecuencia')
+axis1.set_title('Lugares con mayor frecuencia de Accidentes')
+plt.show()
+plt.clf()
+```
+
+## Tipos de Colisiones en diferentes años
+
+```{python}
+años=df.groupby('Year')
+keys=años.groups.keys()
+```
+
+```{python}
+infobox=[]
+for i in range(2003,2016):
+  infobox.append(años.get_group(i)['Collision Type'].value_counts())
+```
+
+
+```{python}
+c2=cm.get_cmap('terrain')
+```
+
+```{python}
+from IPython.display import display, Markdown
+```
+
+
+**Colisiones por Año**
+
+
+::: {.panel-tabset}
+
+```{python}
+#| output: asis
+count=0
+val=0.1
+for i in range(2003,2016):
+  display(Markdown(f"## {i}"))
+  sb.pointplot(x=infobox[count].index,y=infobox[count],color=c2(val))
+  plt.xticks(rotation=65)
+  plt.ylabel('Frecuencia')
+  plt.title('%d Tipo de colisión'%(i))
+  plt.show()
+  display(Markdown(f" "))
+  plt.clf()
+  count+=1
+  val+=0.1
+  if val>=0.9:
+    c2=cm.get_cmap('turbo')
+    val=0.1
+
+```
+:::
+
+
+<!-- Poner un grafico dínamico -->
+
+
+
+

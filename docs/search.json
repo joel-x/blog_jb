@@ -32,7 +32,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nGaussian Mixture Models\n\n\n\nPython\n\n\nAprendizaje No Supervisado\n\n\nClusters\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAnalisis de Componentes Principales\n\n\n\nPython\n\n\nPCA\n\n\nReducción de dimensiones\n\n\nAprendizaje No Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión Lineal Simple\n\n\n\nPython\n\n\nAprendizaje Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nNaive Bayes Clasificación\n\n\n\nAprendizaje supervisado\n\n\nPython\n\n\nNaive Bayes\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDetección de fraude con tarjetas de Crédito\n\n\n\nPython\n\n\n\nEn el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias.\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHiperparametros y Modelos de Validación\n\n\n\nPython\n\n\nMachine Learning\n\n\n\n\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTratando los datos Keane\n\n\n\nEconometría\n\n\nPython\n\n\n\nEn este post se realizara un analisis de los datos keane\n\n\n\nJoel Burbano\n\n\n7 dic 2023\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nAccidentes automovilisticos Conjunto de datos EDA\n\n\n\nPython\n\n\n\nEn este apartado vamos a analizar datos de accidentes automovilisticos\n\n\n\nJoel burbano\n\n\n13 ene 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGaussian Mixture Models\n\n\n\nPython\n\n\nAprendizaje No Supervisado\n\n\nClusters\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAnalisis de Componentes Principales\n\n\n\nPython\n\n\nPCA\n\n\nReducción de dimensiones\n\n\nAprendizaje No Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión Lineal Simple\n\n\n\nPython\n\n\nAprendizaje Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nNaive Bayes Clasificación\n\n\n\nAprendizaje supervisado\n\n\nPython\n\n\nNaive Bayes\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDetección de fraude con tarjetas de Crédito\n\n\n\nPython\n\n\n\nEn el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias.\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHiperparametros y Modelos de Validación\n\n\n\nPython\n\n\nMachine Learning\n\n\n\n\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTratando los datos Keane\n\n\n\nEconometría\n\n\nPython\n\n\n\nEn este post se realizara un analisis de los datos keane\n\n\n\nJoel Burbano\n\n\n7 dic 2023\n\n\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "proyects.html",
@@ -257,5 +257,145 @@
     "title": "Curso Pronóstico Ventas",
     "section": "",
     "text": "Curso Pronoóstico Ventas"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "",
+    "text": "import numpy as np\nimport seaborn as sb\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\npd.options.display.max_columns=None #para que se despliegue todas las columnas\n\nimport warnings \nwarnings.filterwarnings('ignore')\nfrom matplotlib import cm\nc4=cm.get_cmap('Set3')"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#frecuencia-de-los-tipos-de-acciedentes",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#frecuencia-de-los-tipos-de-acciedentes",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Frecuencia de los tipos de acciedentes",
+    "text": "Frecuencia de los tipos de acciedentes\n\nsb.countplot(x=df['Collision Type'],palette='Set3')\nplt.ylabel('Frecuencia')\nplt.xticks(rotation=65)\nplt.title(\"Frecuencia de tipos de Accidentes\")\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que existe una mayor cantidad de accidentes entre dos vehículos, por otro lado la cantidad de accidentes de bicicletas es la menor."
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#accidentes-ocurridos-entre-semana-vs-fin-de-semana",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#accidentes-ocurridos-entre-semana-vs-fin-de-semana",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Accidentes ocurridos entre semana vs fin de semana",
+    "text": "Accidentes ocurridos entre semana vs fin de semana\n\nsb.countplot(x=df['Weekend?'],palette='Accent')\nplt.ylabel('Frecuencia')\nplt.xticks(rotation=65)\nplt.title(\"Entre semana vs Fin de semana\")\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que el Fin de semana es cuando mas ocurren accidentes."
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#porcentaje-de-lesiones-por-categoria",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#porcentaje-de-lesiones-por-categoria",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Porcentaje de lesiones por Categoria",
+    "text": "Porcentaje de lesiones por Categoria\n\nles_val=df['Injury Type'].value_counts()\nles_val\n\nInjury Type\nNo injury/unknown     41603\nNon-incapacitating    11136\nIncapacitating         1089\nFatal                   115\nName: count, dtype: int64\n\n\n\nplt.pie(les_val,labels=les_val.index,startangle=30,shadow=True,autopct='%1.1f%%',rotatelabels=30,explode=(0.1,0.1,0.1,0.1),colors=[c4(0.9),c4(0.2),c4(0.3),c4(0.6)])\nplt.title('Porcentaje de lesiones por Categoria')\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que el \\(0.2\\%\\) de accidentes son Fatales. Por otro lado algo que sería de mucho interes saber de cuantos accidentes no se conoce la lesión ocasionada puesto que la probabilidad de no tener lesiones es muy baja."
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#motivo-mas-comun-por-el-cual-suceden-accidentes",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#motivo-mas-comun-por-el-cual-suceden-accidentes",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Motivo mas comun por el cual suceden accidentes",
+    "text": "Motivo mas comun por el cual suceden accidentes\nPrimero indagaremos cuantos Factores Primarios existen en la data\n\ndf['Primary Factor'].nunique()\n\n55\n\n\nDado que existen \\(55\\) Factores Primarios nos quedaremos con el top 20\n\npfdf=df['Primary Factor'].value_counts().head(20)\n\n\nfig=plt.figure(figsize=(10,10))\naxis=fig.add_axes([1,1,1,1])\nsb.swarmplot(x=pfdf,y=pfdf.index,ax=axis)\nfor i,j in enumerate(pfdf):\n  axis.text(j,i,j)\nplt.xlabel('Ocurrencia')\nplt.title('Motivos principales por los que ocurren accidentes')\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#top-30-lugares-mas-frecuente-donde-ocurren-accidentes",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#top-30-lugares-mas-frecuente-donde-ocurren-accidentes",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Top 30 lugares mas frecuente donde ocurren accidentes",
+    "text": "Top 30 lugares mas frecuente donde ocurren accidentes\n\nldf=df['Reported_Location'].value_counts().head(30)\n\n\nfig1=plt.figure()\naxis1=fig1.add_axes([1,1,1,1])\nsb.barplot(x=ldf,y=ldf.index,ax=axis1,palette=\"viridis\")\nfor i,j in enumerate(ldf):\n  axis1.text(j,i,j,va='top')\naxis1.set_xlabel('Frecuencia')\naxis1.set_title('Lugares con mayor frecuencia de Accidentes')\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#tipos-de-colisiones-en-diferentes-años",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#tipos-de-colisiones-en-diferentes-años",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Tipos de Colisiones en diferentes años",
+    "text": "Tipos de Colisiones en diferentes años\n\naños=df.groupby('Year')\nkeys=años.groups.keys()\n\n\ninfobox=[]\nfor i in range(2003,2016):\n  infobox.append(años.get_group(i)['Collision Type'].value_counts())\n\n\nc2=cm.get_cmap('terrain')\n\n\nfrom IPython.display import display, Markdown\n\nColisiones por Año\n\n2003200420052006200720082009201020112012201320142015\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2003",
+    "text": "2003"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-1",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-1",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2004",
+    "text": "2004"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-2",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-2",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2005",
+    "text": "2005"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-3",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-3",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2006",
+    "text": "2006"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-4",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-4",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2007",
+    "text": "2007"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-5",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-5",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2008",
+    "text": "2008"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-6",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-6",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2009",
+    "text": "2009"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-7",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-7",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2010",
+    "text": "2010"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-8",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-8",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2011",
+    "text": "2011"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-9",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-9",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2012",
+    "text": "2012"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-10",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-10",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2013",
+    "text": "2013"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-11",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-11",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2014",
+    "text": "2014"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-12",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#section-12",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "2015",
+    "text": "2015\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n:::"
   }
 ]
