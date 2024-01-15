@@ -397,5 +397,12 @@
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "2015",
     "text": "2015\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n:::"
+  },
+  {
+    "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#gráfico-dinamico",
+    "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#gráfico-dinamico",
+    "title": "Accidentes automovilisticos Conjunto de datos EDA",
+    "section": "Gráfico Dinamico",
+    "text": "Gráfico Dinamico\n\nimport plotly.express as px\n\n\npx.histogram(df,x='Collision Type', \nanimation_frame=df['Year'].sort_values(ascending=True),\ncolor='Collision Type', title='Accidentes por Tipo de Colisión'\n)"
   }
 ]

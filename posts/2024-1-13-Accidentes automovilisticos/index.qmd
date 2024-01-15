@@ -198,6 +198,21 @@ for i in range(2003,2016):
 
 <!-- Poner un grafico dínamico -->
 
+## Gráfico Dinamico
+
+```{python}
+import plotly.express as px
+
+```
+
+
+```{python}
+px.histogram(df,x='Collision Type', 
+animation_frame=df['Year'].sort_values(ascending=True),
+color='Collision Type', title='Accidentes por Tipo de Colisión'
+)
+```
+
 
 
 
