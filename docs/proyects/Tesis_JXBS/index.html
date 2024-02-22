@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -66,7 +67,12 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -75,6 +81,7 @@ div.csl-indent {
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
     "search-submit-button-title": "Enviar",
     "search-label": "Buscar"
@@ -84,6 +91,33 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
@@ -91,9 +125,9 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Joel Burbano</span>
     </a>
@@ -105,43 +139,47 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">Acerca de mi</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Acerca de mi</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../proyects.html" rel="" target="">
- <span class="menu-text">Proyectos</span></a>
+    <a class="nav-link" href="../../proyects.html"> 
+<span class="menu-text">Proyectos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../certific.html" rel="" target="">
- <span class="menu-text">Certificados</span></a>
+    <a class="nav-link" href="../../certific.html"> 
+<span class="menu-text">Certificados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../contacto.html"> 
+<span class="menu-text">Contactos</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://wa.me/593997868351" rel="" target=""><i class="bi bi-whatsapp" role="img">
+    <a class="nav-link" href="https://wa.me/593997868351"> <i class="bi bi-whatsapp" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/jxbsjb" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/jxbsjb"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="mailto:joelburbano@outlook.com" rel="" target=""><i class="bi bi-envelope" role="img">
+    <a class="nav-link" href="mailto:joelburbano@outlook.com"> <i class="bi bi-envelope" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -213,12 +251,14 @@ div.csl-indent {
   
 <div>
   <div class="abstract">
-    <div class="abstract-title">Resumen, si deseas leer la versión completa la encuentras <a href="https://bibdigital.epn.edu.ec/bitstream/15000/24465/1/CD%2013389.pdf">aquí</a></div>
+    <div class="block-title">Resumen, si deseas leer la versión completa la encuentras <a href="https://bibdigital.epn.edu.ec/bitstream/15000/24465/1/CD%2013389.pdf">aquí</a></div>
     El estudio del modelo teórico del consumo es un tema de relevancia tanto a nivel de individuo como nivel de hogares. Es así que, en este trabajo se realiza una nueva versión del modelo de consumo, basado en la hipótesis renta permanente de Friedman y el modelo de ciclo de vida de Modigliani. Además, se llevará a cabo una comprobación empírica del mencionado modelo para catorce países de América Latina y Caribe, esto se lo realizará utilizando test de causalidad para contrastar si la variable que se describe en el nuevo modelo teórico ayuda con la predicción del consumo.
   </div>
 </div>
 
+
 </header>
+
 
 <section id="introducción" class="level1">
 <h1>Introducción</h1>
@@ -287,14 +327,14 @@ R_{t+j}^\ast=\sum_{i=0}^N \omega_{t+j}^i R_{t+j}^i,
 W_T\geq0
 \tag{5}\]</span></span></p>
 <p>donde, <span class="math inline">\(W\)</span> es el patrimonio neto y su rendimiento, <span class="math inline">\(\omega\)</span> son las ponderaciones de la cartera, <span class="math inline">\(R\)</span> son los rendimientos, <span class="math inline">\(A\)</span> son los activos y <span class="math inline">\(y\)</span> es el ingreso.</p>
-<p>La restricción <a href="#eq-ec:a2">Ecuación&nbsp;2</a> es una restricción presupuestaria genérica donde el valor neto aparece junto con su retorno, ingreso y consumo<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Las restricciones <a href="#eq-ec:a3">Ecuación&nbsp;3</a> y <a href="#eq-ec:a4">Ecuación&nbsp;4</a> definen el patrimonio neto, <span class="math inline">\(W\)</span>, y su rendimiento <span class="math inline">\(-\omega_{t+j}^i\)</span>: son las acciones (o ponderaciones) de la cartera. El rendimiento del patrimonio neto está dado por el promedio ponderado de los rendimientos individuales, <span class="math inline">\(R_{t+j}^i\)</span>. Se supone que estos rendimientos no dependen de la posición neta que tome el consumidor sobre cada uno de estos activos, <span class="math inline">\(A_{t+j}^i\)</span>. <span class="citation" data-cites="Attanasio2010693">(ver , <a href="#ref-Attanasio2010693" role="doc-biblioref">Orazio P. Attanasio y Weber 2010</a>)</span></p>
-<p>La restricción <a href="#eq-ec:a5">Ecuación&nbsp;5</a> da el límite para el patrimonio neto total en el periodo <span class="math inline">\(T\)</span>. El consumidor tiene que morir sin deuda, es decir tiene que pagar su deuda con probabilidad uno<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
+<p>La restricción <a href="#eq-ec:a2" class="quarto-xref">Ecuación&nbsp;2</a> es una restricción presupuestaria genérica donde el valor neto aparece junto con su retorno, ingreso y consumo<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. Las restricciones <a href="#eq-ec:a3" class="quarto-xref">Ecuación&nbsp;3</a> y <a href="#eq-ec:a4" class="quarto-xref">Ecuación&nbsp;4</a> definen el patrimonio neto, <span class="math inline">\(W\)</span>, y su rendimiento <span class="math inline">\(-\omega_{t+j}^i\)</span>: son las acciones (o ponderaciones) de la cartera. El rendimiento del patrimonio neto está dado por el promedio ponderado de los rendimientos individuales, <span class="math inline">\(R_{t+j}^i\)</span>. Se supone que estos rendimientos no dependen de la posición neta que tome el consumidor sobre cada uno de estos activos, <span class="math inline">\(A_{t+j}^i\)</span>. <span class="citation" data-cites="Attanasio2010693">(ver , <a href="#ref-Attanasio2010693" role="doc-biblioref">Orazio P. Attanasio y Weber 2010</a>)</span></p>
+<p>La restricción <a href="#eq-ec:a5" class="quarto-xref">Ecuación&nbsp;5</a> da el límite para el patrimonio neto total en el periodo <span class="math inline">\(T\)</span>. El consumidor tiene que morir sin deuda, es decir tiene que pagar su deuda con probabilidad uno<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>.</p>
 <p>En esta formulación se supone varias restricciones importantes: * El consumidor maximiza la utilidad esperada. * Las preferencias son aditivamente separables a lo largo del tiempo * Implícitamente es posible anotar la utilidad como una función de una sola mercancía. Esta practica presupone un teorema de agregación del tipo estudiado por <span class="citation" data-cites="Gorman1959469">(<a href="#ref-Gorman1959469" role="doc-biblioref">Gorman 1959</a>)</span>.</p>
 <p>El problema formulado anteriormente es capaz de abarcar diferentes versiones del modelo que se han considerado en la literatura. En particular, tratamos como casos especiales el modelo estándar de ingresos permanentes/ciclo de vida con preferencias cuadráticas, el llamado ahorro de existencias reguladoras, así como versiones flexibles del modelo (con un papel importante para la demografía y la oferta laboral) que se han ajustado a los datos.</p>
 <p>Comencemos con un caso en el que la función de consumo se puede derivar analíticamente. Sea la utilidad cuadrática en <span class="math inline">\(C\)</span> (y aditivamente separable en sus otros argumentos <span class="math inline">\(z\)</span>), y suponga que al menos un activo financiero se negocia libremente y produce un rendimiento real fijo, igual al parámetro de referencia temporal constante <span class="math inline">\(\frac{1-\beta}{\beta}\)</span>. La condición de primer orden con respecto al consumo, o ecuación de Euler, implica que el consumo es paseo aleatorio. <span id="eq-ec:a6"><span class="math display">\[
      E(C_{t+1}|I_t )=C_t
 \tag{6}\]</span></span></p>
-<p>donde <span class="math inline">\(I_t\)</span>, denota la información disponible al instante <span class="math inline">\(t\)</span> . En efecto notemos que al ser la función de utilidad cuadrática en <span class="math inline">\(C\)</span> y aditivamente separable en sus otros argumentos <span class="citation" data-cites="Hall1978">(<a href="#ref-Hall1978" role="doc-biblioref">Hall 1978</a>)</span> no dice que se cumple exactamente <span class="math inline">\(C_{t+1}=\beta_0 +\gamma C_t -\varepsilon_{t+1}\)</span> de donde tomando la Esperanza al tiempo <span class="math inline">\(t\)</span> y dado que se produce un rendimiento real fijo, tenemos la <a href="#eq-ec:a6">Ecuación&nbsp;6</a>.</p>
+<p>donde <span class="math inline">\(I_t\)</span>, denota la información disponible al instante <span class="math inline">\(t\)</span> . En efecto notemos que al ser la función de utilidad cuadrática en <span class="math inline">\(C\)</span> y aditivamente separable en sus otros argumentos <span class="citation" data-cites="Hall1978">(<a href="#ref-Hall1978" role="doc-biblioref">Hall 1978</a>)</span> no dice que se cumple exactamente <span class="math inline">\(C_{t+1}=\beta_0 +\gamma C_t -\varepsilon_{t+1}\)</span> de donde tomando la Esperanza al tiempo <span class="math inline">\(t\)</span> y dado que se produce un rendimiento real fijo, tenemos la <a href="#eq-ec:a6" class="quarto-xref">Ecuación&nbsp;6</a>.</p>
 <p>en <span class="math inline">\(t\)</span>, el consumidor escoge <span class="math inline">\(C_t\)</span> tal que maximiza <span id="eq-ec:e1"><span class="math display">\[
      \beta_0 U(C_t,z_t,v_t)+ E_t \sum_{\tau=t+1}^{T-t} \beta_{\tau+j}U(C_\tau,z_\tau,v_\tau)
 \tag{7}\]</span></span> sujeto a <span id="eq-ec:e2"><span class="math display">\[
@@ -305,11 +345,11 @@ W_T\geq0
 <p>considerando una variación desde esta estrategia</p>
 <p>Si los consumidores tienen expectativas racionales, entonces: <span id="eq-ec:a7"><span class="math display">\[
      C_{t+1}=C_t+\varepsilon_{t+1} \qquad E\left( \varepsilon_{t+1}|W_t \right)=0
-\tag{9}\]</span></span> para todas las variables <span class="math inline">\(W\)</span> conocidas al instante <span class="math inline">\(t\)</span>. La ecuación <a href="#eq-ec:a7">Ecuación&nbsp;9</a> se puede utilizar para derivar una función de consumo, en el caso de que no exista ningún tipo otro activo disponible para el consumidor <span class="citation" data-cites="Bewley1977252">(como en, <a href="#ref-Bewley1977252" role="doc-biblioref">Bewley 1977</a>)</span> y la única variable estocástica es la renta del trabajo. Sustituyendo en <a href="#eq-ec:a7">Ecuación&nbsp;9</a> en las restricciones presupuestarias, <span class="citation" data-cites="Flavin1981974">(<a href="#ref-Flavin1981974" role="doc-biblioref">Flavin 1981</a>)</span> muestra que el consumo se iguala a la renta permanente, definido como la tasa de interés multiplicada por el valor presente de los ingresos actuales y futuros esperados:</p>
+\tag{9}\]</span></span> para todas las variables <span class="math inline">\(W\)</span> conocidas al instante <span class="math inline">\(t\)</span>. La ecuación <a href="#eq-ec:a7" class="quarto-xref">Ecuación&nbsp;9</a> se puede utilizar para derivar una función de consumo, en el caso de que no exista ningún tipo otro activo disponible para el consumidor <span class="citation" data-cites="Bewley1977252">(como en, <a href="#ref-Bewley1977252" role="doc-biblioref">Bewley 1977</a>)</span> y la única variable estocástica es la renta del trabajo. Sustituyendo en <a href="#eq-ec:a7" class="quarto-xref">Ecuación&nbsp;9</a> en las restricciones presupuestarias, <span class="citation" data-cites="Flavin1981974">(<a href="#ref-Flavin1981974" role="doc-biblioref">Flavin 1981</a>)</span> muestra que el consumo se iguala a la renta permanente, definido como la tasa de interés multiplicada por el valor presente de los ingresos actuales y futuros esperados:</p>
 <p><span id="eq-ec:a8"><span class="math display">\[
      C_t=\frac{r}{1+r}A_t +\frac{r}{1+r}\sum_{k=0}^\infty E\left(y_{t+k} | I_t\right)
 \tag{10}\]</span></span></p>
-<p>La ecuación <a href="#eq-ec:a8">Ecuación&nbsp;10</a> se deriva para el caso especial de vida infinita, pero se puede derivar una extensión a la vida finita.</p>
+<p>La ecuación <a href="#eq-ec:a8" class="quarto-xref">Ecuación&nbsp;10</a> se deriva para el caso especial de vida infinita, pero se puede derivar una extensión a la vida finita.</p>
 </section>
 </section>
 <section id="otro-modelo-de-consumo" class="level2">
@@ -317,15 +357,15 @@ W_T\geq0
 <p>Una vez que tenemos estas definiciones podemos entonces incluir que si se sigue a <span class="citation" data-cites="Campbell19871249">(<a href="#ref-Campbell19871249" role="doc-biblioref">J. Y. Campbell 1987</a>)</span> y se define el ahorro como <span id="eq-ec:a17"><span class="math display">\[
     s_t=\frac{rA_t}{1+r} +y_t -C_t
 \tag{11}\]</span></span></p>
-<p>Ahora si <span class="math inline">\(P(L) y_t=a+\zeta_t\)</span>, donde <span class="math inline">\(P(L)\)</span> es un polinomio en el operador de retardos y <span class="math inline">\(\zeta_t\)</span> es un ruido blanco. En este caso la ecuación <a href="#eq-ec:a8">Ecuación&nbsp;10</a> implica <span class="citation" data-cites="Flavin1981974">(<a href="#ref-Flavin1981974" role="doc-biblioref">Flavin 1981</a>)</span> que: <span id="eq-ec:a16"><span class="math display">\[
+<p>Ahora si <span class="math inline">\(P(L) y_t=a+\zeta_t\)</span>, donde <span class="math inline">\(P(L)\)</span> es un polinomio en el operador de retardos y <span class="math inline">\(\zeta_t\)</span> es un ruido blanco. En este caso la ecuación <a href="#eq-ec:a8" class="quarto-xref">Ecuación&nbsp;10</a> implica <span class="citation" data-cites="Flavin1981974">(<a href="#ref-Flavin1981974" role="doc-biblioref">Flavin 1981</a>)</span> que: <span id="eq-ec:a16"><span class="math display">\[
     P\left(\frac{1}{1+r}\right)\Delta C_{t+1}= \frac{r}{1+r}\zeta_{t+1}
 \tag{12}\]</span></span></p>
-<p>luego podemos reescribir <a href="#eq-ec:a16">Ecuación&nbsp;12</a> como: <span id="eq-ec:a18"><span class="math display">\[
+<p>luego podemos reescribir <a href="#eq-ec:a16" class="quarto-xref">Ecuación&nbsp;12</a> como: <span id="eq-ec:a18"><span class="math display">\[
     s_t=- \sum_{k=1}^\infty (1+r)^{-k} E\left(\Delta y_{t+k}|I_t \right)
 \tag{13}\]</span></span></p>
-<p>La ecuación <a href="#eq-ec:a18">Ecuación&nbsp;13</a> muestra que los individuos deberían “ahorrar para tiempos difíciles” (los ingresos futuros caen), y se mantiene (por la ley de las proyecciones iteradas) incluso si consideramos las expectativas condicionadas a un subconjunto de la información utilizada por los agentes económicos, como el pasado. ingreso y ahorro.</p>
+<p>La ecuación <a href="#eq-ec:a18" class="quarto-xref">Ecuación&nbsp;13</a> muestra que los individuos deberían “ahorrar para tiempos difíciles” (los ingresos futuros caen), y se mantiene (por la ley de las proyecciones iteradas) incluso si consideramos las expectativas condicionadas a un subconjunto de la información utilizada por los agentes económicos, como el pasado. ingreso y ahorro.</p>
 <div id="prp-line" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposición 1 </strong></span>Si <span class="math inline">\(C_t\)</span> es un paseo aleatorio y además los consumidores tienen expectativas racionales y por otro lado <span class="math inline">\(Y_t\sim AR(1)\)</span> y además <span class="math inline">\(Y_t\sim I(1)\)</span> entonces: <span id="eq-ec:jb1"><span class="math display">\[
+<p><span class="theorem-title"><strong>Proposición 1</strong></span> Si <span class="math inline">\(C_t\)</span> es un paseo aleatorio y además los consumidores tienen expectativas racionales y por otro lado <span class="math inline">\(Y_t\sim AR(1)\)</span> y además <span class="math inline">\(Y_t\sim I(1)\)</span> entonces: <span id="eq-ec:jb1"><span class="math display">\[
 C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}A_{t+1}
 \tag{14}\]</span></span> en el caso de no tener información disponible sobre <span class="math inline">\(\eta\)</span>, donde <span class="math inline">\(\eta\)</span> es la razón entre la tasa de interés pasada y la tasa de interés actual, y no disponer información del activo <span class="math inline">\(A_{t+1}\)</span>, el modelo puedo escribirse como <span id="eq-ec:jb2"><span class="math display">\[
     C_{t+1}=aC_t+bY_{t+1}+ u_{t+1}
@@ -339,75 +379,107 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 <section id="bolivia" class="level3">
 <h3 class="anchored" data-anchor-id="bolivia">Bolivia</h3>
 <div id="fig-Bolivia" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-bol" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/bol.png" class="img-fluid figure-img" data-ref-parent="fig-Bolivia"></p>
-<figcaption class="figure-caption">(a) Original</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Bolivia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Bolivia" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-bol" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-bol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/bol.png" class="img-fluid figure-img" data-ref-parent="fig-Bolivia">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Original
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-bol_tr" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/bol_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Bolivia"></p>
-<figcaption class="figure-caption">(b) Corregida</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Bolivia" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-bol_tr" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-bol_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/bol_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Bolivia">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bol_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Corregida
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figura&nbsp;1: Serie para Bolivia original y corregida por software TRAMO/SEATS<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></figcaption><p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Bolivia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Serie para Bolivia original y corregida por software TRAMO/SEATS<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>
+</figcaption>
 </figure>
 </div>
-<div id="fig-bol_ir" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/bol_ir.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figura&nbsp;2: Serie de irregularidades para Bolivia</figcaption>
+<div id="fig-bol_ir" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bol_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/bol_ir.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bol_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Serie de irregularidades para Bolivia
+</figcaption>
 </figure>
 </div>
-<p>En la figura <a href="#fig-bol_ir">Figura&nbsp;2</a> se observa que la serie presenta irregularidades que se describen a continuación:</p>
+<p>En la figura <a href="#fig-bol_ir" class="quarto-xref">Figura&nbsp;2</a> se observa que la serie presenta irregularidades que se describen a continuación:</p>
 <ul>
 <li><span class="math inline">\(1962\)</span></li>
 <li><span class="math inline">\(1964\)</span> El gobierno se vio interrumpido por medio de un golpe militar, a partir de lo cual Bolivia habría de vivir dictaduras.</li>
 <li><span class="math inline">\(1972\)</span> Presencia de una dictadura en el gobierno y contrato de venta de gas a Argentina.</li>
 <li><span class="math inline">\(1977\)</span> Extraordinario nivel de precios de las materias primas (el estaño llegó a cotizarse en ocho dólares la libra ﬁna) y una gran apertura de créditos internacionales.</li>
 </ul>
-<p>En la figura <a href="#fig-bol_tr">Figura&nbsp;1 (b)</a> se puede observar que la serie posee cierta tendencia que en principio debe ser estocástica puesto que la población y el desarrollo sigue en crecimiento.</p>
+<p>En la figura <a href="#fig-bol_tr" class="quarto-xref">Figura&nbsp;1 (b)</a> se puede observar que la serie posee cierta tendencia que en principio debe ser estocástica puesto que la población y el desarrollo sigue en crecimiento.</p>
 </section>
 <section id="colombia" class="level3">
 <h3 class="anchored" data-anchor-id="colombia">Colombia</h3>
 <div id="fig-Colombia" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-col" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/col.png" class="img-fluid figure-img" data-ref-parent="fig-Colombia"></p>
-<figcaption class="figure-caption">(a) Original</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Colombia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Colombia" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-col" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-col-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/col.png" class="img-fluid figure-img" data-ref-parent="fig-Colombia">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-col-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Original
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-col_tr" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/col_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Colombia"></p>
-<figcaption class="figure-caption">(b) Corregida</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Colombia" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-col_tr" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-col_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/col_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Colombia">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-col_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Corregida
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figura&nbsp;3: Serie para Colombia original y corregida por software TRAMO/SEATS</figcaption><p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Colombia-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3: Serie para Colombia original y corregida por software TRAMO/SEATS
+</figcaption>
 </figure>
 </div>
-<div id="fig-col_ir" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/col_ir.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figura&nbsp;4: Serie de irregularidades para Colombia</figcaption>
+<div id="fig-col_ir" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-col_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/col_ir.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-col_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4: Serie de irregularidades para Colombia
+</figcaption>
 </figure>
 </div>
-<p>En la figura <a href="#fig-col_ir">Figura&nbsp;4</a>} se observa que la serie presenta irregularidades que se describen a continuación</p>
+<p>En la figura <a href="#fig-col_ir" class="quarto-xref">Figura&nbsp;4</a>} se observa que la serie presenta irregularidades que se describen a continuación</p>
 <ul>
 <li><span class="math inline">\(1964\)</span> Aparecen las FARC ,quienes aprobaron en su constitución un programa agrario que pretende la entrega gratuita de las tierras a los campesinos</li>
 <li><span class="math inline">\(1965\)</span> Empiezan los ataques de las guerrillas mismo que se extienden hasta estos días.</li>
@@ -421,35 +493,51 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 <section id="ecuador" class="level3">
 <h3 class="anchored" data-anchor-id="ecuador">Ecuador</h3>
 <div id="fig-Ecuador" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-ecu" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/ecu.png" class="img-fluid figure-img" data-ref-parent="fig-Ecuador"></p>
-<figcaption class="figure-caption">(a) Original</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Ecuador-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Ecuador" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ecu" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ecu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/ecu.png" class="img-fluid figure-img" data-ref-parent="fig-Ecuador">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ecu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Original
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-ecu_tr" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/ecu_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Ecuador"></p>
-<figcaption class="figure-caption">(b) Corregida</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Ecuador" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ecu_tr" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-ecu_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/ecu_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Ecuador">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ecu_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Corregida
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figura&nbsp;5: Serie para Colombia original y corregida por software TRAMO/SEATS</figcaption><p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Ecuador-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;5: Serie para Colombia original y corregida por software TRAMO/SEATS
+</figcaption>
 </figure>
 </div>
-<div id="fig-ecu_ir" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/ecu_ir.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figura&nbsp;6: Serie de irregularidades para Ecuador</figcaption>
+<div id="fig-ecu_ir" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ecu_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/ecu_ir.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ecu_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;6: Serie de irregularidades para Ecuador
+</figcaption>
 </figure>
 </div>
-<p>En la figura <a href="#fig-ecu_ir">Figura&nbsp;6</a>} se observa que la serie presenta irregularidades que se describen a continuación:</p>
+<p>En la figura <a href="#fig-ecu_ir" class="quarto-xref">Figura&nbsp;6</a>} se observa que la serie presenta irregularidades que se describen a continuación:</p>
 <ul>
 <li><span class="math inline">\(1973\)</span> La apropiación de los beneficios del petróleo “la renta petrolera” se constituyó en objetivo de disputa de grupos sociales y organizaciones políticas.</li>
 <li><span class="math inline">\(1998\)</span> La permisividad social a favor de monopolios y oligopolios<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></li>
@@ -459,177 +547,257 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 <section id="perú" class="level3">
 <h3 class="anchored" data-anchor-id="perú">Perú</h3>
 <div id="fig-Perú" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-per" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/per.png" class="img-fluid figure-img" data-ref-parent="fig-Perú"></p>
-<figcaption class="figure-caption">(a) Original</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Perú-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Perú" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-per" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-per-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/per.png" class="img-fluid figure-img" data-ref-parent="fig-Perú">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-per-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Original
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-per_tr" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/per_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Perú"></p>
-<figcaption class="figure-caption">(b) Corregida</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-Perú" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-per_tr" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-per_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/per_tr.png" class="img-fluid figure-img" data-ref-parent="fig-Perú">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-per_tr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Corregida
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figura&nbsp;7: Serie para Colombia original y corregida por software TRAMO/SEATS</figcaption><p></p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Perú-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;7: Serie para Colombia original y corregida por software TRAMO/SEATS
+</figcaption>
 </figure>
 </div>
-<div id="fig-per_ir" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/per_ir.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figura&nbsp;8: Serie de irregularidades para Ecuador</figcaption>
+<div id="fig-per_ir" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-per_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/per_ir.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-per_ir-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;8: Serie de irregularidades para Ecuador
+</figcaption>
 </figure>
 </div>
-<p>En la figura <a href="#fig-per_ir">Figura&nbsp;8</a> se observa que la serie presenta irregularidades que se describen a continuación:</p>
+<p>En la figura <a href="#fig-per_ir" class="quarto-xref">Figura&nbsp;8</a> se observa que la serie presenta irregularidades que se describen a continuación:</p>
 <ul>
 <li><span class="math inline">\(1983\)</span> Fenómeno del niño y caída del precio de los metales.</li>
 <li><span class="math inline">\(1985\)</span> El sol fue reemplazado por el inti con un valor de <span class="math inline">\(1000\)</span> soles (devaluación de la moneda).</li>
 <li><span class="math inline">\(1987\)</span> Se empieza a sentir los efectos de las políticas intervencionistas implementadas un años atrás.</li>
 <li><span class="math inline">\(1989\)</span> Devaluación del inti</li>
 </ul>
-<p>A continuación en la figura <a href="#fig-graf:modelos">Figura&nbsp;9</a> presentamos las gráficas de Consumo y Renta para cada uno de los países de Latinoamérica y Caribe seleccionados para este estudio.</p>
+<p>A continuación en la figura <a href="#fig-graf:modelos" class="quarto-xref">Figura&nbsp;9</a> presentamos las gráficas de Consumo y Renta para cada uno de los países de Latinoamérica y Caribe seleccionados para este estudio.</p>
 <div id="fig-graf:modelos" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Bol.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(a)</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-graf:modelos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Bol.png" id="fig-mod1" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a)
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Bra.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(b)</figcaption>
-</figure>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Bra.png" id="fig-mod2" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
 </div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Chi.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(c)</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod4" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Col.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(d)</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod5" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_CostR.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(e)</figcaption>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod3" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Chi.png" id="fig-mod3" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c)
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod6" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Ecu.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(f)</figcaption>
-</figure>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod4" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Col.png" id="fig-mod4" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
 </div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod7" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Guat.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(g)</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod8" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Hon.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(h)</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d)
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod9" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Mex.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(i)</figcaption>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod5" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_CostR.png" id="fig-mod5" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(e)
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod10" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Nic.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(j)</figcaption>
-</figure>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod6" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Ecu.png" id="fig-mod6" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
 </div>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod11" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Pan.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(k)</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod12" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Par.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(l)</figcaption>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(f)
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod13" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Per.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(m)</figcaption>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod7" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Guat.png" id="fig-mod7" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(g)
+</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-mod14" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Images/mod_Rdom.png" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos"></p>
-<figcaption class="figure-caption">(n)</figcaption>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod8" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Hon.png" id="fig-mod8" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(h)
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figura&nbsp;9: Gráfica de Series Consumo y Renta para los 14 países de Latinoámerica y Caribe</figcaption><p></p>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod9" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Mex.png" id="fig-mod9" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(i)
+</figcaption>
 </figure>
 </div>
-<p>En la tabla <a href="#tbl-raiz_unit">Tabla&nbsp;1</a> se realiza el contraste de Dickey-fuller aumentado (ADF) para las series corregidas.</p>
-<div id="tbl-raiz_unit" class="anchored">
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod10" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Nic.png" id="fig-mod10" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(j)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod11" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Pan.png" id="fig-mod11" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(k)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod12" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Par.png" id="fig-mod12" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(l)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod13" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Per.png" id="fig-mod13" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(m)
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-graf:modelos" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-mod14" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-mod14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/mod_Rdom.png" id="fig-mod14" class="img-fluid figure-img" data-ref-parent="fig-graf:modelos">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-mod14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(n)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-graf:modelos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;9: Gráfica de Series Consumo y Renta para los 14 países de Latinoámerica y Caribe
+</figcaption>
+</figure>
+</div>
+<p>En la tabla <a href="#tbl-raiz_unit" class="quarto-xref">Tabla&nbsp;1</a> se realiza el contraste de Dickey-fuller aumentado (ADF) para las series corregidas.</p>
+<div id="tbl-raiz_unit" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-raiz_unit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;1: Contraste de raíz unitaria Dickey Fuller aumentado
+</figcaption>
+<div aria-describedby="tbl-raiz_unit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tabla&nbsp;1: Contraste de raíz unitaria Dickey Fuller aumentado</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">País</th>
@@ -822,12 +990,18 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 </tbody>
 </table>
 </div>
-<p>En la tabla <a href="#tbl-raiz_unit">Tabla&nbsp;1</a> se ha realizado el contraste ADF para cada una de las series tanto de Renta (PIB) como de Consumo (Consumo familiar). Es así que de manera general tenemos que para todos las series.</p>
+</figure>
+</div>
+<p>En la tabla <a href="#tbl-raiz_unit" class="quarto-xref">Tabla&nbsp;1</a> se ha realizado el contraste ADF para cada una de las series tanto de Renta (PIB) como de Consumo (Consumo familiar). Es así que de manera general tenemos que para todos las series.</p>
 <p>Dada la hipótesis nula de no estacionariedad frente a la alternativa de estacionariedad, El estadístico de contraste de ADF para el caso sin constante para el cual su distribución se encuentra tabulada por Dickey Fuller. Entonces para un nivel de significancia del <span class="math inline">\(\alpha=0.05\)</span> puesto que el valor <span class="math inline">\(p\)</span> del estadístico es mayor que <span class="math inline">\(\alpha\)</span>, No se rechazo la hipótesis nula de no estacionariedad.</p>
 <p>Ahora bien se procederá a realizar el contraste de Johansen para el caso sin constante.</p>
-<div id="tbl-coin_johan" class="anchored">
+<div id="tbl-coin_johan" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-coin_johan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;2: Contraste de Cointegración de Johansen
+</figcaption>
+<div aria-describedby="tbl-coin_johan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tabla&nbsp;2: Contraste de Cointegración de Johansen</caption>
 <colgroup>
 <col style="width: 21%">
 <col style="width: 21%">
@@ -946,11 +1120,17 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 </tbody>
 </table>
 </div>
-<p>En la tabla <a href="#tbl-coin_johan">Tabla&nbsp;2</a> se ha realizado el contraste de cointegración de Johansen entre las series tanto de Renta (PIB) como de Consumo (Consumo familiar) para cada país. Es así que de manera general tenemos que para cada país.</p>
-<p>Dada la hipótesis nula de que el rango de la matriz de cointegración es <span class="math inline">\(0\)</span> frente a la alternativa de que el rango de cointegración es <span class="math inline">\(1\)</span>. Entonces tenemos que para Honduras, México, Nicaragua, las series de consumo y renta no están cointegradas pues para un nivel de significancia <span class="math inline">\(alpha=0.05\)</span> no se rechaza la hipótesis nula de que el rango de la matriz de cointegración es <span class="math inline">\(0\)</span>. Por otro lado, para el resto de países menos Ecuador se tiene que dada la hipótesis nula rango de la matriz de cointegración es <span class="math inline">\(1\)</span> frente a la alternativa rango de la matriz de cointegración es <span class="math inline">\(2\)</span>, para un nivel de significancia <span class="math inline">\(\alpha=0.05\)</span> no se rechaza la hipótesis nula de que el rango de cointegración es <span class="math inline">\(1\)</span> con valores <span class="math inline">\(p\)</span> dados en la tabla <a href="#tbl-coin_johan">Tabla&nbsp;2</a>. Finalmente, para Ecuador se tienen que para un nivel de significancia <span class="math inline">\(\alpha=0.05\)</span> Se rechaza la hipótesis nula de que el rango de cointegración es <span class="math inline">\(1\)</span>.</p>
-<div id="tbl-causa" class="anchored">
+</figure>
+</div>
+<p>En la tabla <a href="#tbl-coin_johan" class="quarto-xref">Tabla&nbsp;2</a> se ha realizado el contraste de cointegración de Johansen entre las series tanto de Renta (PIB) como de Consumo (Consumo familiar) para cada país. Es así que de manera general tenemos que para cada país.</p>
+<p>Dada la hipótesis nula de que el rango de la matriz de cointegración es <span class="math inline">\(0\)</span> frente a la alternativa de que el rango de cointegración es <span class="math inline">\(1\)</span>. Entonces tenemos que para Honduras, México, Nicaragua, las series de consumo y renta no están cointegradas pues para un nivel de significancia <span class="math inline">\(alpha=0.05\)</span> no se rechaza la hipótesis nula de que el rango de la matriz de cointegración es <span class="math inline">\(0\)</span>. Por otro lado, para el resto de países menos Ecuador se tiene que dada la hipótesis nula rango de la matriz de cointegración es <span class="math inline">\(1\)</span> frente a la alternativa rango de la matriz de cointegración es <span class="math inline">\(2\)</span>, para un nivel de significancia <span class="math inline">\(\alpha=0.05\)</span> no se rechaza la hipótesis nula de que el rango de cointegración es <span class="math inline">\(1\)</span> con valores <span class="math inline">\(p\)</span> dados en la tabla <a href="#tbl-coin_johan" class="quarto-xref">Tabla&nbsp;2</a>. Finalmente, para Ecuador se tienen que para un nivel de significancia <span class="math inline">\(\alpha=0.05\)</span> Se rechaza la hipótesis nula de que el rango de cointegración es <span class="math inline">\(1\)</span>.</p>
+<div id="tbl-causa" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-causa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabla&nbsp;3: Contraste de no Causalidad de Dumitrescu-Hurlin entre Consumo y Renta
+</figcaption>
+<div aria-describedby="tbl-causa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tabla&nbsp;3: Contraste de no Causalidad de Dumitrescu-Hurlin entre Consumo y Renta</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">País</th>
@@ -1047,7 +1227,9 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 </tbody>
 </table>
 </div>
-<p>En la tabla <a href="#tbl-causa">Tabla&nbsp;3</a> se ha realizado un resumen del contraste de no causalidad de Dumitrescu-Hurlin para cada modelo de consumo de cada país. Dada la hipótesis nula de <span class="math inline">\(Y\)</span> no causa <span class="math inline">\(X\)</span> frente a la hipótesis alternativa <span class="math inline">\(Y\)</span> causa <span class="math inline">\(X\)</span>. tenemos que para los siguientes países: Brasil, Chile, Ecuador, Guatemala, Perú. Para un nivel de significancia <span class="math inline">\(\alpha=0.05\)</span> se rechaza la hipótesis nula de no causalidad con valores <span class="math inline">\(p\)</span> dados en la tabla <a href="#tbl-causa">Tabla&nbsp;3</a>. Para el resto de países no se rechaza la hipótesis nula de no causalidad.</p>
+</figure>
+</div>
+<p>En la tabla <a href="#tbl-causa" class="quarto-xref">Tabla&nbsp;3</a> se ha realizado un resumen del contraste de no causalidad de Dumitrescu-Hurlin para cada modelo de consumo de cada país. Dada la hipótesis nula de <span class="math inline">\(Y\)</span> no causa <span class="math inline">\(X\)</span> frente a la hipótesis alternativa <span class="math inline">\(Y\)</span> causa <span class="math inline">\(X\)</span>. tenemos que para los siguientes países: Brasil, Chile, Ecuador, Guatemala, Perú. Para un nivel de significancia <span class="math inline">\(\alpha=0.05\)</span> se rechaza la hipótesis nula de no causalidad con valores <span class="math inline">\(p\)</span> dados en la tabla <a href="#tbl-causa" class="quarto-xref">Tabla&nbsp;3</a>. Para el resto de países no se rechaza la hipótesis nula de no causalidad.</p>
 </section>
 </section>
 </section>
@@ -1055,13 +1237,13 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 <h1>Resultados, Conclusiones</h1>
 <section id="resultados" class="level2">
 <h2 class="anchored" data-anchor-id="resultados">Resultados</h2>
-<p>En la tabla <a href="#tbl-raiz_unit">Tabla&nbsp;1</a> se ha evidenciado que tanto las series de Consumo así como las series De Renta poseen una raíz unitaria es decir son series integradas de orden uno. Además se observa que para la mayoría de países el valor <span class="math inline">\(p\)</span> es mayor a <span class="math inline">\(0.95\)</span> es decir tenemos una gran certeza de que nuestras series son no estacionarias, lo cual nos permite realizar el análisis sobre el modelo <a href="#eq-ec:jb2">Ecuación&nbsp;15</a>.</p>
-<p>Ahora bien, una vez tenemos que las series son no estacionarias en la tabla <a href="#tbl-coin_johan">Tabla&nbsp;2</a> se ha realizado la prueba de cointegración de Johansen para el caso sin constante. De donde, se ha obtenido que los países de Ecuador, Honduras, México, y Nicaragua no se encuentra cointegrados esto puede ser debido a que para estos países las series tanto de Consumo y Renta al momento de analizar las intervenciones para esta se evidencio que las series tienen ciertas irregularidades que si bien se esperaba que quedaran enterradas en las innovaciones, estas no pueden absorberlas del todo.</p>
+<p>En la tabla <a href="#tbl-raiz_unit" class="quarto-xref">Tabla&nbsp;1</a> se ha evidenciado que tanto las series de Consumo así como las series De Renta poseen una raíz unitaria es decir son series integradas de orden uno. Además se observa que para la mayoría de países el valor <span class="math inline">\(p\)</span> es mayor a <span class="math inline">\(0.95\)</span> es decir tenemos una gran certeza de que nuestras series son no estacionarias, lo cual nos permite realizar el análisis sobre el modelo <a href="#eq-ec:jb2" class="quarto-xref">Ecuación&nbsp;15</a>.</p>
+<p>Ahora bien, una vez tenemos que las series son no estacionarias en la tabla <a href="#tbl-coin_johan" class="quarto-xref">Tabla&nbsp;2</a> se ha realizado la prueba de cointegración de Johansen para el caso sin constante. De donde, se ha obtenido que los países de Ecuador, Honduras, México, y Nicaragua no se encuentra cointegrados esto puede ser debido a que para estos países las series tanto de Consumo y Renta al momento de analizar las intervenciones para esta se evidencio que las series tienen ciertas irregularidades que si bien se esperaba que quedaran enterradas en las innovaciones, estas no pueden absorberlas del todo.</p>
 <p>Finalmente, para los países cuyo modelo si esta cointegrado se ha realizado un contraste de causalidad viendo a estos datos como un panel de series apiladas. Es así que se ha obtenido que para países cuyas intervenciones han sido absorbidas por las innovaciones el modelo propuesto en este trabajo ayuda a mejorar la predicción del consumo.</p>
 </section>
 <section id="conclusiones" class="level2">
 <h2 class="anchored" data-anchor-id="conclusiones">Conclusiones</h2>
-<p>Dado que uno de los objetivos de este trabajo fue revisar los modelos de ciclo de vida y funciones de consumo desde el punto de vista neoclásico, para los cuales si bien el lineamiento esta bastante acertado, en este trabajo se ha propuesto un modelo que mejora el modelo neoclásico. Esto se evidencia para países en los que los datos no tienen intervenciones de gran impacto es decir que su perturbaciones pueden ser absorbidas por las innovaciones al instante <span class="math inline">\(t+1\)</span>. El modelo <a href="#eq-ec:jb2">Ecuación&nbsp;15</a> ayuda a predecir de manera mas eficiente el Consumo; debido a que para estos países el tener información acerca de la renta en cada instante ayuda a predecir el consumo al instante <span class="math inline">\(t+1\)</span>. Por otro lado para los países, para los cuales las innovaciones causan impactos demasiado grandes, no se puede decir con certeza que el modelo propuesto no seria bueno. Puesto que, si se lograra mitigar los mencionados impactos en el tratamiento de la data podría darse cualquier resultado. Desde un punto de vista econométrico el modelo propuesto bajo las condiciones impuestas ayuda a establecer una relación entre la Renta y el Consumo esta relación es del tipo causal de Granger.</p>
+<p>Dado que uno de los objetivos de este trabajo fue revisar los modelos de ciclo de vida y funciones de consumo desde el punto de vista neoclásico, para los cuales si bien el lineamiento esta bastante acertado, en este trabajo se ha propuesto un modelo que mejora el modelo neoclásico. Esto se evidencia para países en los que los datos no tienen intervenciones de gran impacto es decir que su perturbaciones pueden ser absorbidas por las innovaciones al instante <span class="math inline">\(t+1\)</span>. El modelo <a href="#eq-ec:jb2" class="quarto-xref">Ecuación&nbsp;15</a> ayuda a predecir de manera mas eficiente el Consumo; debido a que para estos países el tener información acerca de la renta en cada instante ayuda a predecir el consumo al instante <span class="math inline">\(t+1\)</span>. Por otro lado para los países, para los cuales las innovaciones causan impactos demasiado grandes, no se puede decir con certeza que el modelo propuesto no seria bueno. Puesto que, si se lograra mitigar los mencionados impactos en el tratamiento de la data podría darse cualquier resultado. Desde un punto de vista econométrico el modelo propuesto bajo las condiciones impuestas ayuda a establecer una relación entre la Renta y el Consumo esta relación es del tipo causal de Granger.</p>
 
 
 
@@ -1069,7 +1251,7 @@ C_{t+1}=\frac{1}{1- \eta}C_t +\frac{\eta}{1-\eta} y_{t+1} +\frac{\eta^2}{1-\eta}
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Attanasio2000" class="csl-entry" role="listitem">
 Attanasio, O. 2000. <span>«Consumer durables and inertial behaviour: Estimation and aggregation of (S, s) rules for automobile purchases»</span>. <em>Review of Economic Studies</em> 67 (4): 667-96.
 </div>
@@ -1221,6 +1403,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1287,13 +1496,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1372,10 +1583,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1385,8 +1595,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1399,6 +1618,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1442,6 +1780,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1467,6 +1806,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1527,6 +1892,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
