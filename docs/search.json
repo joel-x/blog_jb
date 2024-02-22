@@ -270,35 +270,35 @@
     "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#frecuencia-de-los-tipos-de-acciedentes",
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "Frecuencia de los tipos de acciedentes",
-    "text": "Frecuencia de los tipos de acciedentes\n\nsb.countplot(x=df['Collision Type'],palette='Set3')\nplt.ylabel('Frecuencia')\nplt.xticks(rotation=65)\nplt.title(\"Frecuencia de tipos de Accidentes\")\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que existe una mayor cantidad de accidentes entre dos vehículos, por otro lado la cantidad de accidentes de bicicletas es la menor."
+    "text": "Frecuencia de los tipos de acciedentes\n\nsb.countplot(x=df['Collision Type'],palette='Set3')\nplt.ylabel('Frecuencia')\nplt.xticks(rotation=65)\nplt.title(\"Frecuencia de tipos de Accidentes\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que existe una mayor cantidad de accidentes entre dos vehículos, por otro lado la cantidad de accidentes de bicicletas es la menor."
   },
   {
     "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#accidentes-ocurridos-entre-semana-vs-fin-de-semana",
     "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#accidentes-ocurridos-entre-semana-vs-fin-de-semana",
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "Accidentes ocurridos entre semana vs fin de semana",
-    "text": "Accidentes ocurridos entre semana vs fin de semana\n\nsb.countplot(x=df['Weekend?'],palette='Accent')\nplt.ylabel('Frecuencia')\nplt.xticks(rotation=65)\nplt.title(\"Entre semana vs Fin de semana\")\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que el Fin de semana es cuando mas ocurren accidentes."
+    "text": "Accidentes ocurridos entre semana vs fin de semana\n\nsb.countplot(x=df['Weekend?'],palette='Accent')\nplt.ylabel('Frecuencia')\nplt.xticks(rotation=65)\nplt.title(\"Entre semana vs Fin de semana\")\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que el Fin de semana es cuando mas ocurren accidentes."
   },
   {
     "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#porcentaje-de-lesiones-por-categoria",
     "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#porcentaje-de-lesiones-por-categoria",
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "Porcentaje de lesiones por Categoria",
-    "text": "Porcentaje de lesiones por Categoria\n\nles_val=df['Injury Type'].value_counts()\nles_val\n\nInjury Type\nNo injury/unknown     41603\nNon-incapacitating    11136\nIncapacitating         1089\nFatal                   115\nName: count, dtype: int64\n\n\n\nplt.pie(les_val,labels=les_val.index,startangle=30,shadow=True,autopct='%1.1f%%',rotatelabels=30,explode=(0.1,0.1,0.1,0.1),colors=[c4(0.9),c4(0.2),c4(0.3),c4(0.6)])\nplt.title('Porcentaje de lesiones por Categoria')\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que el \\(0.2\\%\\) de accidentes son Fatales. Por otro lado algo que sería de mucho interes saber de cuantos accidentes no se conoce la lesión ocasionada puesto que la probabilidad de no tener lesiones es muy baja."
+    "text": "Porcentaje de lesiones por Categoria\n\nles_val=df['Injury Type'].value_counts()\nles_val\n\nInjury Type\nNo injury/unknown     41603\nNon-incapacitating    11136\nIncapacitating         1089\nFatal                   115\nName: count, dtype: int64\n\n\n\nplt.pie(les_val,labels=les_val.index,startangle=30,shadow=True,autopct='%1.1f%%',rotatelabels=30,explode=(0.1,0.1,0.1,0.1),colors=[c4(0.9),c4(0.2),c4(0.3),c4(0.6)])\nplt.title('Porcentaje de lesiones por Categoria')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\nObservamos que el \\(0.2\\%\\) de accidentes son Fatales. Por otro lado algo que sería de mucho interes saber de cuantos accidentes no se conoce la lesión ocasionada puesto que la probabilidad de no tener lesiones es muy baja."
   },
   {
     "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#motivo-mas-comun-por-el-cual-suceden-accidentes",
     "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#motivo-mas-comun-por-el-cual-suceden-accidentes",
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "Motivo mas comun por el cual suceden accidentes",
-    "text": "Motivo mas comun por el cual suceden accidentes\nPrimero indagaremos cuantos Factores Primarios existen en la data\n\ndf['Primary Factor'].nunique()\n\n55\n\n\nDado que existen \\(55\\) Factores Primarios nos quedaremos con el top 20\n\npfdf=df['Primary Factor'].value_counts().head(20)\n\n\nfig=plt.figure(figsize=(10,10))\naxis=fig.add_axes([1,1,1,1])\nsb.swarmplot(x=pfdf,y=pfdf.index,ax=axis)\nfor i,j in enumerate(pfdf):\n  axis.text(j,i,j)\nplt.xlabel('Ocurrencia')\nplt.title('Motivos principales por los que ocurren accidentes')\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "Motivo mas comun por el cual suceden accidentes\nPrimero indagaremos cuantos Factores Primarios existen en la data\n\ndf['Primary Factor'].nunique()\n\n55\n\n\nDado que existen \\(55\\) Factores Primarios nos quedaremos con el top 20\n\npfdf=df['Primary Factor'].value_counts().head(20)\n\n\nfig=plt.figure(figsize=(10,10))\naxis=fig.add_axes([1,1,1,1])\nsb.swarmplot(x=pfdf,y=pfdf.index,ax=axis)\nfor i,j in enumerate(pfdf):\n  axis.text(j,i,j)\nplt.xlabel('Ocurrencia')\nplt.title('Motivos principales por los que ocurren accidentes')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#top-30-lugares-mas-frecuente-donde-ocurren-accidentes",
     "href": "posts/2024-1-13-Accidentes automovilisticos/index.html#top-30-lugares-mas-frecuente-donde-ocurren-accidentes",
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "Top 30 lugares mas frecuente donde ocurren accidentes",
-    "text": "Top 30 lugares mas frecuente donde ocurren accidentes\n\nldf=df['Reported_Location'].value_counts().head(30)\n\n\nfig1=plt.figure()\naxis1=fig1.add_axes([1,1,1,1])\nsb.barplot(x=ldf,y=ldf.index,ax=axis1,palette=\"viridis\")\nfor i,j in enumerate(ldf):\n  axis1.text(j,i,j,va='top')\naxis1.set_xlabel('Frecuencia')\naxis1.set_title('Lugares con mayor frecuencia de Accidentes')\nplt.show()\nplt.clf()\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+    "text": "Top 30 lugares mas frecuente donde ocurren accidentes\n\nldf=df['Reported_Location'].value_counts().head(30)\n\n\nfig1=plt.figure()\naxis1=fig1.add_axes([1,1,1,1])\nsb.barplot(x=ldf,y=ldf.index,ax=axis1,palette=\"viridis\")\nfor i,j in enumerate(ldf):\n  axis1.text(j,i,j,va='top')\naxis1.set_xlabel('Frecuencia')\naxis1.set_title('Lugares con mayor frecuencia de Accidentes')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   },
   {
     "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html#tipos-de-colisiones-en-diferentes-años",
@@ -404,5 +404,47 @@
     "title": "Accidentes automovilisticos Conjunto de datos EDA",
     "section": "Gráfico Dinamico",
     "text": "Gráfico Dinamico\n\nimport plotly.express as px\n\n\npx.histogram(df,x='Collision Type', \nanimation_frame=df['Year'].sort_values(ascending=True),\ncolor='Collision Type', title='Accidentes por Tipo de Colisión'\n)"
+  },
+  {
+    "objectID": "contacto.html",
+    "href": "contacto.html",
+    "title": "Contactos",
+    "section": "",
+    "text": "0997868351"
+  },
+  {
+    "objectID": "contacto.html#linkedin-jxbsjb",
+    "href": "contacto.html#linkedin-jxbsjb",
+    "title": "Contactos",
+    "section": "LinkedIn : jxbsjb",
+    "text": "LinkedIn : jxbsjb"
+  },
+  {
+    "objectID": "contacto.html#email-joelburbanooutlook.com",
+    "href": "contacto.html#email-joelburbanooutlook.com",
+    "title": "Contactos",
+    "section": "Email : joelburbano@outlook.com",
+    "text": "Email : joelburbano@outlook.com"
+  },
+  {
+    "objectID": "contacto.html#linkedin-fa-linkedin-square-jxbsjb",
+    "href": "contacto.html#linkedin-fa-linkedin-square-jxbsjb",
+    "title": "Contactos",
+    "section": "LinkedIn  jxbsjb",
+    "text": "LinkedIn  jxbsjb"
+  },
+  {
+    "objectID": "contacto.html#whatsapp",
+    "href": "contacto.html#whatsapp",
+    "title": "Contactos",
+    "section": "",
+    "text": "0997868351"
+  },
+  {
+    "objectID": "contacto.html#whatsapp-r-fanamewhatsapp",
+    "href": "contacto.html#whatsapp-r-fanamewhatsapp",
+    "title": "Contactos",
+    "section": "",
+    "text": "0997868351"
   }
 ]

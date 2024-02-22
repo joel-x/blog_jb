@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://joel-x.github.io/jb_blog/index.html</loc>
-    <lastmod>2024-01-15T17:25:35.471Z</lastmod>
+    <lastmod>2023-12-20T17:34:23.391Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/about.html</loc>
-    <lastmod>2024-01-08T22:27:18.578Z</lastmod>
+    <lastmod>2023-12-19T21:26:35.877Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/blog.html</loc>
-    <lastmod>2024-01-15T17:25:37.284Z</lastmod>
+    <lastmod>2023-12-20T17:31:43.254Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects.html</loc>
-    <lastmod>2024-01-15T17:32:37.097Z</lastmod>
+    <lastmod>2023-12-20T17:35:54.423Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2020-12-01-r-rmarkdown/index.html</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/proyects/Tesis_JXBS/index.html</loc>
-    <lastmod>2024-01-15T17:32:36.377Z</lastmod>
+    <lastmod>2024-01-15T17:38:07.366Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/certificados/25-05-2023_Curso_power-BI/index.html</loc>
@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/certific.html</loc>
-    <lastmod>2024-01-08T22:34:34.221Z</lastmod>
+    <lastmod>2024-01-08T17:21:01.586Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/certificados/16-05-2023-Curso_de_PHP-MySQL/index.html</loc>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/certificados/19-05-2023_Curso_Tableau/index.html</loc>
-    <lastmod>2024-01-08T16:42:05.002Z</lastmod>
+    <lastmod>2024-01-08T16:41:57.463Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/certificados/03-09-2020-Curso-R/index.html</loc>
@@ -118,10 +118,14 @@
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/certificados/27-10-2023_Curso-R/index.html</loc>
-    <lastmod>2024-01-08T17:09:54.283Z</lastmod>
+    <lastmod>2024-01-08T17:09:53.074Z</lastmod>
   </url>
   <url>
     <loc>https://joel-x.github.io/jb_blog/posts/2024-1-13-Accidentes automovilisticos/index.html</loc>
-    <lastmod>2024-01-15T17:25:34.805Z</lastmod>
+    <lastmod>2024-01-15T17:25:16.239Z</lastmod>
+  </url>
+  <url>
+    <loc>https://joel-x.github.io/jb_blog/contacto.html</loc>
+    <lastmod>2024-02-22T01:50:09.344Z</lastmod>
   </url>
 </urlset>

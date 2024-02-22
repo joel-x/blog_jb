@@ -13,6 +13,7 @@ website:
       - blog.qmd
       - proyects.qmd
       - certific.qmd
+      - contacto.qmd
     right:
       - icon: whatsapp
         href: https://wa.me/593997868351
