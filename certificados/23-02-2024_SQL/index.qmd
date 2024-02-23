@@ -1,0 +1,17 @@
+---
+title: R para data scientist avanzado
+date: "10-27-2023"
+categories: [SQL,Consultas,Combinanciones y Subconsultas]
+image: sql1.png
+description: "  "
+---
+
+![](sql1.png){width="9in" height="7in"}
+![](sql2.png){width="9in" height="7in"}
+
+![](sql3.png){width="9in" height="7in"}
+
+
+![](sql4.png){width="9in" height="7in"}
+
+![](sql5.png){width="9in" height="7in"}
