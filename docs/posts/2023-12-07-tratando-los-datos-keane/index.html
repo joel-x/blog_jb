@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -103,9 +103,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C1J6R1KB4G"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-C1J6R1KB4G', { 'anonymize_ip': true});
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -129,10 +141,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">Acerca de mi</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
@@ -150,11 +158,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://wa.me/593997868351"> <i class="bi bi-whatsapp" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/jxbsjb"> <i class="bi bi-linkedin" role="img">
 </i> 
@@ -226,6 +229,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>En este post abordaremos un poco los datos keane obtenidos de <code>Gretl</code></p>
 <p>Empezaremos por importar las librerías necesarias</p>
 <div class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pd.options.display.max_columns<span class="op">=</span><span class="va">None</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -233,15 +238,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <!-- 2 Recopilación de datos -->
 <p>A continuación nos disponemos a visualizar los datos</p>
 <div class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>keane<span class="op">=</span>pd.read_csv(<span class="st">"keane.csv"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>keane<span class="op">=</span>pd.DataFrame(keane)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>keane.head(<span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <div>
 <div>
@@ -387,17 +399,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- 3 Limpieza y preparación de datos -->
 <p>Crearemos etiquetas para las observaciones de acuerdo a “choice” estudiante=1, hogar=2, cualificado=3, no-cualificado=4, servicio=5</p>
 <div class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>keane[<span class="st">"choice"</span>]<span class="op">=</span>np.where(keane[<span class="st">"choice"</span>]<span class="op">==</span><span class="dv">1</span>,<span class="st">"estudiante"</span>,</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>         np.where(keane[<span class="st">"choice"</span>]<span class="op">==</span><span class="dv">2</span>,<span class="st">"hogar"</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                  np.where(keane[<span class="st">"choice"</span>]<span class="op">==</span><span class="dv">3</span>,<span class="st">"cualificado"</span>,</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                           np.where(keane[<span class="st">"choice"</span>]<span class="op">==</span><span class="dv">4</span>,<span class="st">"no-cualificado"</span>,<span class="st">"servicio"</span>))))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <!-- Análisis de datos-->
 <p>Procedemos a gráficar la evolución de salarios separado por color de piel</p>
 <div class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>sb.scatterplot(data<span class="op">=</span>keane,x<span class="op">=</span><span class="st">"year"</span>,y<span class="op">=</span><span class="st">"wage"</span>,hue<span class="op">=</span><span class="st">"black"</span>,style<span class="op">=</span><span class="st">"black"</span>,style_order<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">0</span>])</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -412,9 +430,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>En esta gráfica evidenciamos que a lo largo de los años aumenta la discriminación.</p>
 <p>Visualicemos lo siguiente: seleccionando sólo las personas que trabajan se realizara un gráfico de la evolución de los salarios separados por la variable <code>choice</code></p>
 <div class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sb.scatterplot(data<span class="op">=</span>keane[keane[<span class="st">"employ"</span>]<span class="op">==</span><span class="dv">1</span>],x<span class="op">=</span><span class="st">"year"</span>, y<span class="op">=</span><span class="st">"wage"</span>,hue<span class="op">=</span><span class="st">"choice"</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -429,13 +450,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Se observa que la terciarización de la economía ha aumentado las diferencias entre trabajadores cualificados y no cualificados, así como, entre servicio e industria.</p>
 <p>Ahora procedamos al análisis de la variable <code>educ</code> para ello primero la Codificaremos de acuerdo a educación básica=1, educación media=2, y educación superior=3.</p>
 <div class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>keane[<span class="st">"educCode"</span>]<span class="op">=</span>np.where(keane[<span class="st">"educ"</span>]<span class="op">&lt;=</span><span class="dv">9</span>,<span class="dv">1</span>,np.where(keane[<span class="st">"educ"</span>]<span class="op">&lt;=</span><span class="dv">12</span>,<span class="dv">2</span>,<span class="dv">3</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Seleccionando solo las personas que trabajan tenemos lo siguiente:</p>
 <div class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sb.scatterplot(data<span class="op">=</span>keane[keane[<span class="st">"employ"</span>]<span class="op">==</span><span class="dv">1</span>],x<span class="op">=</span><span class="st">"year"</span>,y<span class="op">=</span><span class="st">"wage"</span>,hue<span class="op">=</span><span class="st">"educCode"</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -674,6 +701,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/joel-x\.github\.io\/jb_blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -708,7 +753,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

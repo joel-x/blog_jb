@@ -52,7 +52,7 @@ Como se mencionó en la introducción, el modelo de ciclo de vida/renta permanen
 
 ### Evolución de la sección cruzada de la evolución del consumo
 
--   [@Deaton1994437], notan que en un modelo de ciclo de vida, si la renta tiene raíz unitaria (i.e es $I(1)$ \^\[Las series integradas son un caso particular de series no estacionarias. Se dice que una serie temporal $x_t$ es integrada de orden $d$, $I(d)$, cuando es necesario diferenciarla $d$ veces para convertirla en estacionaria [@Engle1987251]) la sección cruzada del consumo aumenta con el tiempo[^2], Concluyen que a medida que se acumulen las innovaciones, la distribución transversal del consumo se amplia con la edad.
+-   [@Deaton1994437], notan que en un modelo de ciclo de vida, si la renta tiene raíz unitaria (i.e es $I(1)$.  ^[Las series integradas son un caso particular de series no estacionarias. Se dice que una serie temporal $x_t$ es integrada de orden $d$, $I(d)$, cuando es necesario diferenciarla $d$ veces para convertirla en estacionaria [@Engle1987251] ]) la sección cruzada del consumo aumenta con el tiempo[^2], Concluyen que a medida que se acumulen las innovaciones, la distribución transversal del consumo se amplia con la edad.
 
 -   [@Battistin20091140] utilizan un argumento similar para explicar una notable regularidad empírica: la distribución de la sección cruzada del consumo parece aproximarse muy bien a una $\log Normal$. Bajo una versión estándar del modelo de ciclo de vida, a cualquier edad el "$\log consumo_t=\log consumo_{t-1}+u_t$" [^3] y por lo tanto, por sustitución recursiva, se obtiene que el $log(consumo)$ está dado por la suma de innovaciones desde el comienzo de la vida hasta la era actual[^4].
 
@@ -61,6 +61,8 @@ Como se mencionó en la introducción, el modelo de ciclo de vida/renta permanen
 -   [@Deaton1994437; @Jappelli200675], hallan evidencia de que dada una distribución inicial del consumo (sin importar cómo se determine) en presencia de un riesgo compartido perfecto esa distribución debe permanecer constante. Por un lado, [@Deaton1994437], notaron eso en una nota al pie y presentaron evidencia sobre la evolución de sección cruzada del consumo como un rechazo del modelo de mercado completo. Por otro lado, [@Jappelli200675], explotan esa idea al observar explícitamente los movimientos en la clasificación relativa en la distribución del consumo en una encuesta italiana[^5]
 
 -   [@Attanasio19961227] al observar la evolución del consumo relativo en diferentes grupos educativos y relacionado con cambios en los cambios salariales relativos e interpretan la evidencia de fuerte correlación en bajas frecuencias entre estas dos variables como evidencia en contra de la hipótesis del mercado completo. No pueden rechazar la hipótesis de que a frecuencias relativamente altos (como un año) no existe una relación entre el consumo y los cambios salariales relativos[^6]
+
+
 
 [^2]: Entonces se puede considerar como la varianza cruzada del consumo para una cohorte de individuos.
 

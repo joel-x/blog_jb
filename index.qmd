@@ -1,19 +1,26 @@
 ---
-#title: "About"
-image: joeb.jpg
+title: "Joel Burbano"
 about:
-  template: jolla
+  template: trestles
+  image: joeb.jpg
   links:
-    - icon: whatsapp
-      href: https://wa.me/593997868351
     - icon: linkedin
       href: https://www.linkedin.com/in/jxbsjb
     - icon: envelope
       href: mailto:joelburbano@outlook.com
+#categories: [Ingeniero Matemático, Analista de Datos , Científico de Datos]
 ---
 
-Ingeniero Matemático
+Ingeniero Matemático \| Analista de Datos \| Científico de Datos
 
-Analista de Datos
+## Educación
 
-Científico de Datos
+**Escuela Politécnica Nacional, Quito** \| Quito, Ec
+
+Ingeniero Matemático \| Meción Estadistica e Investigación Operativa
+
+**Tesis:** Estudio Teórico del Comportamiento del Consumo en Latinoamérica y Caribe. En el trabajo de tesis se propuso un modelo teórico del consumo, basado en la hipótesis de renta permanente de Friedman y el modelo de Ciclo de Vida de Modigliani. Además, se realizo una comprobación con datos de panel para países de América Latina y Caribe.
+
+## Competencias
+
+`R` `Python` `SQL` `MongoDB` `Power BI` `Excel(VBA)`

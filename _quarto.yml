@@ -2,22 +2,22 @@ project:
   type: website
   output-dir: docs
   
-  
+
 lang: es
 website:
+  google-analytics: "G-C1J6R1KB4G"
   site-url: https://joel-x.github.io/jb_blog/
   title: Joel Burbano
   description: Portafolio Joel Burbano
+  
   navbar:
     left: 
-      - about.qmd
+      #- about.qmd
       - blog.qmd
       - proyects.qmd
       - certific.qmd
       - contacto.qmd
     right:
-      - icon: whatsapp
-        href: https://wa.me/593997868351
       - icon: linkedin
         href: https://www.linkedin.com/in/jxbsjb
       - icon: envelope
@@ -28,6 +28,9 @@ website:
 format:
   html:
     #max-width: fit content(25em)
+    code-fold: true
+    code-block-bg: true
+    code-block-border-left: "#0D2B71"
     theme:
       light: flatly
       dark: darkly
@@ -35,9 +38,28 @@ format:
       
     linestretch: 1.7
     css: styles.css
+    
+    
 
 editor: visual
 
+
+
+    
+    
 execute: 
   freeze: true
 
+
+# include GA4 script
+
+# includes:
+#   in-header: |
+#     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1J6R1KB4G"></script>
+#     <script>
+#       window.dataLayer = window.dataLayer || [];
+#       function gtag(){dataLayer.push(arguments);}
+#       gtag('js', new Date());
+# 
+#       gtag('config', 'G-C1J6R1KB4G');
+#     </script>

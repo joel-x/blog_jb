@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -66,6 +66,15 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Buscar"
   }
 }</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C1J6R1KB4G"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-C1J6R1KB4G', { 'anonymize_ip': true});
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -89,10 +98,6 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">Acerca de mi</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
@@ -110,11 +115,6 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://wa.me/593997868351"> <i class="bi bi-whatsapp" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://www.linkedin.com/in/jxbsjb"> <i class="bi bi-linkedin" role="img">
 </i> 
@@ -139,22 +139,18 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla content">
-  <img src="joeb.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <main class="content" id="quarto-document-content">
-<p>Ingeniero Matemático</p>
-<p>Analista de Datos</p>
-<p>Científico de Datos</p>
-
-
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://wa.me/593997868351" class="about-link" rel="" target="">
-    <i class="bi bi-whatsapp"></i>
-     <span class="about-link-text"></span>
-  </a>
+<div class="quarto-about-trestles content">
+  <div class="about-entity">
+    <img src="joeb.jpg" class="about-image
+  rounded " style="width: 20em;">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Joel Burbano</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header>
+    <div class="about-links">
   <a href="https://www.linkedin.com/in/jxbsjb" class="about-link" rel="" target="">
     <i class="bi bi-linkedin"></i>
      <span class="about-link-text"></span>
@@ -164,6 +160,22 @@ ul.task-list li input[type="checkbox"] {
      <span class="about-link-text"></span>
   </a>
 </div>
+  </div>
+  <div class="about-contents"><main class="content" id="quarto-document-content">
+<p>Ingeniero Matemático | Analista de Datos | Científico de Datos</p>
+<section id="educación" class="level2">
+<h2 data-anchor-id="educación">Educación</h2>
+<p><strong>Escuela Politécnica Nacional, Quito</strong> | Quito, Ec</p>
+<p>Ingeniero Matemático | Meción Estadistica e Investigación Operativa</p>
+<p><strong>Tesis:</strong> Estudio Teórico del Comportamiento del Consumo en Latinoamérica y Caribe. En el trabajo de tesis se propuso un modelo teórico del consumo, basado en la hipótesis de renta permanente de Friedman y el modelo de Ciclo de Vida de Modigliani. Además, se realizo una comprobación con datos de panel para países de América Latina y Caribe.</p>
+</section>
+<section id="competencias" class="level2">
+<h2 data-anchor-id="competencias">Competencias</h2>
+<p><code>R</code> <code>Python</code> <code>SQL</code> <code>MongoDB</code> <code>Power BI</code> <code>Excel(VBA)</code></p>
+
+
+</section>
+</main></div>
 </div>
  <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -382,6 +394,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/joel-x\.github\.io\/jb_blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -416,7 +446,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

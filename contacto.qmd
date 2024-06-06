@@ -1,14 +1,11 @@
 ---
 title: Contactos
 ---
-```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
 library(fontawesome)
 ```
 
-## Whatsapp `r fa(name="whatsapp")`:  [0997868351](https://wa.me/593997868351)
+## LinkedIn `r fa(name="linkedin")`: [jxbsjb](https://www.linkedin.com/in/jxbsjb)
 
-## LinkedIn `r fa(name="linkedin")`:  [jxbsjb](https://www.linkedin.com/in/jxbsjb)
-
-## Email `r fa(name="envelope")`:   [joelburbano\@outlook.com](mailto:joelburbano@outlook.com)
-
-
+## Email `r fa(name="envelope")`: [joelburbano\@outlook.com](mailto:joelburbano@outlook.com)

@@ -6,19 +6,6 @@
     ]
   },
   {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/2024-1-13-Accidentes automovilisticos/index.html",
-      "/posts/2023-12-20-Clustering/index.html",
-      "/posts/2023-12-20-PCA/index.html",
-      "/posts/Linear_Regression/index.html",
-      "/posts/naive_bayes/index.html",
-      "/posts/Deteccion_fraude/index.html",
-      "/posts/Hyperparameters and Model Validation/index.html",
-      "/posts/2023-12-07-tratando-los-datos-keane/index.html"
-    ]
-  },
-  {
     "listing": "/certific.html",
     "items": [
       "/certificados/23-02-2024_SQL/index.html",
@@ -33,6 +20,19 @@
       "/certificados/16-05-2023-Curso_de_PHP-MySQL/index.html",
       "/certificados/16-04-2023-Pronostico-Ventas/index.html",
       "/certificados/03-09-2020-Curso-R/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/2024-1-13-Accidentes automovilisticos/index.html",
+      "/posts/2023-12-20-Clustering/index.html",
+      "/posts/2023-12-20-PCA/index.html",
+      "/posts/Linear_Regression/index.html",
+      "/posts/naive_bayes/index.html",
+      "/posts/Deteccion_fraude/index.html",
+      "/posts/Hyperparameters and Model Validation/index.html",
+      "/posts/2023-12-07-tratando-los-datos-keane/index.html"
     ]
   }
 ]
