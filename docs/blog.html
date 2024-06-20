@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -200,13 +234,13 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Aprendizaje No Supervisado">Aprendizaje No Supervisado <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Aprendizaje Supervisado">Aprendizaje Supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Aprendizaje supervisado">Aprendizaje supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Clusters">Clusters <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Econometría">Econometría <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Naive Bayes">Naive Bayes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="PCA">PCA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Reducción de dimensiones">Reducción de dimensiones <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorías</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todas <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Aprendizaje No Supervisado">Aprendizaje No Supervisado <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Aprendizaje Supervisado">Aprendizaje Supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Aprendizaje supervisado">Aprendizaje supervisado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Clusters">Clusters <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Econometría">Econometría <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Naive Bayes">Naive Bayes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="PCA">PCA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(9)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Reducción de dimensiones">Reducción de dimensiones <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<div class="quarto-title-block"><div><h1 class="title">Blog</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Código</button></div></div>
 </div>
 
 
@@ -225,6 +259,8 @@ window.Quarto = {
 
 
 
+
+<!-- -->
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
@@ -254,7 +290,41 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Python" data-listing-date-sort="1705122000000" data-listing-file-modified-sort="1705339516239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="326">
+<div class="g-col-1" data-index="0" data-categories="Python,R,Machine Learning" data-listing-date-sort="1710133200000" data-listing-file-modified-sort="1718902914606" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="572">
+<a href="./posts/2024-06-20-regresion-logistica/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\2024-06-20-regresion-logistica\index_files\figure-html\unnamed-chunk-1-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Regresión Logística
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Python'); return false;">
+Python
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+</div>
+<div class="card-text listing-description">
+La regresión logística es una técnica de modelado estadístico utilizada para predecir el resultado de una variable categórica basada en una o más variables independientes.…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Joel Burbano
+</div>
+<div class="listing-date">
+11 mar 2024
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Python" data-listing-date-sort="1705122000000" data-listing-file-modified-sort="1705339516239" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="326">
 <a href="./posts/2024-1-13-Accidentes automovilisticos/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\2024-1-13-Accidentes automovilisticos\index_files\figure-html\cell-9-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -282,7 +352,7 @@ Joel burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Python,Aprendizaje No Supervisado,Clusters" data-listing-date-sort="1703048400000" data-listing-file-modified-sort="1704753074684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<div class="g-col-1" data-index="2" data-categories="Python,Aprendizaje No Supervisado,Clusters" data-listing-date-sort="1703048400000" data-listing-file-modified-sort="1704753074684" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
 <a href="./posts/2023-12-20-Clustering/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\2023-12-20-Clustering\index_files\figure-html\cell-8-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -316,7 +386,7 @@ Joel Burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Python,PCA,Reducción de dimensiones,Aprendizaje No Supervisado" data-listing-date-sort="1703048400000" data-listing-file-modified-sort="1704722597097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
+<div class="g-col-1" data-index="3" data-categories="Python,PCA,Reducción de dimensiones,Aprendizaje No Supervisado" data-listing-date-sort="1703048400000" data-listing-file-modified-sort="1704722597097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="74">
 <a href="./posts/2023-12-20-PCA/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\2023-12-20-PCA\index_files\figure-html\cell-7-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -353,7 +423,7 @@ Joel Burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Python,Aprendizaje Supervisado" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1704753169425" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
+<div class="g-col-1" data-index="4" data-categories="Python,Aprendizaje Supervisado" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1704753169425" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
 <a href="./posts/Linear_Regression/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\Linear_Regression\index_files\figure-html\cell-3-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -384,7 +454,7 @@ Joel Burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Aprendizaje supervisado,Python,Naive Bayes" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1704753185023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
+<div class="g-col-1" data-index="5" data-categories="Aprendizaje supervisado,Python,Naive Bayes" data-listing-date-sort="1702962000000" data-listing-file-modified-sort="1704753185023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="129">
 <a href="./posts/naive_bayes/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
@@ -418,7 +488,7 @@ Joel Burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Python" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1704215543038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
+<div class="g-col-1" data-index="6" data-categories="Python" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1704215543038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="218">
 <a href="./posts/Deteccion_fraude/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\Deteccion_fraude\index_files\figure-html\cell-12-output-2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -446,7 +516,7 @@ Joel Burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Python,Machine Learning" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1704753149091" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
+<div class="g-col-1" data-index="7" data-categories="Python,Machine Learning" data-listing-date-sort="1702789200000" data-listing-file-modified-sort="1704753149091" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
 <a href="./posts/Hyperparameters and Model Validation/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\Hyperparameters and Model Validation\index_files\figure-html\cell-4-output-2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -477,7 +547,7 @@ Joel Burbano
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="Econometría,Python" data-listing-date-sort="1701925200000" data-listing-file-modified-sort="1704240497420" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
+<div class="g-col-1" data-index="8" data-categories="Econometría,Python" data-listing-date-sort="1701925200000" data-listing-file-modified-sort="1704240497420" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="230">
 <a href="./posts/2023-12-07-tratando-los-datos-keane/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top"><img src="posts\2023-12-07-tratando-los-datos-keane\index_files\figure-html\cell-6-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
@@ -736,6 +806,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/joel-x\.github\.io\/jb_blog\/");
@@ -1065,7 +1186,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Blog"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">listing:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">  contents: posts</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">  sort: "date desc"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: grid</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">  categories: true</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">  sort-ui: true</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">  filter-ui: true</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 

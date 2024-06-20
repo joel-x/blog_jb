@@ -1,0 +1,230 @@
+---
+title: Regresión Logística
+author: Joel Burbano
+date: '2024-03-11'
+categories: [Python, R, Machine Learning]
+---
+# Introducción a la Regresión Logística
+
+```{r}
+#| echo: false
+
+library(ggplot2)
+x <- seq(-8,8,0.01)
+y <- 1 / (1 + exp(-x))
+sigmoide <- cbind(x,y)
+ggplot(sigmoide,aes(x,y))+
+  geom_line(color="blue", lwd=1)+
+  geom_hline(yintercept = 1, lwd=1, color = "gray")+
+  ggtitle("y=sigmoide(x)")+
+  theme_minimal()
+  
+```
+
+
+La regresión logística es una técnica de modelado estadístico utilizada para predecir el resultado de una variable categórica basada en una o más variables independientes. Es especialmente útil cuando queremos clasificar observaciones en dos o más clases. A diferencia de la regresión lineal, que predice valores continuos, la regresión logística predice probabilidades de pertenencia a una categoría.
+
+## ¿Comó Funciona?
+
+La regresión logística utiliza la función logística, también conocida como función sigmoide, para transformar la salida de una combinación lineal de las variables independientes. La función sigmoide produce valores entre 0 y 1, que pueden interpretarse como probabilidades.
+
+:::{.callout-important}
+La fórmula de la función sigmoide es: 
+
+
+$$\sigma(z)=\frac{1}{1+ e^{-z}}$$
+
+donde $z$ es la combinación lineal de las variables independientes, es decir $z=\beta_0 + \sum_{i=1}^n \beta_i z_i$
+
+:::
+
+:::{.callout-note icon=false appearance="simple"}
+## Ejemplo Práctico 
+
+Imaginemos que queremos predecir si un correo electrónico es spam o no, usando características como la frecuencia de ciertas palabras y la longitud del correo.
+
+### Paso1: Importar Librerías
+
+:::{.panel-tabset}
+## Python
+
+```{python}
+import pandas as pd
+pd.options.display.max_columns=None
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+
+```
+
+## R
+
+```{R}
+library(dplyr)
+library(caTools)
+library(caret)
+```
+
+
+:::
+
+### Paso 2: Cargar Datos
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+colums = ["word_freq_make", "word_freq_address", "word_freq_all", "word_freq_3d", "word_freq_our",
+"word_freq_over", "word_freq_remove", "word_freq_internet", "word_freq_order", "word_freq_mail",
+"word_freq_receive", "word_freq_will", "word_freq_people", "word_freq_report", "word_freq_addresses",
+"word_freq_free", "word_freq_business", "word_freq_email", "word_freq_you", "word_freq_credit","word_freq_your", "word_freq_font", "word_freq_000", "word_freq_money", "word_freq_hp", "word_freq_hpl", "word_freq_george", "word_freq_650", "word_freq_lab",
+"word_freq_labs", "word_freq_telnet", "word_freq_857", "word_freq_data", "word_freq_415",
+"word_freq_85", "word_freq_technology", "word_freq_1999", "word_freq_parts", "word_freq_pm",
+"word_freq_direct", "word_freq_cs", "word_freq_meeting", "word_freq_original", "word_freq_project",
+"word_freq_re", "word_freq_edu", "word_freq_table", "word_freq_conference", "char_freq_;",
+"char_freq_(", "char_freq_[", "char_freq_!", "char_freq_$", "char_freq_#", 
+"capital_run_length_average", "capital_run_length_longest","capital_run_length_total","spam"
+]
+
+data = pd.read_csv("spambase.data", header=None, names=colums)
+
+
+X = data.drop(columns=['spam'])
+y = data['spam']
+```
+
+## R
+
+```{r}
+columns <- c("word_freq_make", "word_freq_address", "word_freq_all", "word_freq_3d", "word_freq_our",
+"word_freq_over", "word_freq_remove", "word_freq_internet", "word_freq_order", "word_freq_mail",
+"word_freq_receive", "word_freq_will", "word_freq_people", "word_freq_report", "word_freq_addresses",
+"word_freq_free", "word_freq_business", "word_freq_email", "word_freq_you", "word_freq_credit","word_freq_your", "word_freq_font", "word_freq_000", "word_freq_money", "word_freq_hp", "word_freq_hpl", "word_freq_george", "word_freq_650", "word_freq_lab",
+"word_freq_labs", "word_freq_telnet", "word_freq_857", "word_freq_data", "word_freq_415",
+"word_freq_85", "word_freq_technology", "word_freq_1999", "word_freq_parts", "word_freq_pm",
+"word_freq_direct", "word_freq_cs", "word_freq_meeting", "word_freq_original", "word_freq_project",
+"word_freq_re", "word_freq_edu", "word_freq_table", "word_freq_conference", "char_freq_;",
+"char_freq_(", "char_freq_[", "char_freq_!", "char_freq_$", "char_freq_#", 
+"capital_run_length_average", "capital_run_length_longest","capital_run_length_total","spam")
+
+data <- read.csv("spambase.data", header = FALSE, col.names = columns)
+
+# Convertimos la variable dependiente en factor
+
+data$spam <- as.factor(data$spam)
+
+```
+
+
+:::
+
+
+### Paso 3: Dividir el Conjunto de Datos
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+```
+
+## R
+
+```{r}
+set.seed(42)
+
+split <- sample.split(data$spam, SplitRatio = 0.7)
+
+train_data <- subset(data, split == TRUE)
+test_data <- subset(data, split == FALSE)
+```
+
+:::
+
+### Paso 4: Entrenar el Modelo
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+model = LogisticRegression()
+
+model.fit(X_train, y_train)
+```
+
+## R
+
+```{R}
+model <- glm(spam ~ ., data = train_data, family = binomial)
+
+```
+
+:::
+
+
+### Paso 5: Evaluar el Modelo
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+y_pred = model.predict(X_test)
+print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
+print('Confusion Matrix:')
+print(confusion_matrix(y_test, y_pred))
+print('Clasification Report:')
+print(classification_report(y_test, y_pred))
+```
+
+## R
+
+```{r}
+predictions <- predict(model, test_data, type = "response")
+predicted_classes <- ifelse(predictions > 0.5, 1, 0)
+
+# Calcular el accuracy del modelo
+accuracy <- mean(predicted_classes == test_data$spam)
+print(paste("Accuracy:", round(accuracy * 100, 2),"%"))
+
+# Matriz de consfusión
+confusion <- table(Predicted = predicted_classes, Actual = test_data$spam)
+print("Confusion Matrix:")
+print(confusion)
+
+# Reporte de clasificacion
+confusionMatrix(as.factor(predicted_classes), test_data$spam)
+```
+
+:::
+
+## Resultados y Evaluación 
+
+En general se ha conseguido un accuracy de alrededor del $92\%$ lo cual indica que el modelo predice un resultado correcto 92 de cada 100 veces, lo que en general es un buen modelo pero se lo podria mejorar seleccionando mejor las variables en este caso se ha utilizado todas sin un analisis de su poder predicitivo.
+:::
+
+## Ventajas y Desventajas
+
+**Ventajas**
+
+* Interpretabilidad: Es fácil de entender y explicar
+
+* Eficiencia: Es computacionalmente menos costosa que otros métodos complejos
+
+**Desventajas**
+
+* Linealidad: Asume una relación lineal entre las variables independientes y la probabilidad de la clase.
+
+* Limitación: La versión básica está diseñada para clasificación binaria.
+
+
+## Conclusión 
+
+La regresión logística es una herramienta poderosa y ampliamente utilizada en la ciencia de datos para problemas de clasificación. Su simplicidad y eficacia la hacen ideal para muchas aplicaciones, desde el diagnóstico médico hasta la detección de fraude.
+
+
+
+
