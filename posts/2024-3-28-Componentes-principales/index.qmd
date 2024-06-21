@@ -1,0 +1,158 @@
+---
+title: Análisis de Componentes Principales (PCA)
+author: Joel Burbano
+date: 2024-03-28
+categories: [Python, R, Aprendizaje No Supervisado, Clusters ]
+---
+
+## Introducción 
+
+El Análisis de Componentes Principales (PCA, por sus siglas en inglés) es una técnica fundamental en ciencia de datos utilizada para la reducción de dimensionalidad. Este método transforma un conjunto de variables posiblemente correlacionadas en un conjunto más pequeño de variables no correlacionadas, llamadas componentes principales. Es especialmente útil cuando se trabaja con grandes volúmenes de datos y se busca simplificar el análisis sin perder información significativa.
+
+## ¿Qué es el Análisis de Componentes Principales?
+
+PCA es un método estadístico que transforma los datos originales en nuevas variables no correlacionadas ordenadas según la cantidad de varianza explicada. Los primeros componentes principales capturan la mayor parte de la variabilidad en los datos, lo que permite una reducción significativa de la dimensionalidad mientras se preserva la mayor cantidad de información posible.
+
+:::{.callout-important}
+
+Conceptos Clave:
+
+* **Varianza:** Medida de la dispersión de los datos
+
+* **Covarianza:** Indica la dirección de la relación entre dos variables.
+
+* **Componentes Principales:** Nuevas variables no correlacionadas formadas por combinaciones lineales de las variables originales
+
+* **Valores y Vectores propios:** Los valores propios indican la cantidad de varianza capturada por cada componente principal, y los vectores propios definen la dirección de los componentes.
+
+:::
+
+## Ejemplo Practico
+:::{.callout-note icon=false appearance="simple" }
+
+
+Para ilustrar un ejemplo se utilizara el dataset de Wine Quality disponible en Kaggle.
+
+### Paso 1: Instalación de librerias
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
+import seaborn as sb
+```
+
+## R
+
+```{r}
+library(ggplot2)
+library(dplyr)
+```
+
+:::
+
+### Paso 2: Cara y Preprocesamiento de Datos
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+data = pd.read_csv("WineQT.csv")
+features = data.drop('quality', axis=1)
+
+features = StandardScaler().fit_transform(features)
+```
+
+## R
+
+```{r}
+data <- read.csv("WineQT.csv")
+features <- data %>% select(-quality)
+
+features <- scale(features)
+```
+
+:::
+
+### Paso 3: Aplicación de PCA
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+pca = PCA(n_components = 2)
+principalComponents = pca.fit_transform(features)
+principalDf = pd.DataFrame(data = principalComponents, columns = ['PC1', 'PC2'])
+finalDf = pd.concat([principalDf, data[['quality']]], axis = 1)
+
+```
+
+## R
+
+```{r}
+pca <- prcomp(features, center = TRUE, scale. = TRUE)
+principalComponents <- data.frame(pca$x[,1:2])
+finalDf <- cbind(principalComponents, quality = data$quality)
+```
+
+:::
+
+### Paso 4: Visualización de Resultados
+
+:::{.panel-tabset}
+
+## python 
+
+```{python}
+plt.figure(figsize = (8,6))
+sb.scatterplot(x = 'PC1', y = 'PC2', hue = 'quality', data = finalDf, palette = 'viridis')
+plt.title('PCA de Vinos')
+plt.xlabel('Componente Principal 1')
+plt.ylabel('Componente Principal 2')
+plt.show()
+plt.clf()
+```
+
+## R
+
+```{r}
+ggplot(finalDf, aes(x = PC1, y = PC2, color = as.factor(quality))) +
+  geom_point(alpha=0.5) +
+  labs(title = "PCA de Vinos",
+       x = "Componente Principal 1",
+       y = "Componente Principal 2") +
+  theme_minimal()
+```
+
+
+:::
+
+
+:::
+
+
+## Ventajas y Desventajas 
+
+**Ventajas**
+
+* **Reducción de Dimensionalidad:** Facilita la visualización y análisis de datos de alta dimensionalidad.
+
+* **Eliminación de Redundancia:** Reduce la redundancia al eliminar las correlaciones entre variables.
+
+**Desventajas**
+
+* **Interpretabilidad:** Los componentes principales no siempre tienen un significado intuitivo.
+
+* **Pérdida de Información:** Aunque PCA preserva la mayor varianza posible, siempre hay alguna pérdida de información.
+
+
+## Conclusión
+
+El PCA es una herramienta poderosa en el arsenal de un científico de datos. Su capacidad para simplificar conjuntos de datos complejos y reducir la dimensionalidad lo hace indispensable para la exploración y visualización de datos. A través de ejemplos prácticos en Python y R, podemos ver cómo esta técnica se aplica en la práctica, facilitando el análisis y la toma de decisiones basadas en datos.

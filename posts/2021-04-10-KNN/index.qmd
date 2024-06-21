@@ -1,0 +1,198 @@
+---
+title: K Vecinos más cercanos (KNN)
+author: Joel Burbano
+date: 2024-03-28
+categories: [Python, R, Aprendizaje Supervisado, KNN]
+---
+
+## Introducción
+
+El algoritmo de K Vecinos Más Cercanos (KNN) es uno de los métodos más simples y efectivos para clasificación y regresión en ciencia de datos. A pesar de su simplicidad, KNN puede ser muy poderoso, especialmente cuando se configuran adecuadamente los parámetros y se utiliza en los contextos apropiados.
+
+## ¿Qué es K Vecinos Más Cercanos?
+
+KNN es un algoritmo de aprendizaje supervisado que clasifica una muestra en función de las categorías de sus $K$ vecinos más cercanos. Para la clasificación, asigna la categoría más común entre sus vecinos, y para la regresión, predice el valor promedio de los vecinos más cercanos.
+
+### Funcionamiento del KNN:
+
+1. **Selección de K:** Elige el número de vecinos más cercanos ($K$).
+
+2. **Distancia:** Calcula la distancia entre la muestra y todas las demás muestras en el conjunto de datos (comúnmente usando la distancia euclidiana).
+
+3. **Vecinos:** Identifica los $K$ vecinos más cercanos a la muestra.
+
+4. **Votación:** Asigna la clase más común (clasificación) o el promedio de los valores (regresión) entre los $K$ vecinos.
+
+## Ejemplo
+
+:::{.callout-note icon=false appearance="simple" }
+
+Para ilustrar el uso de KNN, usaremos el dataset Iris.
+
+### Paso 1: Instalación de Librerías 
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+import pandas as pd 
+pd.options.display.max_columns=None
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+import matplotlib.pyplot as plt
+import seaborn as sb
+```
+
+
+## R
+
+```{r}
+library(class)
+library(caret)
+library(GGally)
+library(ggplot2)
+```
+
+:::
+
+
+### Paso 2: Cargar y Preprocesar los Datos
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+data = pd.read_csv("Iris.csv")
+data = data.drop(['Id'], axis = 1)
+X = data.drop(['Species'], axis = 1)
+y = data['Species']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 42)
+
+scaler = StandardScaler()
+
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.fit_transform(X_test)
+```
+
+## R
+
+```{r}
+data <- read.csv("Iris.csv")
+data <- data[,-1]
+
+any(is.na(data))
+
+
+X <- data[,-5]
+y <- data$Species
+
+set.seed(42)
+trainIndex <- createDataPartition(y, p = .7, list = FALSE)
+X_train <- X[trainIndex,]
+X_test <- X[-trainIndex,]
+y_train <- y[trainIndex]
+y_test <- y[-trainIndex]
+
+preProcValues <- preProcess(X_train, method = c("center", "scale"))
+X_train <- predict(preProcValues, X_train)
+X_test <- predict(preProcValues, X_test)
+```
+
+
+:::
+
+
+### Paso 3: Entrenar el Modelo
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+knn = KNeighborsClassifier(n_neighbors = 3)
+knn.fit(X_train, y_train)
+```
+
+
+## R
+
+```{r}
+knn_model <- knn(train = X_train, test = X_test, cl = y_train, k = 3)
+```
+
+:::
+
+
+### Paso 4: Evaluar el Modelo
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+y_pred = knn.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+print(f'Accuracy: {accuracy}')
+
+print('Confusion Matrix:\n', confusion_matrix(y_test, y_pred))
+print('Classifcation Report:\n', classification_report(y_test, y_pred))
+```
+
+## R
+
+```{r}
+confusion <- confusionMatrix(knn_model, as.factor(y_test))
+print(confusion)
+```
+
+
+:::
+
+### Paso 5: Visualización de Resultados
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+sb.pairplot(data, hue = 'Species')
+plt.clf()
+```
+
+## R
+
+```{r}
+ggpairs(data, aes(color = Species, alpha = 0.5)) +
+  theme_bw()
+```
+
+
+:::
+
+:::
+
+
+## Ventajas y Desventajas
+
+**Ventajas**
+
+* **Simplicidad:** Fácil de entender e implementar.
+
+* **No Paramétrico:** No asume ninguna distribución de datos.
+
+**Desventajas**
+
+* **Costo Computacional:** Requiere almacenar todos los datos de entrenamiento y calcular distancias para cada predicción.
+
+* **Sensibilidad al Ruido:** Afectado por la escala y por valores atípicos.
+
+
+## Conclusión
+
+El algoritmo de K Vecinos Más Cercanos es una herramienta poderosa y fácil de usar para tareas de clasificación y regresión. A través de ejemplos prácticos en Python y R, hemos demostrado cómo implementar y evaluar este modelo en la práctica. Aunque tiene algunas limitaciones, KNN sigue siendo una opción valiosa para muchos problemas en ciencia de datos.

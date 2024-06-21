@@ -38,12 +38,13 @@ donde $z$ es la combinación lineal de las variables independientes, es decir $z
 
 :::
 
-:::{.callout-note icon=false appearance="simple"}
 ## Ejemplo Práctico 
+:::{.callout-note icon=false appearance="simple"}
+
 
 Imaginemos que queremos predecir si un correo electrónico es spam o no, usando características como la frecuencia de ciertas palabras y la longitud del correo.
 
-### Paso1: Importar Librerías
+### Paso 1: Importar Librerías
 
 :::{.panel-tabset}
 ## Python

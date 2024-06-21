@@ -28,6 +28,7 @@ website:
 format:
   html:
     #max-width: fit content(25em)
+    toc: true
     code-fold: true
     code-tools: true
     code-block-bg: true
@@ -43,9 +44,7 @@ format:
     
 lang: es    
 
-editor: visual
-
-
+editor: source  
 
     
     

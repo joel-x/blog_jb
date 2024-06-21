@@ -9,6 +9,9 @@ about:
     - icon: envelope
       href: mailto:joelburbano@outlook.com
 #categories: [Ingeniero Matemático, Analista de Datos , Científico de Datos]
+toc: false
+code-fold: false
+code-tools: false
 ---
 
 Ingeniero Matemático \| Analista de Datos \| Científico de Datos

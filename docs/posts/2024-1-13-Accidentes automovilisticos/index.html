@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.554">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Joel burbano">
-<meta name="dcterms.date" content="2024-01-13">
 <meta name="description" content="En este apartado vamos a analizar datos de accidentes automovilisticos">
 
 <title>Joel Burbano - Accidentes automovilisticos Conjunto de datos EDA</title>
@@ -91,17 +90,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "s"
   ],
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-C1J6R1KB4G"></script>
@@ -185,7 +184,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -196,8 +195,8 @@ window.Quarto = {
     <span class="navbar-title">Joel Burbano</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -233,7 +232,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -242,7 +241,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Accidentes automovilisticos Conjunto de datos EDA</h1>
+      <div class="quarto-title-block"><div><h1 class="title">Accidentes automovilisticos Conjunto de datos EDA</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Código</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Mostrar todo el código</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Ocultar todo el código</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">Ver el código fuente</a></li></ul></div></div>
                   <div>
         <div class="description">
           En este apartado vamos a analizar datos de accidentes automovilisticos
@@ -258,16 +257,16 @@ window.Quarto = {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
       <div class="quarto-title-meta-contents">
                <p>Joel burbano </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 13, 2024</p>
+        <p class="date">13 de enero de 2024</p>
       </div>
     </div>
     
@@ -278,7 +277,27 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#importamos-las-librerias-necesarias" id="toc-importamos-las-librerias-necesarias" class="nav-link active" data-scroll-target="#importamos-las-librerias-necesarias">Importamos las librerias necesarias</a></li>
+  <li><a href="#cargamos-la-data" id="toc-cargamos-la-data" class="nav-link" data-scroll-target="#cargamos-la-data">Cargamos la data</a></li>
+  <li><a href="#procedmos-con-la-limpieza-da-la-data" id="toc-procedmos-con-la-limpieza-da-la-data" class="nav-link" data-scroll-target="#procedmos-con-la-limpieza-da-la-data">Procedmos con la limpieza da la data</a></li>
+  <li><a href="#visualización-de-la-data" id="toc-visualización-de-la-data" class="nav-link" data-scroll-target="#visualización-de-la-data">Visualización de la data</a>
+  <ul class="collapse">
+  <li><a href="#frecuencia-de-los-tipos-de-acciedentes" id="toc-frecuencia-de-los-tipos-de-acciedentes" class="nav-link" data-scroll-target="#frecuencia-de-los-tipos-de-acciedentes">Frecuencia de los tipos de acciedentes</a></li>
+  <li><a href="#accidentes-ocurridos-entre-semana-vs-fin-de-semana" id="toc-accidentes-ocurridos-entre-semana-vs-fin-de-semana" class="nav-link" data-scroll-target="#accidentes-ocurridos-entre-semana-vs-fin-de-semana">Accidentes ocurridos <strong>entre semana</strong> vs <strong>fin de semana</strong></a></li>
+  <li><a href="#porcentaje-de-lesiones-por-categoria" id="toc-porcentaje-de-lesiones-por-categoria" class="nav-link" data-scroll-target="#porcentaje-de-lesiones-por-categoria">Porcentaje de lesiones por Categoria</a></li>
+  <li><a href="#motivo-mas-comun-por-el-cual-suceden-accidentes" id="toc-motivo-mas-comun-por-el-cual-suceden-accidentes" class="nav-link" data-scroll-target="#motivo-mas-comun-por-el-cual-suceden-accidentes">Motivo mas comun por el cual suceden accidentes</a></li>
+  <li><a href="#top-30-lugares-mas-frecuente-donde-ocurren-accidentes" id="toc-top-30-lugares-mas-frecuente-donde-ocurren-accidentes" class="nav-link" data-scroll-target="#top-30-lugares-mas-frecuente-donde-ocurren-accidentes">Top 30 lugares mas frecuente donde ocurren accidentes</a></li>
+  <li><a href="#tipos-de-colisiones-en-diferentes-años" id="toc-tipos-de-colisiones-en-diferentes-años" class="nav-link" data-scroll-target="#tipos-de-colisiones-en-diferentes-años">Tipos de Colisiones en diferentes años</a></li>
+  <li><a href="#gráfico-dinamico" id="toc-gráfico-dinamico" class="nav-link" data-scroll-target="#gráfico-dinamico">Gráfico Dinamico</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -290,7 +309,7 @@ window.Quarto = {
 <h1>Importamos las librerias necesarias</h1>
 <div class="cell" data-execution_count="1">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -301,7 +320,7 @@ window.Quarto = {
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>c4<span class="op">=</span>cm.get_cmap(<span class="st">'Set3'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>c4<span class="op">=</span>cm.get_cmap(<span class="st">'Set3'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -309,15 +328,15 @@ window.Quarto = {
 <h1>Cargamos la data</h1>
 <div class="cell" data-execution_count="2">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_excel(<span class="st">"dataset.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_excel(<span class="st">"dataset.xlsx"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Revisemos las 5 primeras filas de datos</p>
 <div class="cell" data-execution_count="3">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
@@ -425,8 +444,8 @@ window.Quarto = {
 <p>Realizamos una revisión de duplicados</p>
 <div class="cell" data-execution_count="4">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.duplicated().value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.duplicated().value_counts()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>False    53879
@@ -438,8 +457,8 @@ Name: count, dtype: int64</code></pre>
 <p>ahora observemos la información de los datos</p>
 <div class="cell" data-execution_count="5">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
@@ -465,8 +484,8 @@ memory usage: 4.5+ MB</code></pre>
 <p>Veamos el rango de años que contiene la data</p>
 <div class="cell" data-execution_count="6">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data desde el año"</span>,df.Year.<span class="bu">min</span>(), <span class="st">" hasta "</span>, df.Year.<span class="bu">max</span>() )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data desde el año"</span>,df.Year.<span class="bu">min</span>(), <span class="st">" hasta "</span>, df.Year.<span class="bu">max</span>() )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Data desde el año 2003  hasta  2015</code></pre>
@@ -475,8 +494,8 @@ memory usage: 4.5+ MB</code></pre>
 <p>Analicemos los tipos de colisión que existen en la data</p>
 <div class="cell" data-execution_count="7">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Collision Type'</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Collision Type'</span>].value_counts()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>Collision Type
@@ -497,13 +516,13 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="frecuencia-de-los-tipos-de-acciedentes">Frecuencia de los tipos de acciedentes</h2>
 <div class="cell" data-execution_count="8">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sb.countplot(x<span class="op">=</span>df[<span class="st">'Collision Type'</span>],palette<span class="op">=</span><span class="st">'Set3'</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frecuencia'</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">65</span>)</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Frecuencia de tipos de Accidentes"</span>)</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -522,13 +541,13 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="accidentes-ocurridos-entre-semana-vs-fin-de-semana">Accidentes ocurridos <strong>entre semana</strong> vs <strong>fin de semana</strong></h2>
 <div class="cell" data-execution_count="9">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sb.countplot(x<span class="op">=</span>df[<span class="st">'Weekend?'</span>],palette<span class="op">=</span><span class="st">'Accent'</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frecuencia'</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">65</span>)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Entre semana vs Fin de semana"</span>)</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -547,9 +566,9 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="porcentaje-de-lesiones-por-categoria">Porcentaje de lesiones por Categoria</h2>
 <div class="cell" data-execution_count="10">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>les_val<span class="op">=</span>df[<span class="st">'Injury Type'</span>].value_counts()</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>les_val</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>les_val</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>Injury Type
@@ -562,11 +581,11 @@ Name: count, dtype: int64</code></pre>
 </div>
 <div class="cell" data-execution_count="11">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.pie(les_val,labels<span class="op">=</span>les_val.index,startangle<span class="op">=</span><span class="dv">30</span>,shadow<span class="op">=</span><span class="va">True</span>,autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>,rotatelabels<span class="op">=</span><span class="dv">30</span>,explode<span class="op">=</span>(<span class="fl">0.1</span>,<span class="fl">0.1</span>,<span class="fl">0.1</span>,<span class="fl">0.1</span>),colors<span class="op">=</span>[c4(<span class="fl">0.9</span>),c4(<span class="fl">0.2</span>),c4(<span class="fl">0.3</span>),c4(<span class="fl">0.6</span>)])</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Porcentaje de lesiones por Categoria'</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -586,8 +605,8 @@ Name: count, dtype: int64</code></pre>
 <p>Primero indagaremos cuantos Factores Primarios existen en la data</p>
 <div class="cell" data-execution_count="12">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Primary Factor'</span>].nunique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Primary Factor'</span>].nunique()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>55</code></pre>
@@ -596,13 +615,13 @@ Name: count, dtype: int64</code></pre>
 <p>Dado que existen <span class="math inline">\(55\)</span> Factores Primarios nos quedaremos con el top 20</p>
 <div class="cell" data-execution_count="13">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>pfdf<span class="op">=</span>df[<span class="st">'Primary Factor'</span>].value_counts().head(<span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>pfdf<span class="op">=</span>df[<span class="st">'Primary Factor'</span>].value_counts().head(<span class="dv">20</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-execution_count="14">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>axis<span class="op">=</span>fig.add_axes([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>sb.swarmplot(x<span class="op">=</span>pfdf,y<span class="op">=</span>pfdf.index,ax<span class="op">=</span>axis)</span>
@@ -611,7 +630,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Ocurrencia'</span>)</span>
 <span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Motivos principales por los que ocurren accidentes'</span>)</span>
 <span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -629,13 +648,13 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="top-30-lugares-mas-frecuente-donde-ocurren-accidentes">Top 30 lugares mas frecuente donde ocurren accidentes</h2>
 <div class="cell" data-execution_count="15">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ldf<span class="op">=</span>df[<span class="st">'Reported_Location'</span>].value_counts().head(<span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ldf<span class="op">=</span>df[<span class="st">'Reported_Location'</span>].value_counts().head(<span class="dv">30</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-execution_count="16">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>fig1<span class="op">=</span>plt.figure()</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>axis1<span class="op">=</span>fig1.add_axes([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>sb.barplot(x<span class="op">=</span>ldf,y<span class="op">=</span>ldf.index,ax<span class="op">=</span>axis1,palette<span class="op">=</span><span class="st">"viridis"</span>)</span>
@@ -644,7 +663,7 @@ Name: count, dtype: int64</code></pre>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>axis1.set_xlabel(<span class="st">'Frecuencia'</span>)</span>
 <span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>axis1.set_title(<span class="st">'Lugares con mayor frecuencia de Accidentes'</span>)</span>
 <span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
@@ -662,29 +681,29 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="tipos-de-colisiones-en-diferentes-años">Tipos de Colisiones en diferentes años</h2>
 <div class="cell" data-execution_count="17">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>años<span class="op">=</span>df.groupby(<span class="st">'Year'</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>keys<span class="op">=</span>años.groups.keys()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>keys<span class="op">=</span>años.groups.keys()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-execution_count="18">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>infobox<span class="op">=</span>[]</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2003</span>,<span class="dv">2016</span>):</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  infobox.append(años.get_group(i)[<span class="st">'Collision Type'</span>].value_counts())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  infobox.append(años.get_group(i)[<span class="st">'Collision Type'</span>].value_counts())</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-execution_count="19">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>c2<span class="op">=</span>cm.get_cmap(<span class="st">'terrain'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>c2<span class="op">=</span>cm.get_cmap(<span class="st">'terrain'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-execution_count="20">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Colisiones por Año</strong></p>
@@ -739,17 +758,17 @@ Name: count, dtype: int64</code></pre>
 <h2 class="anchored" data-anchor-id="gráfico-dinamico">Gráfico Dinamico</h2>
 <div class="cell" data-execution_count="22">
 <details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Código</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="cell" data-execution_count="23">
 <details class="code-fold">
-<summary>Code</summary>
+<summary>Código</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>px.histogram(df,x<span class="op">=</span><span class="st">'Collision Type'</span>, </span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>animation_frame<span class="op">=</span>df[<span class="st">'Year'</span>].sort_values(ascending<span class="op">=</span><span class="va">True</span>),</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>color<span class="op">=</span><span class="st">'Collision Type'</span>, title<span class="op">=</span><span class="st">'Accidentes por Tipo de Colisión'</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>                            <div id="f5db2091-bc85-4394-a67b-61cc72c6fb51" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f5db2091-bc85-4394-a67b-61cc72c6fb51")) {                    Plotly.newPlot(                        "f5db2091-bc85-4394-a67b-61cc72c6fb51",                        [{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"2-Car","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"2-Car","offsetgroup":"2-Car","orientation":"v","showlegend":true,"x":["2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car","2-Car"],"xaxis":"x","yaxis":"y","type":"histogram"},{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"1-Car","marker":{"color":"#EF553B","pattern":{"shape":""}},"name":"1-Car","offsetgroup":"1-Car","orientation":"v","showlegend":true,"x":["1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car","1-Car"],"xaxis":"x","yaxis":"y","type":"histogram"},{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"3+ Cars","marker":{"color":"#00cc96","pattern":{"shape":""}},"name":"3+ Cars","offsetgroup":"3+ Cars","orientation":"v","showlegend":true,"x":["3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars","3+ Cars"],"xaxis":"x","yaxis":"y","type":"histogram"},{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Pedestrian","marker":{"color":"#ab63fa","pattern":{"shape":""}},"name":"Pedestrian","offsetgroup":"Pedestrian","orientation":"v","showlegend":true,"x":["Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian","Pedestrian"],"xaxis":"x","yaxis":"y","type":"histogram"},{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Cyclist","marker":{"color":"#FFA15A","pattern":{"shape":""}},"name":"Cyclist","offsetgroup":"Cyclist","orientation":"v","showlegend":true,"x":["Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist","Cyclist"],"xaxis":"x","yaxis":"y","type":"histogram"},{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Bus","marker":{"color":"#19d3f3","pattern":{"shape":""}},"name":"Bus","offsetgroup":"Bus","orientation":"v","showlegend":true,"x":["Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus","Bus"],"xaxis":"x","yaxis":"y","type":"histogram"},{"alignmentgroup":"True","bingroup":"x","hovertemplate":"Collision Type=%{x}\u003cbr\u003eanimation_frame=2003\u003cbr\u003ecount=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"Moped\u002fMotorcycle","marker":{"color":"#FF6692","pattern":{"shape":""}},"name":"Moped\u002fMotorcycle","offsetgroup":"Moped\u002fMotorcycle","orientation":"v","showlegend":true,"x":["Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle","Moped\u002fMotorcycle"],"xaxis":"x","yaxis":"y","type":"histogram"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Collision Type"},"categoryorder":"array","categoryarray":["2-Car","1-Car","3+ Cars","Pedestrian","Cyclist","Bus","Moped\u002fMotorcycle",null]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"count"}},"legend":{"title":{"text":"Collision Type"},"tracegroupgap":0},"title":{"text":"Accidentes por Tipo de Colisi\u00f3n"},"barmode":"relative","updatemenus":[{"buttons":[{"args":[null,{"frame":{"duration":500,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":500,"easing":"linear"}}],"label":"&#9654;","method":"animate"},{"args":[[null],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"&#9724;","method":"animate"}],"direction":"left","pad":{"r":10,"t":70},"showactive":false,"type":"buttons","x":0.1,"xanchor":"right","y":0,"yanchor":"top"}],"sliders":[{"active":0,"currentvalue":{"prefix":"animation_frame="},"len":0.9,"pad":{"b":10,"t":60},"steps":[{"args":[["2003"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2003","method":"animate"},{"args":[["2004"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2004","method":"animate"},{"args":[["2005"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2005","method":"animate"},{"args":[["2006"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2006","method":"animate"},{"args":[["2007"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2007","method":"animate"},{"args":[["2008"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2008","method":"animate"},{"args":[["2009"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2009","method":"animate"},{"args":[["2010"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2010","method":"animate"},{"args":[["2011"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2011","method":"animate"},{"args":[["2012"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2012","method":"animate"},{"args":[["2013"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2013","method":"animate"},{"args":[["2014"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2014","method":"animate"},{"args":[["2015"],{"frame":{"duration":0,"redraw":true},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2015","method":"animate"}],"x":0.1,"xanchor":"left","y":0,"yanchor":"top"}]},                        {"responsive": true}                    ).then(function(){
@@ -782,6 +801,8 @@ if (outputEl) {{
 </div>
 </div>
 
+
+<!-- -->
 
 </section>
 </section>
@@ -985,12 +1006,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Copiado");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Copiado");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
@@ -1010,6 +1031,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/joel-x\.github\.io\/jb_blog\/");
@@ -1339,7 +1411,226 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Ejecutar el código</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb35" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Accidentes automovilisticos Conjunto de datos EDA</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Joel burbano</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 1-13-2024</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Python]</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> En este apartado vamos a analizar datos de accidentes automovilisticos</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a><span class="fu"># Importamos las librerias necesarias</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>pd.options.display.max_columns<span class="op">=</span><span class="va">None</span> <span class="co">#para que se despliegue todas las columnas</span></span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings </span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb35-24"><a href="#cb35-24" aria-hidden="true" tabindex="-1"></a>c4<span class="op">=</span>cm.get_cmap(<span class="st">'Set3'</span>)</span>
+<span id="cb35-25"><a href="#cb35-25" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-26"><a href="#cb35-26" aria-hidden="true" tabindex="-1"></a><span class="fu"># Cargamos la data</span></span>
+<span id="cb35-27"><a href="#cb35-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-30"><a href="#cb35-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-31"><a href="#cb35-31" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.read_excel(<span class="st">"dataset.xlsx"</span>)</span>
+<span id="cb35-32"><a href="#cb35-32" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-33"><a href="#cb35-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-34"><a href="#cb35-34" aria-hidden="true" tabindex="-1"></a>Revisemos las 5 primeras filas de datos</span>
+<span id="cb35-37"><a href="#cb35-37" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-38"><a href="#cb35-38" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">5</span>)</span>
+<span id="cb35-39"><a href="#cb35-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-40"><a href="#cb35-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-41"><a href="#cb35-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-42"><a href="#cb35-42" aria-hidden="true" tabindex="-1"></a><span class="fu"># Procedmos con la limpieza da la data</span></span>
+<span id="cb35-43"><a href="#cb35-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-44"><a href="#cb35-44" aria-hidden="true" tabindex="-1"></a>Realizamos una revisión de duplicados</span>
+<span id="cb35-47"><a href="#cb35-47" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-48"><a href="#cb35-48" aria-hidden="true" tabindex="-1"></a>df.duplicated().value_counts()</span>
+<span id="cb35-49"><a href="#cb35-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-50"><a href="#cb35-50" aria-hidden="true" tabindex="-1"></a>al parecer tenemos $64$ filas repetidas</span>
+<span id="cb35-51"><a href="#cb35-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-52"><a href="#cb35-52" aria-hidden="true" tabindex="-1"></a>ahora observemos la información de los datos </span>
+<span id="cb35-53"><a href="#cb35-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-56"><a href="#cb35-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-57"><a href="#cb35-57" aria-hidden="true" tabindex="-1"></a>df.info()</span>
+<span id="cb35-58"><a href="#cb35-58" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-59"><a href="#cb35-59" aria-hidden="true" tabindex="-1"></a>Veamos el rango de años que contiene la data</span>
+<span id="cb35-62"><a href="#cb35-62" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-63"><a href="#cb35-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Data desde el año"</span>,df.Year.<span class="bu">min</span>(), <span class="st">" hasta "</span>, df.Year.<span class="bu">max</span>() )</span>
+<span id="cb35-64"><a href="#cb35-64" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-65"><a href="#cb35-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-66"><a href="#cb35-66" aria-hidden="true" tabindex="-1"></a>Analicemos los tipos de colisión que existen en la data</span>
+<span id="cb35-67"><a href="#cb35-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-70"><a href="#cb35-70" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-71"><a href="#cb35-71" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Collision Type'</span>].value_counts()</span>
+<span id="cb35-72"><a href="#cb35-72" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-73"><a href="#cb35-73" aria-hidden="true" tabindex="-1"></a><span class="fu"># Visualización de la data</span></span>
+<span id="cb35-74"><a href="#cb35-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-75"><a href="#cb35-75" aria-hidden="true" tabindex="-1"></a><span class="fu">## Frecuencia de los tipos de acciedentes</span></span>
+<span id="cb35-76"><a href="#cb35-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-79"><a href="#cb35-79" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-80"><a href="#cb35-80" aria-hidden="true" tabindex="-1"></a>sb.countplot(x<span class="op">=</span>df[<span class="st">'Collision Type'</span>],palette<span class="op">=</span><span class="st">'Set3'</span>)</span>
+<span id="cb35-81"><a href="#cb35-81" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frecuencia'</span>)</span>
+<span id="cb35-82"><a href="#cb35-82" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">65</span>)</span>
+<span id="cb35-83"><a href="#cb35-83" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Frecuencia de tipos de Accidentes"</span>)</span>
+<span id="cb35-84"><a href="#cb35-84" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb35-85"><a href="#cb35-85" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb35-86"><a href="#cb35-86" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-87"><a href="#cb35-87" aria-hidden="true" tabindex="-1"></a>Observamos que existe una mayor cantidad de accidentes entre dos vehículos, por otro lado la cantidad de accidentes de bicicletas es la menor.</span>
+<span id="cb35-88"><a href="#cb35-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-89"><a href="#cb35-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## Accidentes ocurridos **entre semana** vs **fin de semana**</span></span>
+<span id="cb35-90"><a href="#cb35-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-93"><a href="#cb35-93" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-94"><a href="#cb35-94" aria-hidden="true" tabindex="-1"></a>sb.countplot(x<span class="op">=</span>df[<span class="st">'Weekend?'</span>],palette<span class="op">=</span><span class="st">'Accent'</span>)</span>
+<span id="cb35-95"><a href="#cb35-95" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frecuencia'</span>)</span>
+<span id="cb35-96"><a href="#cb35-96" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">65</span>)</span>
+<span id="cb35-97"><a href="#cb35-97" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Entre semana vs Fin de semana"</span>)</span>
+<span id="cb35-98"><a href="#cb35-98" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb35-99"><a href="#cb35-99" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb35-100"><a href="#cb35-100" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-101"><a href="#cb35-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-102"><a href="#cb35-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-103"><a href="#cb35-103" aria-hidden="true" tabindex="-1"></a>Observamos que el Fin de semana es cuando mas ocurren accidentes.</span>
+<span id="cb35-104"><a href="#cb35-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-105"><a href="#cb35-105" aria-hidden="true" tabindex="-1"></a><span class="fu">## Porcentaje de lesiones por Categoria</span></span>
+<span id="cb35-106"><a href="#cb35-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-109"><a href="#cb35-109" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-110"><a href="#cb35-110" aria-hidden="true" tabindex="-1"></a>les_val<span class="op">=</span>df[<span class="st">'Injury Type'</span>].value_counts()</span>
+<span id="cb35-111"><a href="#cb35-111" aria-hidden="true" tabindex="-1"></a>les_val</span>
+<span id="cb35-112"><a href="#cb35-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-113"><a href="#cb35-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-116"><a href="#cb35-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-117"><a href="#cb35-117" aria-hidden="true" tabindex="-1"></a>plt.pie(les_val,labels<span class="op">=</span>les_val.index,startangle<span class="op">=</span><span class="dv">30</span>,shadow<span class="op">=</span><span class="va">True</span>,autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>,rotatelabels<span class="op">=</span><span class="dv">30</span>,explode<span class="op">=</span>(<span class="fl">0.1</span>,<span class="fl">0.1</span>,<span class="fl">0.1</span>,<span class="fl">0.1</span>),colors<span class="op">=</span>[c4(<span class="fl">0.9</span>),c4(<span class="fl">0.2</span>),c4(<span class="fl">0.3</span>),c4(<span class="fl">0.6</span>)])</span>
+<span id="cb35-118"><a href="#cb35-118" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Porcentaje de lesiones por Categoria'</span>)</span>
+<span id="cb35-119"><a href="#cb35-119" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb35-120"><a href="#cb35-120" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb35-121"><a href="#cb35-121" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-122"><a href="#cb35-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-123"><a href="#cb35-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-124"><a href="#cb35-124" aria-hidden="true" tabindex="-1"></a>Observamos que el $0.2\%$ de accidentes son Fatales. Por otro lado algo que sería de mucho interes saber de cuantos accidentes no se conoce la lesión ocasionada puesto que la probabilidad de no tener lesiones es muy baja.</span>
+<span id="cb35-125"><a href="#cb35-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-126"><a href="#cb35-126" aria-hidden="true" tabindex="-1"></a><span class="fu">## Motivo mas comun por el cual suceden accidentes</span></span>
+<span id="cb35-127"><a href="#cb35-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-128"><a href="#cb35-128" aria-hidden="true" tabindex="-1"></a>Primero indagaremos cuantos Factores Primarios existen en la data</span>
+<span id="cb35-131"><a href="#cb35-131" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-132"><a href="#cb35-132" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Primary Factor'</span>].nunique()</span>
+<span id="cb35-133"><a href="#cb35-133" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-134"><a href="#cb35-134" aria-hidden="true" tabindex="-1"></a>Dado que existen $55$ Factores Primarios nos quedaremos con el top 20</span>
+<span id="cb35-137"><a href="#cb35-137" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-138"><a href="#cb35-138" aria-hidden="true" tabindex="-1"></a>pfdf<span class="op">=</span>df[<span class="st">'Primary Factor'</span>].value_counts().head(<span class="dv">20</span>)</span>
+<span id="cb35-139"><a href="#cb35-139" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-140"><a href="#cb35-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-141"><a href="#cb35-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-144"><a href="#cb35-144" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-145"><a href="#cb35-145" aria-hidden="true" tabindex="-1"></a>fig<span class="op">=</span>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">10</span>))</span>
+<span id="cb35-146"><a href="#cb35-146" aria-hidden="true" tabindex="-1"></a>axis<span class="op">=</span>fig.add_axes([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb35-147"><a href="#cb35-147" aria-hidden="true" tabindex="-1"></a>sb.swarmplot(x<span class="op">=</span>pfdf,y<span class="op">=</span>pfdf.index,ax<span class="op">=</span>axis)</span>
+<span id="cb35-148"><a href="#cb35-148" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i,j <span class="kw">in</span> <span class="bu">enumerate</span>(pfdf):</span>
+<span id="cb35-149"><a href="#cb35-149" aria-hidden="true" tabindex="-1"></a>  axis.text(j,i,j)</span>
+<span id="cb35-150"><a href="#cb35-150" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Ocurrencia'</span>)</span>
+<span id="cb35-151"><a href="#cb35-151" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Motivos principales por los que ocurren accidentes'</span>)</span>
+<span id="cb35-152"><a href="#cb35-152" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb35-153"><a href="#cb35-153" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb35-154"><a href="#cb35-154" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-155"><a href="#cb35-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-156"><a href="#cb35-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-157"><a href="#cb35-157" aria-hidden="true" tabindex="-1"></a><span class="fu">## Top 30 lugares mas frecuente donde ocurren accidentes</span></span>
+<span id="cb35-158"><a href="#cb35-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-161"><a href="#cb35-161" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-162"><a href="#cb35-162" aria-hidden="true" tabindex="-1"></a>ldf<span class="op">=</span>df[<span class="st">'Reported_Location'</span>].value_counts().head(<span class="dv">30</span>)</span>
+<span id="cb35-163"><a href="#cb35-163" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-164"><a href="#cb35-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-165"><a href="#cb35-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-168"><a href="#cb35-168" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-169"><a href="#cb35-169" aria-hidden="true" tabindex="-1"></a>fig1<span class="op">=</span>plt.figure()</span>
+<span id="cb35-170"><a href="#cb35-170" aria-hidden="true" tabindex="-1"></a>axis1<span class="op">=</span>fig1.add_axes([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span>
+<span id="cb35-171"><a href="#cb35-171" aria-hidden="true" tabindex="-1"></a>sb.barplot(x<span class="op">=</span>ldf,y<span class="op">=</span>ldf.index,ax<span class="op">=</span>axis1,palette<span class="op">=</span><span class="st">"viridis"</span>)</span>
+<span id="cb35-172"><a href="#cb35-172" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i,j <span class="kw">in</span> <span class="bu">enumerate</span>(ldf):</span>
+<span id="cb35-173"><a href="#cb35-173" aria-hidden="true" tabindex="-1"></a>  axis1.text(j,i,j,va<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb35-174"><a href="#cb35-174" aria-hidden="true" tabindex="-1"></a>axis1.set_xlabel(<span class="st">'Frecuencia'</span>)</span>
+<span id="cb35-175"><a href="#cb35-175" aria-hidden="true" tabindex="-1"></a>axis1.set_title(<span class="st">'Lugares con mayor frecuencia de Accidentes'</span>)</span>
+<span id="cb35-176"><a href="#cb35-176" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb35-177"><a href="#cb35-177" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb35-178"><a href="#cb35-178" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-179"><a href="#cb35-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-180"><a href="#cb35-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tipos de Colisiones en diferentes años</span></span>
+<span id="cb35-181"><a href="#cb35-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-184"><a href="#cb35-184" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-185"><a href="#cb35-185" aria-hidden="true" tabindex="-1"></a>años<span class="op">=</span>df.groupby(<span class="st">'Year'</span>)</span>
+<span id="cb35-186"><a href="#cb35-186" aria-hidden="true" tabindex="-1"></a>keys<span class="op">=</span>años.groups.keys()</span>
+<span id="cb35-187"><a href="#cb35-187" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-188"><a href="#cb35-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-191"><a href="#cb35-191" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-192"><a href="#cb35-192" aria-hidden="true" tabindex="-1"></a>infobox<span class="op">=</span>[]</span>
+<span id="cb35-193"><a href="#cb35-193" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2003</span>,<span class="dv">2016</span>):</span>
+<span id="cb35-194"><a href="#cb35-194" aria-hidden="true" tabindex="-1"></a>  infobox.append(años.get_group(i)[<span class="st">'Collision Type'</span>].value_counts())</span>
+<span id="cb35-195"><a href="#cb35-195" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-196"><a href="#cb35-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-197"><a href="#cb35-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-200"><a href="#cb35-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-201"><a href="#cb35-201" aria-hidden="true" tabindex="-1"></a>c2<span class="op">=</span>cm.get_cmap(<span class="st">'terrain'</span>)</span>
+<span id="cb35-202"><a href="#cb35-202" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-203"><a href="#cb35-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-206"><a href="#cb35-206" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-207"><a href="#cb35-207" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display, Markdown</span>
+<span id="cb35-208"><a href="#cb35-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-209"><a href="#cb35-209" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-210"><a href="#cb35-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-211"><a href="#cb35-211" aria-hidden="true" tabindex="-1"></a>**Colisiones por Año**</span>
+<span id="cb35-212"><a href="#cb35-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-213"><a href="#cb35-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-214"><a href="#cb35-214" aria-hidden="true" tabindex="-1"></a>::: {.panel-tabset}</span>
+<span id="cb35-215"><a href="#cb35-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-218"><a href="#cb35-218" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-219"><a href="#cb35-219" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: asis</span></span>
+<span id="cb35-220"><a href="#cb35-220" aria-hidden="true" tabindex="-1"></a>count<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb35-221"><a href="#cb35-221" aria-hidden="true" tabindex="-1"></a>val<span class="op">=</span><span class="fl">0.1</span></span>
+<span id="cb35-222"><a href="#cb35-222" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2003</span>,<span class="dv">2016</span>):</span>
+<span id="cb35-223"><a href="#cb35-223" aria-hidden="true" tabindex="-1"></a>  display(Markdown(<span class="ss">f"## </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">"</span>))</span>
+<span id="cb35-224"><a href="#cb35-224" aria-hidden="true" tabindex="-1"></a>  sb.pointplot(x<span class="op">=</span>infobox[count].index,y<span class="op">=</span>infobox[count],color<span class="op">=</span>c2(val))</span>
+<span id="cb35-225"><a href="#cb35-225" aria-hidden="true" tabindex="-1"></a>  plt.xticks(rotation<span class="op">=</span><span class="dv">65</span>)</span>
+<span id="cb35-226"><a href="#cb35-226" aria-hidden="true" tabindex="-1"></a>  plt.ylabel(<span class="st">'Frecuencia'</span>)</span>
+<span id="cb35-227"><a href="#cb35-227" aria-hidden="true" tabindex="-1"></a>  plt.title(<span class="st">'</span><span class="sc">%d</span><span class="st"> Tipo de colisión'</span><span class="op">%</span>(i))</span>
+<span id="cb35-228"><a href="#cb35-228" aria-hidden="true" tabindex="-1"></a>  plt.show()</span>
+<span id="cb35-229"><a href="#cb35-229" aria-hidden="true" tabindex="-1"></a>  display(Markdown(<span class="ss">f" "</span>))</span>
+<span id="cb35-230"><a href="#cb35-230" aria-hidden="true" tabindex="-1"></a>  plt.clf()</span>
+<span id="cb35-231"><a href="#cb35-231" aria-hidden="true" tabindex="-1"></a>  count<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb35-232"><a href="#cb35-232" aria-hidden="true" tabindex="-1"></a>  val<span class="op">+=</span><span class="fl">0.1</span></span>
+<span id="cb35-233"><a href="#cb35-233" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> val<span class="op">&gt;=</span><span class="fl">0.9</span>:</span>
+<span id="cb35-234"><a href="#cb35-234" aria-hidden="true" tabindex="-1"></a>    c2<span class="op">=</span>cm.get_cmap(<span class="st">'turbo'</span>)</span>
+<span id="cb35-235"><a href="#cb35-235" aria-hidden="true" tabindex="-1"></a>    val<span class="op">=</span><span class="fl">0.1</span></span>
+<span id="cb35-236"><a href="#cb35-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-237"><a href="#cb35-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-238"><a href="#cb35-238" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb35-239"><a href="#cb35-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-240"><a href="#cb35-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-241"><a href="#cb35-241" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Poner un grafico dínamico --&gt;</span></span>
+<span id="cb35-242"><a href="#cb35-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-243"><a href="#cb35-243" aria-hidden="true" tabindex="-1"></a><span class="fu">## Gráfico Dinamico</span></span>
+<span id="cb35-244"><a href="#cb35-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-247"><a href="#cb35-247" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-248"><a href="#cb35-248" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb35-249"><a href="#cb35-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-250"><a href="#cb35-250" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-251"><a href="#cb35-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-252"><a href="#cb35-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-255"><a href="#cb35-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb35-256"><a href="#cb35-256" aria-hidden="true" tabindex="-1"></a>px.histogram(df,x<span class="op">=</span><span class="st">'Collision Type'</span>, </span>
+<span id="cb35-257"><a href="#cb35-257" aria-hidden="true" tabindex="-1"></a>animation_frame<span class="op">=</span>df[<span class="st">'Year'</span>].sort_values(ascending<span class="op">=</span><span class="va">True</span>),</span>
+<span id="cb35-258"><a href="#cb35-258" aria-hidden="true" tabindex="-1"></a>color<span class="op">=</span><span class="st">'Collision Type'</span>, title<span class="op">=</span><span class="st">'Accidentes por Tipo de Colisión'</span></span>
+<span id="cb35-259"><a href="#cb35-259" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-260"><a href="#cb35-260" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb35-261"><a href="#cb35-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-262"><a href="#cb35-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-263"><a href="#cb35-263" aria-hidden="true" tabindex="-1"></a></span>
+</code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
 
 

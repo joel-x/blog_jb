@@ -1,5 +1,8 @@
 ---
 title: Contactos
+toc: false
+code-fold: false
+code-tools: false
 ---
 
 ```{r load_packages, message=FALSE, warning=FALSE, include=FALSE}
