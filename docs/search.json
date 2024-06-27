@@ -105,6 +105,55 @@
     "text": "Conclusión\nEl PCA es una herramienta poderosa en el arsenal de un científico de datos. Su capacidad para simplificar conjuntos de datos complejos y reducir la dimensionalidad lo hace indispensable para la exploración y visualización de datos. A través de ejemplos prácticos en Python y R, podemos ver cómo esta técnica se aplica en la práctica, facilitando el análisis y la toma de decisiones basadas en datos."
   },
   {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "",
+    "text": "Las medidas con fórmulas temporales en DAX (Data Analysis Expressions) y Power BI son herramientas poderosas que permiten a los analistas de datos realizar cálculos avanzados en base a períodos de tiempo. Estas medidas son esenciales para el análisis de series temporales, permitiendo comparar datos entre diferentes períodos y obtener insights sobre tendencias y patrones. En este artículo, exploraremos qué son estas medidas, para qué sirven, y veremos un ejemplo práctico utilizando Power BI."
+  },
+  {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-1-cargar-los-datos-en-power-bi",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-1-cargar-los-datos-en-power-bi",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "Paso 1: Cargar los Datos en Power BI",
+    "text": "Paso 1: Cargar los Datos en Power BI\n\nAbre Power BI Desktop.\nHaz clic en “Obtener datos” y selecciona “Archivo CSV”\nCarga el dataset “Superstore Sales”"
+  },
+  {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-2-crear-un-modelo-de-datos",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-2-crear-un-modelo-de-datos",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "Paso 2: Crear un Modelo de Datos",
+    "text": "Paso 2: Crear un Modelo de Datos\n\nAbre Transformar datos y verificamos que las columnas tengan el formato adecuado\nCrea una tabla de fechas “Calendario”\n\n\n\ndax\n\ncalendario = CALENDAR(MIN(Superstore[Order Date]), MAX(Superstore[Order Date]))"
+  },
+  {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-3-definir-relaciones",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-3-definir-relaciones",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "Paso 3: Definir Relaciones",
+    "text": "Paso 3: Definir Relaciones\n\nEn la vista “Modelo”, crea una relación entre la columna “Order Date” de la tabla de Superstore y la columna “Date” de la tabla calendario."
+  },
+  {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-4-crear-medidas-temporales",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html#paso-4-crear-medidas-temporales",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "Paso 4: Crear Medidas Temporales",
+    "text": "Paso 4: Crear Medidas Temporales\n\nVentas Totales (Total Sales):\n\n\n\ndax\n\ntotal_sales = SUM(Superstore[Sales])\n\n\nVentas Acumuladas Año a la Fecha (YTD Sales):\n\n\n\ndax\n\nYTD_Sales = TOTALYTD([total_sales],calendario[Date])\n\n\nVentas Acumuladas Mes a la Fecha (MTD Sales):\n\n\n\ndax\n\nMTD_Sales = TOTALMTD([total_sales], calendario[Date])\n\n\nVentas del Mismo Período el Año Pasado (Same Period Last Year Sales):\n\n\n\ndax\n\nSales_last_year = CALCULATE( [total_sales], SAMEPERIODLASTYEAR(calendario[Date]))"
+  },
+  {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html#ventajas",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html#ventajas",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "Ventajas",
+    "text": "Ventajas\n\nFacilidad de Uso: Power BI y DAX facilitan la creación y manipulación de medidas temporales.\nFlexibilidad: Permite realizar cálculos complejos y personalizados según las necesidades del análisis.\nVisualización Interactiva: Power BI ofrece herramientas visuales que permiten explorar datos de manera interactiva."
+  },
+  {
+    "objectID": "posts/2024-05-25-Medidas_Power_BI/index.html#desventajas",
+    "href": "posts/2024-05-25-Medidas_Power_BI/index.html#desventajas",
+    "title": "Medidas con Fórmulas Temporales DAX y Power BI",
+    "section": "Desventajas",
+    "text": "Desventajas\n\nCurva de Aprendizaje: Puede ser desafiante para principiantes sin experiencia previa en DAX.\nRendimiento: Las medidas complejas pueden afectar el rendimiento del informe, especialmente con grandes volúmenes de datos."
+  },
+  {
     "objectID": "posts/2024-03-11-regresion-logistica/index.html",
     "href": "posts/2024-03-11-regresion-logistica/index.html",
     "title": "Regresión Logística",
@@ -193,7 +242,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nK Vecinos más cercanos (KNN)\n\n\n\nPython\n\n\nR\n\n\nAprendizaje Supervisado\n\n\nKNN\n\n\n\n\n\n\n\nJoel Burbano\n\n\n28 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálisis de Componentes Principales (PCA)\n\n\n\nPython\n\n\nR\n\n\nAprendizaje No Supervisado\n\n\nClusters\n\n\n\n\n\n\n\nJoel Burbano\n\n\n28 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión Logística\n\n\n\nPython\n\n\nR\n\n\nMachine Learning\n\n\n\n\n\n\n\nJoel Burbano\n\n\n11 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAccidentes automovilisticos Conjunto de datos EDA\n\n\n\nPython\n\n\n\nEn este apartado vamos a analizar datos de accidentes automovilisticos\n\n\n\nJoel burbano\n\n\n13 ene 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGaussian Mixture Models\n\n\n\nPython\n\n\nAprendizaje No Supervisado\n\n\nClusters\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAnalisis de Componentes Principales\n\n\n\nPython\n\n\nPCA\n\n\nReducción de dimensiones\n\n\nAprendizaje No Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión Lineal Simple\n\n\n\nPython\n\n\nAprendizaje Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nNaive Bayes Clasificación\n\n\n\nAprendizaje supervisado\n\n\nPython\n\n\nNaive Bayes\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDetección de fraude con tarjetas de Crédito\n\n\n\nPython\n\n\n\nEn el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias.\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHiperparametros y Modelos de Validación\n\n\n\nPython\n\n\nMachine Learning\n\n\n\n\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTratando los datos Keane\n\n\n\nEconometría\n\n\nPython\n\n\n\nEn este post se realizara un analisis de los datos keane\n\n\n\nJoel Burbano\n\n\n7 dic 2023\n\n\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nMedidas con Fórmulas Temporales DAX y Power BI\n\n\n\nPower BI\n\n\nDAX\n\n\n\n\n\n\n\nJoel Burbano\n\n\n25 may 2024\n\n\n\n\n\n\n\n\n\n\n\n\nK Vecinos más cercanos (KNN)\n\n\n\nPython\n\n\nR\n\n\nAprendizaje Supervisado\n\n\nKNN\n\n\n\n\n\n\n\nJoel Burbano\n\n\n28 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAnálisis de Componentes Principales (PCA)\n\n\n\nPython\n\n\nR\n\n\nAprendizaje No Supervisado\n\n\nClusters\n\n\n\n\n\n\n\nJoel Burbano\n\n\n28 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión Logística\n\n\n\nPython\n\n\nR\n\n\nMachine Learning\n\n\n\n\n\n\n\nJoel Burbano\n\n\n11 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nAccidentes automovilisticos Conjunto de datos EDA\n\n\n\nPython\n\n\n\nEn este apartado vamos a analizar datos de accidentes automovilisticos\n\n\n\nJoel burbano\n\n\n13 ene 2024\n\n\n\n\n\n\n\n\n\n\n\n\nGaussian Mixture Models\n\n\n\nPython\n\n\nAprendizaje No Supervisado\n\n\nClusters\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nAnalisis de Componentes Principales\n\n\n\nPython\n\n\nPCA\n\n\nReducción de dimensiones\n\n\nAprendizaje No Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n20 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión Lineal Simple\n\n\n\nPython\n\n\nAprendizaje Supervisado\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nNaive Bayes Clasificación\n\n\n\nAprendizaje supervisado\n\n\nPython\n\n\nNaive Bayes\n\n\n\n\n\n\n\nJoel Burbano\n\n\n19 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nDetección de fraude con tarjetas de Crédito\n\n\n\nPython\n\n\n\nEn el presente proyecto se pretende analizar un conjunto de datos de transacciones crediticias.\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHiperparametros y Modelos de Validación\n\n\n\nPython\n\n\nMachine Learning\n\n\n\n\n\n\n\nJoel Burbano\n\n\n17 dic 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTratando los datos Keane\n\n\n\nEconometría\n\n\nPython\n\n\n\nEn este post se realizara un analisis de los datos keane\n\n\n\nJoel Burbano\n\n\n7 dic 2023\n\n\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "certificados/16-05-2023-Curso_de_PHP-MySQL/index.html",
@@ -229,6 +278,48 @@
     "title": "Analisis de Componentes Principales",
     "section": "",
     "text": "En este post se pretende reducir dimensiones de una cantidad de datos es decir encontrar una transformación en la cuál se represente de mejor manera los datos reduciendo así su dimensión\nComo ya es costumbre primero importamos las librerías necesarias\n\n\nCódigo\nimport seaborn as sb \nimport numpy as np\nfrom sklearn.decomposition import PCA\n\n\nImportemos los datos\n\n\nCódigo\niris=sb.load_dataset('iris')\nX_iris=iris.drop('species',axis=1)\ny_iris=iris['species']\n\n\nDefinimos el modelo\n\n\nCódigo\nACP=PCA(n_components=2)\n\n\nAjustamos el modelo\n\n\nCódigo\nACP.fit(X_iris)\n\n\nPCA(n_components=2)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.PCAPCA(n_components=2)\n\n\ntransformamos la data\n\n\nCódigo\nX_2d=ACP.transform(X_iris)\n\n\nRealizamos una representación gráfica\n\n\nCódigo\n#para facilitarnos el trabajo vamos a extender sobre el data iris los nuevos ejes encontrados\niris['PCA1']=X_2d[:,0]\niris['PCA2']=X_2d[:,1]\nsb.lmplot(x=\"PCA1\",y=\"PCA2\",hue='species',data=iris,fit_reg=False)"
+  },
+  {
+    "objectID": "posts/2024-04-10-KNN/index.html",
+    "href": "posts/2024-04-10-KNN/index.html",
+    "title": "K Vecinos más cercanos (KNN)",
+    "section": "",
+    "text": "El algoritmo de K Vecinos Más Cercanos (KNN) es uno de los métodos más simples y efectivos para clasificación y regresión en ciencia de datos. A pesar de su simplicidad, KNN puede ser muy poderoso, especialmente cuando se configuran adecuadamente los parámetros y se utiliza en los contextos apropiados."
+  },
+  {
+    "objectID": "posts/2024-04-10-KNN/index.html#introducción",
+    "href": "posts/2024-04-10-KNN/index.html#introducción",
+    "title": "K Vecinos más cercanos (KNN)",
+    "section": "",
+    "text": "El algoritmo de K Vecinos Más Cercanos (KNN) es uno de los métodos más simples y efectivos para clasificación y regresión en ciencia de datos. A pesar de su simplicidad, KNN puede ser muy poderoso, especialmente cuando se configuran adecuadamente los parámetros y se utiliza en los contextos apropiados."
+  },
+  {
+    "objectID": "posts/2024-04-10-KNN/index.html#qué-es-k-vecinos-más-cercanos",
+    "href": "posts/2024-04-10-KNN/index.html#qué-es-k-vecinos-más-cercanos",
+    "title": "K Vecinos más cercanos (KNN)",
+    "section": "¿Qué es K Vecinos Más Cercanos?",
+    "text": "¿Qué es K Vecinos Más Cercanos?\nKNN es un algoritmo de aprendizaje supervisado que clasifica una muestra en función de las categorías de sus \\(K\\) vecinos más cercanos. Para la clasificación, asigna la categoría más común entre sus vecinos, y para la regresión, predice el valor promedio de los vecinos más cercanos.\n\nFuncionamiento del KNN:\n\nSelección de K: Elige el número de vecinos más cercanos (\\(K\\)).\nDistancia: Calcula la distancia entre la muestra y todas las demás muestras en el conjunto de datos (comúnmente usando la distancia euclidiana).\nVecinos: Identifica los \\(K\\) vecinos más cercanos a la muestra.\nVotación: Asigna la clase más común (clasificación) o el promedio de los valores (regresión) entre los \\(K\\) vecinos."
+  },
+  {
+    "objectID": "posts/2024-04-10-KNN/index.html#ejemplo",
+    "href": "posts/2024-04-10-KNN/index.html#ejemplo",
+    "title": "K Vecinos más cercanos (KNN)",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n\n\n\n\n\nPara ilustrar el uso de KNN, usaremos el dataset Iris.\n\nPaso 1: Instalación de Librerías\n\nPythonR\n\n\n\n\nCódigo\nimport pandas as pd \npd.options.display.max_columns=None\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, confusion_matrix, classification_report\nimport matplotlib.pyplot as plt\nimport seaborn as sb\n\n\n\n\n\n\nCódigo\nlibrary(class)\nlibrary(caret)\nlibrary(GGally)\nlibrary(ggplot2)\n\n\n\n\n\n\n\nPaso 2: Cargar y Preprocesar los Datos\n\nPythonR\n\n\n\n\nCódigo\ndata = pd.read_csv(\"Iris.csv\")\ndata = data.drop(['Id'], axis = 1)\nX = data.drop(['Species'], axis = 1)\ny = data['Species']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 42)\n\nscaler = StandardScaler()\n\nX_train = scaler.fit_transform(X_train)\nX_test = scaler.fit_transform(X_test)\n\n\n\n\n\n\nCódigo\ndata &lt;- read.csv(\"Iris.csv\")\ndata &lt;- data[,-1]\n\nany(is.na(data))\n\n\n[1] FALSE\n\n\nCódigo\nX &lt;- data[,-5]\ny &lt;- data$Species\n\nset.seed(42)\ntrainIndex &lt;- createDataPartition(y, p = .7, list = FALSE)\nX_train &lt;- X[trainIndex,]\nX_test &lt;- X[-trainIndex,]\ny_train &lt;- y[trainIndex]\ny_test &lt;- y[-trainIndex]\n\npreProcValues &lt;- preProcess(X_train, method = c(\"center\", \"scale\"))\nX_train &lt;- predict(preProcValues, X_train)\nX_test &lt;- predict(preProcValues, X_test)\n\n\n\n\n\n\n\nPaso 3: Entrenar el Modelo\n\nPythonR\n\n\n\n\nCódigo\nknn = KNeighborsClassifier(n_neighbors = 3)\nknn.fit(X_train, y_train)\n\n\nKNeighborsClassifier(n_neighbors=3)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  KNeighborsClassifier?Documentation for KNeighborsClassifieriFittedKNeighborsClassifier(n_neighbors=3) \n\n\n\n\n\n\nCódigo\nknn_model &lt;- knn(train = X_train, test = X_test, cl = y_train, k = 3)\n\n\n\n\n\n\n\nPaso 4: Evaluar el Modelo\n\nPythonR\n\n\n\n\nCódigo\ny_pred = knn.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy}')\n\n\nAccuracy: 0.9111111111111111\n\n\nCódigo\nprint('Confusion Matrix:\\n', confusion_matrix(y_test, y_pred))\n\n\nConfusion Matrix:\n [[19  0  0]\n [ 0  9  4]\n [ 0  0 13]]\n\n\nCódigo\nprint('Classifcation Report:\\n', classification_report(y_test, y_pred))\n\n\nClassifcation Report:\n                  precision    recall  f1-score   support\n\n    Iris-setosa       1.00      1.00      1.00        19\nIris-versicolor       1.00      0.69      0.82        13\n Iris-virginica       0.76      1.00      0.87        13\n\n       accuracy                           0.91        45\n      macro avg       0.92      0.90      0.89        45\n   weighted avg       0.93      0.91      0.91        45\n\n\n\n\n\n\nCódigo\nconfusion &lt;- confusionMatrix(knn_model, as.factor(y_test))\nprint(confusion)\n\n\nConfusion Matrix and Statistics\n\n                 Reference\nPrediction        Iris-setosa Iris-versicolor Iris-virginica\n  Iris-setosa              14               0              0\n  Iris-versicolor           1              14              2\n  Iris-virginica            0               1             13\n\nOverall Statistics\n                                          \n               Accuracy : 0.9111          \n                 95% CI : (0.7878, 0.9752)\n    No Information Rate : 0.3333          \n    P-Value [Acc &gt; NIR] : 8.467e-16       \n                                          \n                  Kappa : 0.8667          \n                                          \n Mcnemar's Test P-Value : NA              \n\nStatistics by Class:\n\n                     Class: Iris-setosa Class: Iris-versicolor\nSensitivity                      0.9333                 0.9333\nSpecificity                      1.0000                 0.9000\nPos Pred Value                   1.0000                 0.8235\nNeg Pred Value                   0.9677                 0.9643\nPrevalence                       0.3333                 0.3333\nDetection Rate                   0.3111                 0.3111\nDetection Prevalence             0.3111                 0.3778\nBalanced Accuracy                0.9667                 0.9167\n                     Class: Iris-virginica\nSensitivity                         0.8667\nSpecificity                         0.9667\nPos Pred Value                      0.9286\nNeg Pred Value                      0.9355\nPrevalence                          0.3333\nDetection Rate                      0.2889\nDetection Prevalence                0.3111\nBalanced Accuracy                   0.9167\n\n\n\n\n\n\n\nPaso 5: Visualización de Resultados\n\nPythonR\n\n\n\n\nCódigo\nsb.pairplot(data, hue = 'Species')\n\n\n\n\n\n\n\n\n\nCódigo\nplt.clf()\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nggpairs(data, aes(color = Species, alpha = 0.5)) +\n  theme_bw()"
+  },
+  {
+    "objectID": "posts/2024-04-10-KNN/index.html#ventajas-y-desventajas",
+    "href": "posts/2024-04-10-KNN/index.html#ventajas-y-desventajas",
+    "title": "K Vecinos más cercanos (KNN)",
+    "section": "Ventajas y Desventajas",
+    "text": "Ventajas y Desventajas\nVentajas\n\nSimplicidad: Fácil de entender e implementar.\nNo Paramétrico: No asume ninguna distribución de datos.\n\nDesventajas\n\nCosto Computacional: Requiere almacenar todos los datos de entrenamiento y calcular distancias para cada predicción.\nSensibilidad al Ruido: Afectado por la escala y por valores atípicos."
+  },
+  {
+    "objectID": "posts/2024-04-10-KNN/index.html#conclusión",
+    "href": "posts/2024-04-10-KNN/index.html#conclusión",
+    "title": "K Vecinos más cercanos (KNN)",
+    "section": "Conclusión",
+    "text": "Conclusión\nEl algoritmo de K Vecinos Más Cercanos es una herramienta poderosa y fácil de usar para tareas de clasificación y regresión. A través de ejemplos prácticos en Python y R, hemos demostrado cómo implementar y evaluar este modelo en la práctica. Aunque tiene algunas limitaciones, KNN sigue siendo una opción valiosa para muchos problemas en ciencia de datos."
   },
   {
     "objectID": "posts/2024-1-13-Accidentes automovilisticos/index.html",
@@ -369,47 +460,5 @@
     "title": "Estudio Teórico del Comportamiento del Consumo en Latinámerica y Caribe (Resumen)",
     "section": "Notas",
     "text": "Notas\n\n\nUna ecuación de Euler del consumo, a grandes rasgos, es una condición matemática que describe el comportamiento de una senda óptima de consumo bajo los supuestos de elección intertemporal, expectativas racionales y agente representativo, entre otros, (Parker 2007)↩︎\nLas series integradas son un caso particular de series no estacionarias. Se dice que una serie temporal \\(x_t\\) es integrada de orden \\(d\\), \\(I(d)\\), cuando es necesario diferenciarla \\(d\\) veces para convertirla en estacionaria (Engle y Granger 1987) ↩︎\nEntonces se puede considerar como la varianza cruzada del consumo para una cohorte de individuos.↩︎\n\\(u_t\\) innovaciones en la renta permanente↩︎\nPor el TCL, \\(\\sum u_t \\overset{d}{\\sim} Normal\\) con \\(u_t\\) independientes , bajo supuestos de regularidad incluso si \\(u_t \\not\\sim Normal\\)↩︎\nAl igual que con otros documentos, rechazan enérgicamente la suposición de una perfecta distribución del riesgo.↩︎\nSegún (Orazio P. Attanasio y Weber 2010) esto parece indicar que, de alguna manera, en altas frecuencias los choques salariales son absorbidos y no se reflejan en el consumo.↩︎\nPor ejemplo, es posible que el ingreso esté dado por la tasa de salario multiplicada por el número de horas trabajadas, donde el número de horas es uno de los componentes de \\(z\\)↩︎\nEsta simple restricción impone limitaciones cuantitativamente importantes a la capacidad de suavizar el consumo↩︎\nTRAMO significa “Time series Regression with ARIMA noise, Missing values and Outliers” y SEATS “Signal Extraction in ARIMA Time Series”. Estos programas (que normalmente se usan juntos) han sido desarrollados por Víctor Gómez y Agustín Maravall del Banco de España.↩︎\nDado el fenómeno del niño (1995) el cual fue uno de los desastres naturales mas grandes que ha impactado al Ecuador seria el principio de la bola de nieve que desencadenaría en 1999 con el ya tan conocido “Feriado Bancario”↩︎"
-  },
-  {
-    "objectID": "posts/2021-04-10-KNN/index.html",
-    "href": "posts/2021-04-10-KNN/index.html",
-    "title": "K Vecinos más cercanos (KNN)",
-    "section": "",
-    "text": "El algoritmo de K Vecinos Más Cercanos (KNN) es uno de los métodos más simples y efectivos para clasificación y regresión en ciencia de datos. A pesar de su simplicidad, KNN puede ser muy poderoso, especialmente cuando se configuran adecuadamente los parámetros y se utiliza en los contextos apropiados."
-  },
-  {
-    "objectID": "posts/2021-04-10-KNN/index.html#introducción",
-    "href": "posts/2021-04-10-KNN/index.html#introducción",
-    "title": "K Vecinos más cercanos (KNN)",
-    "section": "",
-    "text": "El algoritmo de K Vecinos Más Cercanos (KNN) es uno de los métodos más simples y efectivos para clasificación y regresión en ciencia de datos. A pesar de su simplicidad, KNN puede ser muy poderoso, especialmente cuando se configuran adecuadamente los parámetros y se utiliza en los contextos apropiados."
-  },
-  {
-    "objectID": "posts/2021-04-10-KNN/index.html#qué-es-k-vecinos-más-cercanos",
-    "href": "posts/2021-04-10-KNN/index.html#qué-es-k-vecinos-más-cercanos",
-    "title": "K Vecinos más cercanos (KNN)",
-    "section": "¿Qué es K Vecinos Más Cercanos?",
-    "text": "¿Qué es K Vecinos Más Cercanos?\nKNN es un algoritmo de aprendizaje supervisado que clasifica una muestra en función de las categorías de sus \\(K\\) vecinos más cercanos. Para la clasificación, asigna la categoría más común entre sus vecinos, y para la regresión, predice el valor promedio de los vecinos más cercanos.\n\nFuncionamiento del KNN:\n\nSelección de K: Elige el número de vecinos más cercanos (\\(K\\)).\nDistancia: Calcula la distancia entre la muestra y todas las demás muestras en el conjunto de datos (comúnmente usando la distancia euclidiana).\nVecinos: Identifica los \\(K\\) vecinos más cercanos a la muestra.\nVotación: Asigna la clase más común (clasificación) o el promedio de los valores (regresión) entre los \\(K\\) vecinos."
-  },
-  {
-    "objectID": "posts/2021-04-10-KNN/index.html#ejemplo",
-    "href": "posts/2021-04-10-KNN/index.html#ejemplo",
-    "title": "K Vecinos más cercanos (KNN)",
-    "section": "Ejemplo",
-    "text": "Ejemplo\n\n\n\n\n\n\nPara ilustrar el uso de KNN, usaremos el dataset Iris.\n\nPaso 1: Instalación de Librerías\n\nPythonR\n\n\n\n\nCódigo\nimport pandas as pd \npd.options.display.max_columns=None\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.metrics import accuracy_score, confusion_matrix, classification_report\nimport matplotlib.pyplot as plt\nimport seaborn as sb\n\n\n\n\n\n\nCódigo\nlibrary(class)\nlibrary(caret)\nlibrary(GGally)\nlibrary(ggplot2)\n\n\n\n\n\n\n\nPaso 2: Cargar y Preprocesar los Datos\n\nPythonR\n\n\n\n\nCódigo\ndata = pd.read_csv(\"Iris.csv\")\ndata = data.drop(['Id'], axis = 1)\nX = data.drop(['Species'], axis = 1)\ny = data['Species']\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 42)\n\nscaler = StandardScaler()\n\nX_train = scaler.fit_transform(X_train)\nX_test = scaler.fit_transform(X_test)\n\n\n\n\n\n\nCódigo\ndata &lt;- read.csv(\"Iris.csv\")\ndata &lt;- data[,-1]\n\nany(is.na(data))\n\n\n[1] FALSE\n\n\nCódigo\nX &lt;- data[,-5]\ny &lt;- data$Species\n\nset.seed(42)\ntrainIndex &lt;- createDataPartition(y, p = .7, list = FALSE)\nX_train &lt;- X[trainIndex,]\nX_test &lt;- X[-trainIndex,]\ny_train &lt;- y[trainIndex]\ny_test &lt;- y[-trainIndex]\n\npreProcValues &lt;- preProcess(X_train, method = c(\"center\", \"scale\"))\nX_train &lt;- predict(preProcValues, X_train)\nX_test &lt;- predict(preProcValues, X_test)\n\n\n\n\n\n\n\nPaso 3: Entrenar el Modelo\n\nPythonR\n\n\n\n\nCódigo\nknn = KNeighborsClassifier(n_neighbors = 3)\nknn.fit(X_train, y_train)\n\n\nKNeighborsClassifier(n_neighbors=3)In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.  KNeighborsClassifier?Documentation for KNeighborsClassifieriFittedKNeighborsClassifier(n_neighbors=3) \n\n\n\n\n\n\nCódigo\nknn_model &lt;- knn(train = X_train, test = X_test, cl = y_train, k = 3)\n\n\n\n\n\n\n\nPaso 4: Evaluar el Modelo\n\nPythonR\n\n\n\n\nCódigo\ny_pred = knn.predict(X_test)\n\naccuracy = accuracy_score(y_test, y_pred)\nprint(f'Accuracy: {accuracy}')\n\n\nAccuracy: 0.9111111111111111\n\n\nCódigo\nprint('Confusion Matrix:\\n', confusion_matrix(y_test, y_pred))\n\n\nConfusion Matrix:\n [[19  0  0]\n [ 0  9  4]\n [ 0  0 13]]\n\n\nCódigo\nprint('Classifcation Report:\\n', classification_report(y_test, y_pred))\n\n\nClassifcation Report:\n                  precision    recall  f1-score   support\n\n    Iris-setosa       1.00      1.00      1.00        19\nIris-versicolor       1.00      0.69      0.82        13\n Iris-virginica       0.76      1.00      0.87        13\n\n       accuracy                           0.91        45\n      macro avg       0.92      0.90      0.89        45\n   weighted avg       0.93      0.91      0.91        45\n\n\n\n\n\n\nCódigo\nconfusion &lt;- confusionMatrix(knn_model, as.factor(y_test))\nprint(confusion)\n\n\nConfusion Matrix and Statistics\n\n                 Reference\nPrediction        Iris-setosa Iris-versicolor Iris-virginica\n  Iris-setosa              14               0              0\n  Iris-versicolor           1              14              2\n  Iris-virginica            0               1             13\n\nOverall Statistics\n                                          \n               Accuracy : 0.9111          \n                 95% CI : (0.7878, 0.9752)\n    No Information Rate : 0.3333          \n    P-Value [Acc &gt; NIR] : 8.467e-16       \n                                          \n                  Kappa : 0.8667          \n                                          \n Mcnemar's Test P-Value : NA              \n\nStatistics by Class:\n\n                     Class: Iris-setosa Class: Iris-versicolor\nSensitivity                      0.9333                 0.9333\nSpecificity                      1.0000                 0.9000\nPos Pred Value                   1.0000                 0.8235\nNeg Pred Value                   0.9677                 0.9643\nPrevalence                       0.3333                 0.3333\nDetection Rate                   0.3111                 0.3111\nDetection Prevalence             0.3111                 0.3778\nBalanced Accuracy                0.9667                 0.9167\n                     Class: Iris-virginica\nSensitivity                         0.8667\nSpecificity                         0.9667\nPos Pred Value                      0.9286\nNeg Pred Value                      0.9355\nPrevalence                          0.3333\nDetection Rate                      0.2889\nDetection Prevalence                0.3111\nBalanced Accuracy                   0.9167\n\n\n\n\n\n\n\nPaso 5: Visualización de Resultados\n\nPythonR\n\n\n\n\nCódigo\nsb.pairplot(data, hue = 'Species')\n\n\n\n\n\n\n\n\n\nCódigo\nplt.clf()\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\nggpairs(data, aes(color = Species, alpha = 0.5)) +\n  theme_bw()"
-  },
-  {
-    "objectID": "posts/2021-04-10-KNN/index.html#ventajas-y-desventajas",
-    "href": "posts/2021-04-10-KNN/index.html#ventajas-y-desventajas",
-    "title": "K Vecinos más cercanos (KNN)",
-    "section": "Ventajas y Desventajas",
-    "text": "Ventajas y Desventajas\nVentajas\n\nSimplicidad: Fácil de entender e implementar.\nNo Paramétrico: No asume ninguna distribución de datos.\n\nDesventajas\n\nCosto Computacional: Requiere almacenar todos los datos de entrenamiento y calcular distancias para cada predicción.\nSensibilidad al Ruido: Afectado por la escala y por valores atípicos."
-  },
-  {
-    "objectID": "posts/2021-04-10-KNN/index.html#conclusión",
-    "href": "posts/2021-04-10-KNN/index.html#conclusión",
-    "title": "K Vecinos más cercanos (KNN)",
-    "section": "Conclusión",
-    "text": "Conclusión\nEl algoritmo de K Vecinos Más Cercanos es una herramienta poderosa y fácil de usar para tareas de clasificación y regresión. A través de ejemplos prácticos en Python y R, hemos demostrado cómo implementar y evaluar este modelo en la práctica. Aunque tiene algunas limitaciones, KNN sigue siendo una opción valiosa para muchos problemas en ciencia de datos."
   }
 ]

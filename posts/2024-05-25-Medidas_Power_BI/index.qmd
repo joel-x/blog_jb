@@ -1,0 +1,124 @@
+---
+title: Medidas con Fórmulas Temporales DAX y Power BI
+author: Joel Burbano
+date: 2024-05-25
+categories: [Power BI, DAX,]
+---
+
+# Introducción 
+
+Las medidas con fórmulas temporales en DAX (Data Analysis Expressions) y Power BI son herramientas poderosas que permiten a los analistas de datos realizar cálculos avanzados en base a períodos de tiempo. Estas medidas son esenciales para el análisis de series temporales, permitiendo comparar datos entre diferentes períodos y obtener insights sobre tendencias y patrones. En este artículo, exploraremos qué son estas medidas, para qué sirven, y veremos un ejemplo práctico utilizando Power BI.
+
+
+# ¿QUé son las Medidas con Fórmulas Temporales?
+
+
+Las medidas con fórmulas temporales en DAX son cálculos que utilizan funciones específicas para manipular y analizar datos temporales. Estas funciones permiten realizar comparaciones y análisis a través del tiempo, tales como:
+
+* **Year-to-Date (YTD):** Acumulado del año hasta la fecha.
+
+* **Quarter-to-Date (QTD):** Acumulado del trimestre hasta la fecha.
+
+* **Month-to-Date (MTD):** Acumulado del mes hasta la fecha.
+
+* **Rolling Average:** Promedio móvil de un período específico.
+
+* **SamePeriodLastYear:** Comparación con el mismo período del año anterior.
+
+# ¿Para qué sirven las Medidas con Fórmulas Temporales?
+
+Estas medidas son cruciales para el análisis de datos históricos y la identificación de tendencias a lo largo del tiempo. Algunas de sus aplicaciones incluyen:
+
+
+* **Análisis de Tendencias:** Identificar patrones de crecimiento o decrecimiento.
+
+* **Comparaciones Periódicas:** Comparar el rendimiento actual con el de períodos anteriores (meses, trimestres, años).
+
+* **Proyecciones y Predicciones:** Realizar proyecciones basadas en datos históricos.
+
+* **Evaluación de Desempeño:** Medir el desempeño en diferentes períodos y establecer metas.
+
+# Ejemplo
+
+:::{.callout-note icon=false appearance="simple" }
+
+Utilizaremos el dataset "Superstore Sales" de Kaggle, que contiene datos de ventas de una tienda. 
+
+
+## Paso 1: Cargar los Datos en Power BI
+
+1. Abre Power BI Desktop.
+
+2. Haz clic en "Obtener datos" y selecciona "Archivo CSV"
+
+3. Carga el dataset "Superstore Sales"
+
+## Paso 2: Crear un Modelo de Datos
+
+1. Abre Transformar datos y verificamos que las columnas tengan el formato adecuado 
+
+2. Crea una tabla de fechas "Calendario" 
+
+```{.r .code-overflow-wrap filename="dax"}
+calendario = CALENDAR(MIN(Superstore[Order Date]), MAX(Superstore[Order Date]))
+```
+
+## Paso 3: Definir Relaciones
+
+1. En la vista "Modelo", crea una relación entre la columna "Order Date" de la tabla de `Superstore` y la columna "Date" de la tabla `calendario`.
+
+## Paso 4: Crear Medidas Temporales
+
+1. Ventas Totales (Total Sales):
+
+```{.r .code-overflow-wrap filename="dax"}
+total_sales = SUM(Superstore[Sales])
+```
+
+2. Ventas Acumuladas Año a la Fecha (YTD Sales):
+
+```{.r .code-overflow-wrap filename="dax"}
+YTD_Sales = TOTALYTD([total_sales],calendario[Date])
+```
+
+3. Ventas Acumuladas Mes a la Fecha (MTD Sales):
+
+```{.r .code-overflow-wrap filename="dax"}
+MTD_Sales = TOTALMTD([total_sales], calendario[Date])
+```
+
+4. Ventas del Mismo Período el Año Pasado (Same Period Last Year Sales):
+
+```{.r .code-overflow-wrap filename="dax"}
+Sales_last_year = CALCULATE( [total_sales], SAMEPERIODLASTYEAR(calendario[Date]))
+
+```
+
+:::
+
+
+<div class="page-layout-custom">
+<iframe title="medidas_temporal" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiZWIxOTdiZjItY2JlOS00OWRlLThkNmItOTlkZmMzNjRjOWYyIiwidCI6IjY4MmE0ZTZhLWE3N2YtNDk1OC1hM2FjLTllMjY2ZDE4YWEzNyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
+</div>
+
+# Ventajas y Desventajas
+
+## Ventajas
+
+* **Facilidad de Uso:** Power BI y DAX facilitan la creación y manipulación de medidas temporales.
+
+* **Flexibilidad:** Permite realizar cálculos complejos y personalizados según las necesidades del análisis.
+
+* **Visualización Interactiva:** Power BI ofrece herramientas visuales que permiten explorar datos de manera interactiva.
+
+## Desventajas
+
+* **Curva de Aprendizaje:** Puede ser desafiante para principiantes sin experiencia previa en DAX.
+
+* **Rendimiento:** Las medidas complejas pueden afectar el rendimiento del informe, especialmente con grandes volúmenes de datos.
+
+# Conclusiones 
+
+Las medidas con fórmulas temporales en DAX y Power BI son herramientas esenciales para cualquier analista de datos que trabaje con series temporales. Facilitan el análisis comparativo y la identificación de tendencias a lo largo del tiempo, proporcionando insights valiosos para la toma de decisiones. Con este conocimiento, puedes implementar análisis más profundos y visualizaciones más significativas en tus proyectos de análisis de datos.
+
+
