@@ -1,0 +1,21 @@
+2024-08-08 18:33:48,060 - INFO - Inicio del proceso ETL.
+2024-08-08 18:33:48,060 - ERROR - Error durante la extracción de datos: name 'pd' is not defined
+2024-08-08 18:33:48,060 - CRITICAL - El proceso ETL falló: name 'pd' is not defined
+2024-08-08 18:52:44,803 - INFO - Inicio del proceso ETL.
+2024-08-08 18:52:44,806 - INFO - Extracción de datos completada con éxito.
+2024-08-08 18:52:44,811 - ERROR - Error durante la transformación de datos: (slice(None, None, None), 2)
+2024-08-08 18:52:44,811 - CRITICAL - El proceso ETL falló: (slice(None, None, None), 2)
+2024-08-08 18:53:13,562 - INFO - Inicio del proceso ETL.
+2024-08-08 18:53:13,565 - INFO - Extracción de datos completada con éxito.
+2024-08-08 18:53:13,566 - ERROR - Error durante la transformación de datos: (slice(None, None, None), slice(2, None, None))
+2024-08-08 18:53:13,566 - CRITICAL - El proceso ETL falló: (slice(None, None, None), slice(2, None, None))
+2024-08-08 18:53:50,567 - INFO - Inicio del proceso ETL.
+2024-08-08 18:53:50,570 - INFO - Extracción de datos completada con éxito.
+2024-08-08 18:53:50,587 - INFO - Transformación de datos completada con éxito.
+2024-08-08 18:53:51,409 - INFO - Carga de datos completada con éxito.
+2024-08-08 18:53:51,409 - INFO - Proceso ETL completado con éxito.
+2024-08-08 18:56:21,632 - INFO - Inicio del proceso ETL.
+2024-08-08 18:56:21,634 - INFO - Extracción de datos completada con éxito.
+2024-08-08 18:56:21,642 - INFO - Transformación de datos completada con éxito.
+2024-08-08 18:56:22,338 - INFO - Carga de datos completada con éxito.
+2024-08-08 18:56:22,338 - INFO - Proceso ETL completado con éxito.

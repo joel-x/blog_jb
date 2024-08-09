@@ -1,0 +1,8 @@
+2024-08-08 18:54:38.529514 - INFO - Inicio del proceso ETL.
+2024-08-08 18:54:38.607099 - ERROR - Error durante la extracción de datos: 'world-happiness-report.csv' does not exist in current working directory ('D:/Joel/Blog/jb_blog/proyects/ETL').
+2024-08-08 18:54:38.607476 - CRITICAL - El proceso ETL falló: 'world-happiness-report.csv' does not exist in current working directory ('D:/Joel/Blog/jb_blog/proyects/ETL').
+2024-08-08 18:54:56.702178 - INFO - Inicio del proceso ETL.
+2024-08-08 18:54:56.778256 - INFO - Extracción de datos completada con éxito.
+2024-08-08 18:54:56.799868 - INFO - Transformación de datos completada con éxito.
+2024-08-08 18:54:56.879991 - INFO - Carga de datos completada con éxito.
+2024-08-08 18:54:56.880431 - INFO - Proceso ETL completado con éxito.

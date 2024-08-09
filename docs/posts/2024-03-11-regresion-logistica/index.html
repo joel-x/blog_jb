@@ -243,6 +243,7 @@ window.Quarto = {
   <li><a href="#introducción-a-la-regresión-logística" id="toc-introducción-a-la-regresión-logística" class="nav-link active" data-scroll-target="#introducción-a-la-regresión-logística">Introducción a la Regresión Logística</a>
   <ul class="collapse">
   <li><a href="#comó-funciona" id="toc-comó-funciona" class="nav-link" data-scroll-target="#comó-funciona">¿Comó Funciona?</a></li>
+  <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico">Ejemplo Práctico</a></li>
   <li><a href="#ventajas-y-desventajas" id="toc-ventajas-y-desventajas" class="nav-link" data-scroll-target="#ventajas-y-desventajas">Ventajas y Desventajas</a></li>
   <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión">Conclusión</a></li>
   </ul></li>
@@ -286,16 +287,15 @@ Importante
 <p>donde <span class="math inline">\(z\)</span> es la combinación lineal de las variables independientes, es decir <span class="math inline">\(z=\beta_0 + \sum_{i=1}^n \beta_i z_i\)</span></p>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center">
+</section>
+<section id="ejemplo-práctico" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-práctico">Ejemplo Práctico</h2>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-Ejemplo Práctico
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Imaginemos que queremos predecir si un correo electrónico es spam o no, usando características como la frecuencia de ciertas palabras y la longitud del correo.</p>
 <section id="paso-1-importar-librerías" class="level3">
 <h3 class="anchored" data-anchor-id="paso-1-importar-librerías">Paso 1: Importar Librerías</h3>
@@ -857,7 +857,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Accuracy: </span><span class="sc">{</span>accuracy_score(y_test, y_pred)<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Accuracy: 0.9210716871832005</code></pre>
+<pre><code>Accuracy: 0.9268645908761767</code></pre>
 </div>
 <details class="code-fold">
 <summary>Código</summary>
@@ -871,8 +871,8 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(confusion_matrix(y_test, y_pred))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[761  43]
- [ 66 511]]</code></pre>
+<pre><code>[[757  47]
+ [ 54 523]]</code></pre>
 </div>
 <details class="code-fold">
 <summary>Código</summary>
@@ -888,12 +888,12 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <div class="cell-output cell-output-stdout">
 <pre><code>              precision    recall  f1-score   support
 
-           0       0.92      0.95      0.93       804
-           1       0.92      0.89      0.90       577
+           0       0.93      0.94      0.94       804
+           1       0.92      0.91      0.91       577
 
-    accuracy                           0.92      1381
-   macro avg       0.92      0.92      0.92      1381
-weighted avg       0.92      0.92      0.92      1381</code></pre>
+    accuracy                           0.93      1381
+   macro avg       0.93      0.92      0.92      1381
+weighted avg       0.93      0.93      0.93      1381</code></pre>
 </div>
 </div>
 </div>
@@ -973,6 +973,7 @@ Prediction   0   1
 <h2 class="anchored" data-anchor-id="resultados-y-evaluación">Resultados y Evaluación</h2>
 <p>En general se ha conseguido un accuracy de alrededor del <span class="math inline">\(92\%\)</span> lo cual indica que el modelo predice un resultado correcto 92 de cada 100 veces, lo que en general es un buen modelo pero se lo podria mejorar seleccionando mejor las variables en este caso se ha utilizado todas sin un analisis de su poder predicitivo.</p>
 </section>
+</div>
 </div>
 </div>
 </section>
@@ -1666,7 +1667,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb27-64"><a href="#cb27-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-65"><a href="#cb27-65" aria-hidden="true" tabindex="-1"></a><span class="fu">## R</span></span>
 <span id="cb27-66"><a href="#cb27-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{R}</span></span>
+<span id="cb27-69"><a href="#cb27-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb27-70"><a href="#cb27-70" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb27-71"><a href="#cb27-71" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caTools)</span>
 <span id="cb27-72"><a href="#cb27-72" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span>
