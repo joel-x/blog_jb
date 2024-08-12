@@ -32,7 +32,7 @@ rmarkdown::paged_table(head(df))
 ## Python
 
 ```{python}
-#| eval: false
+
 import pandas as pd
 import sqlite3
 import logging

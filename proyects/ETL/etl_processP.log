@@ -1,0 +1,5 @@
+2024-08-11 20:37:45,745 - INFO - Inicio del proceso ETL.
+2024-08-11 20:37:45,755 - INFO - Extracción de datos completada con éxito.
+2024-08-11 20:37:45,765 - INFO - Transformación de datos completada con éxito.
+2024-08-11 20:37:46,190 - INFO - Carga de datos completada con éxito.
+2024-08-11 20:37:46,190 - INFO - Proceso ETL completado con éxito.

@@ -1,11 +1,14 @@
 ---
 title: Estudio Teórico del Comportamiento del Consumo en Latinámerica y Caribe (Resumen)
 authores: [Joel Burbano , Carlos Almedia ]
+date: "2023-02-23"
 abstract: El estudio del modelo teórico del consumo es un tema de relevancia tanto a nivel de individuo como nivel de hogares. Es así que, en este trabajo se  realiza una nueva versión del modelo de consumo, basado en la hipótesis renta permanente de Friedman y el modelo de ciclo de vida de Modigliani. Además, se llevará a cabo una comprobación empírica del mencionado modelo para catorce países de América Latina y Caribe, esto se lo realizará utilizando test de causalidad para contrastar si la variable que se describe en el nuevo modelo teórico ayuda con la predicción del consumo.
 categories: [Renta permanente, Modelo de Ciclo de vida, Ecuación de Euler, Causalidad, Modelos de Consumo]
 toc: true
 bibliography: referencias-tic.bib
 abstract-title: Resumen, si deseas leer la versión completa la encuentras  [aquí](https://bibdigital.epn.edu.ec/bitstream/15000/24465/1/CD%2013389.pdf)
+
+
 ---
 
 # Introducción
