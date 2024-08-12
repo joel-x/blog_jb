@@ -1,0 +1,133 @@
+---
+title: Validación Cruzada (Cross Validation)
+freeze: true
+author: Joel Burbano
+date: 2024-07-12
+categories: [Python, R, Machine Learning]
+
+
+---
+
+# Introducción 
+
+En el mundo de la ciencia de datos, uno de los desafíos más grandes es evaluar de manera precisa el rendimiento de los modelos predictivos. La validación cruzada (CV) es una técnica que nos permite estimar de manera más robusta cómo un modelo generaliza a un conjunto de datos independiente.
+
+
+
+
+# Importancia de la Validación Cruzada
+
+* **Evaluar la generalización del Modelo:** Garantiza que el modelo funcione bien con datos nuevos.
+
+* **Detectar Overfitting y Underfitting:** Ayuda a identificar cuándo un modelo está demasiado ajustado a los datos de entrenamiento (overfitting) o cuándo no ha aprendido lo suficiente (underfitting)
+
+* **Mejorar la Robustez del Modelo:** Permite utilizar mejor la información disponible, maximizando el uso del conjunto de datos para entrenamiento y evaluación.
+
+
+# ¿Qué es la Validación Cruzada?
+
+La validación cruzada es una técnica de remuestreo utilizada para evaluar los modelos de aprendizaje automático. En lugar de dividir los datos una sola vez en conjunto de entrenamiento y prueba, la validación cruzada divide los datos en múltiples subconjuntos (folds), entrena y evalúa el modelo varias veces. Los tipos más comunes de validación cruzada son:
+
+## Validación cruzada K-Fold
+
+En la validación cruzada K-Fold, el conjunto de datos se divide en k subconjuntos de igual tamaño. El modelo se entrena k veces, cada vez utilizando k-1 folds para entrenar y el fold restante para probar. El error de validación cruzada se calcula como el promedio de los errores en cada iteración.
+
+## Leave One Out Cross Validation (LOOCV)
+
+En LOOCV, se utiliza un solo punto de datos para el conjunto de prueba y el resto para el conjunto de entrenamiento. Este proceso se repite para cada punto de datos, resultando en un número de iteraciones igual al número de observaciones en el conjunto de datos.
+
+## Validación Cruzada Estratificada
+
+Este método es similar a la validación cruzada K-Fold, pero los folds se crean de manera que la proporción de cada clase objetivo sea la misma en cada fold. Esto es especialmente útil en conjuntos de datos desbalanceados.
+
+
+# Ejemplo con un modelo de clasificación
+
+:::{.callout-note icon=false appearance="simple" }
+
+En este ejemplo utilizaremos el conjunto de datos de Kaggle "House prices" para construir y evaluar un modelo de clasificación utilizando validación cruzada
+
+
+## Paso 1: Carga de Información
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+import pyreadr
+import pandas as pd
+
+df = pyreadr.read_r("house_prices.RData")
+
+data = df['house_prices'] 
+
+print(data.head())
+print(data.info())
+```
+
+
+## R
+
+```{r}
+load("house_prices.RData")
+data <- house_prices
+head(data)
+str(data)
+```
+
+:::
+
+
+## Paso 2: Particionamiento (Train, Test)
+
+:::{.panel-tabset}
+
+## Python
+
+```{python}
+from sklearn.model_selection import train_test_split
+
+X = data.drop('SalePrice', axis =1)
+y = data['SalePrice']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state = 95)
+
+print(y_train.value_counts(normalize = True))
+```
+
+## R
+
+```{r}
+
+```
+
+
+:::
+
+
+
+:::
+
+
+
+
+
+
+
+# Ventajas y Desventajas
+La validación cruzada presenta varias ventajas y desventajas:
+
+##Ventajas
+
+Mejor Estimación del Rendimiento del Modelo: Proporciona una estimación más confiable del rendimiento del modelo en datos no vistos.
+Uso Eficiente de Datos: Maximiza el uso de datos al entrenar y probar en diferentes subconjuntos.
+Reducción de la Varianza: Al promediar los resultados de múltiples pruebas, se reduce la varianza en la estimación del rendimiento del modelo.
+
+## Desventajas
+
+Mayor Costo Computacional: Requiere múltiples entrenamientos y evaluaciones del modelo, lo que aumenta el tiempo de cómputo.
+Complejidad: La implementación y el análisis pueden ser más complejos que una simple división de datos en entrenamiento y prueba.
+
+# Conclusión
+La validación cruzada es una herramienta poderosa para evaluar y seleccionar modelos de aprendizaje automático. Su uso en diferentes industrias demuestra su versatilidad y efectividad en garantizar que los modelos seleccionados sean robustos y generalicen bien. En este artículo, hemos cubierto los conceptos básicos de la validación cruzada y hemos proporcionado un ejemplo práctico utilizando Python y R. Esperamos que esta guía te sea útil en tus proyectos de ciencia de datos y te motive a incorporar la validación cruzada en tus flujos de trabajo.
