@@ -1,0 +1,81 @@
+---
+title: Análisis Roll Rate
+author: Joel Burbano
+date: 08-23-2024
+categories: [Python, Roll Rate]
+description: Análisis Roll Rate mediante matrices de transición para el dataset Default of Credit Card Clients
+---
+
+# Carga del dataset
+
+```{python}
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sb
+
+df = pd.read_csv("UCI_Credit_Card.csv")
+df.head()
+```
+
+# Limpieza y Preparación de Datos
+
+```{python}
+print(df.isnull().sum())
+
+print(df.duplicated().sum())
+
+# df = df.drop_duplicates()
+
+print(df.info())
+
+
+# Las columnas PAY_i con i={0,2,3,...,6} representan el estado de pago del cliente
+# -1: Pago a tiempo, 0: Pago debido, 1: 1-30 diás moroso, .... , 8: 180 + días moroso
+
+# Estandarizamos estas categorias
+pay_cols = ["PAY_" + str(i) for i in [0,2,3,4,5,6]]
+
+# Reemplazamos valores por categorías más fáciles de interpretar
+df[pay_cols] = df[pay_cols].replace({-2: 'No deuda',-1: 'Corriente', 0: 'Corriente',
+                                      1: '1-30 días', 2: '31-60 días', 3: '61-90 días',
+                                      4: '91-120 días', 5: '121-150 días',
+                                      6: '151-180 días', 7: '180+ días', 8: '180+ días'})
+                                      
+# Definir el orden deseado de los estados de pago
+estado_pago_orden = ['No deuda', 'Corriente', '1-30 días', '31-60 días', '61-90 días', '91-120 días', '121-150 días', '151-180 días', '180+ días']
+for col in pay_cols:
+  df[col]=pd.Categorical(df[col], categories= estado_pago_orden, ordered = True)
+```
+
+
+# Cálculo del Roll Rate
+
+```{python}
+# Cálculo de las tasas de transición (Roll Rate)
+roll_rates = {}
+
+# Iteramos por pares de meses para calcular la tasa de transición entre estados de pago
+for i in range(len(pay_cols)-1):
+  transition_matrix = pd.crosstab(df[pay_cols[i]], df[pay_cols[i+1]], normalize= 'index')
+  label = f'Transición de {pay_cols[i]} a {pay_cols[i+1]}'
+  roll_rates[label] = transition_matrix
+  
+# Resumen de tasas de transición
+roll_rates['Transición de PAY_0 a PAY_2']
+```
+
+# Visualización de Resultados
+
+```{python}
+# Visualización de cada matriz de transición utilizando heatmaps
+for label, matrix in roll_rates.items():
+  plt.figure(figsize= (10,6))
+  sb.heatmap(matrix, annot = True, cmap = "YlGnBu", cbar = True)
+  plt.title(label)
+  plt.xlabel('Estado de Pago Siguiente')
+  plt.ylabel('Estado de Pago Actual')
+  plt.show()
+  plt.clf()
+```
+
