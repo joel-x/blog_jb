@@ -1,0 +1,9 @@
+---
+title: Dimplomado Técnico Big Data
+date: "06-12-2024"
+categories: [R, Python, MySQL, BI, Power BI, ML, DL, DBA]
+image: Joel_Burbano_Diplomado_Big_data.svg
+description: "  "
+---
+
+![](Joel_Burbano_Diplomado_Big_data.pdf){width="9in" height="7in"}

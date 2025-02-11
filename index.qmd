@@ -2,7 +2,7 @@
 title: "Joel Burbano"
 about:
   template: trestles
-  image: joeb.jpg
+  image: jxbs_clean.jpg
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/jxbsjb
@@ -16,13 +16,18 @@ code-tools: false
 
 Ingeniero Matemático \| Analista de Datos \| Científico de Datos
 
-## Educación
+## Perfil
 
-**Escuela Politécnica Nacional, Quito** \| Quito, Ec
-
-Ingeniero Matemático \| Meción Estadistica e Investigación Operativa
-
-**Tesis:** Estudio Teórico del Comportamiento del Consumo en Latinoamérica y Caribe. En el trabajo de tesis se propuso un modelo teórico del consumo, basado en la hipótesis de renta permanente de Friedman y el modelo de Ciclo de Vida de Modigliani. Además, se realizo una comprobación con datos de panel para países de América Latina y Caribe.
+Ingeniero Matemático con sólida experiencia en análisis de datos
+estadística y ciencia de datos. Especializado en la recolección,
+procesamiento y modelado de datos para facilitar la toma de decisiones
+estratégicas. Experto en el desarrollo de modelos estadísticos y
+econométricos, así como en la creación de dashboards interactivos y
+reportes en Power BI. Amplia experiencia en el uso de herramientas
+avanzadas como Python y R para realizar análisis predictivo y
+exploratorio. Apasionado por resolver problemas complejos mediante el
+análisis de datos y aportar soluciones innovadoras basadas en
+evidencia.
 
 ## Competencias
 

@@ -1,5 +1,5 @@
 ---
-title: R para data scientist avanzado
+title: SQL Interactivo
 date: "10-27-2023"
 categories: [SQL,Consultas,Combinanciones y Subconsultas]
 image: sql1.png

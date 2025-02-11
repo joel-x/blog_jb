@@ -11,6 +11,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/2025-02-10-Power-BI-python/index.html",
       "/posts/2024-05-25-Medidas_Power_BI/index.html",
       "/posts/2024-04-10-KNN/index.html",
       "/posts/2024-3-28-Componentes-principales/index.html",
@@ -28,6 +29,7 @@
   {
     "listing": "/certific.html",
     "items": [
+      "/certificados/12-06-2024-Big-Data/index.html",
       "/certificados/23-02-2024_SQL/index.html",
       "/certificados/27-10-2023_Curso-R/index.html",
       "/certificados/24-10-2023-Python-para-ds-y-bd/index.html",
