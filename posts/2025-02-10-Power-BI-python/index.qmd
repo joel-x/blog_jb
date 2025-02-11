@@ -4,7 +4,8 @@ freeze: true
 author: Joel Burbano
 date: 2025-02-10
 categories: [Python, Power BI]
-
+image: imag10.png
+description: Tutorial para Integración de Python en Power BI, aprende a cargar datos desde scripts de python y a crear visualizaciones avanzadas.
 
 ---
 

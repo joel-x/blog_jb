@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Joel Burbano">
+<meta name="description" content="Tutorial para Integración de Python en Power BI, aprende a cargar datos desde scripts de python y a crear visualizaciones avanzadas.">
 
 <title>Integración de Python en Power BI – Joel Burbano</title>
 <style>
@@ -174,7 +175,12 @@ gtag('config', 'G-C1J6R1KB4G', { 'anonymize_ip': true});
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title">Integración de Python en Power BI</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Código</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Mostrar todo el código</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Ocultar todo el código</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">Ver el código fuente</a></li></ul></div></div>
-                                <div class="quarto-categories">
+                  <div>
+        <div class="description">
+          Tutorial para Integración de Python en Power BI, aprende a cargar datos desde scripts de python y a crear visualizaciones avanzadas.
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">Python</div>
                 <div class="quarto-category">Power BI</div>
               </div>
@@ -242,7 +248,7 @@ gtag('config', 'G-C1J6R1KB4G', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="escribimos-el-código-necesario-para-importar-los-datos">Escribimos el código necesario para importar los datos</h3>
 <p><img src="imag2.png" class="img-fluid"></p>
 <p>En esta ocasión el código que usaremos será el siguiente.</p>
-<div id="8ff99ed9" class="cell" data-execution_count="1">
+<div id="988fff47" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Código</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Librerias a utilizar</span></span>
@@ -289,7 +295,7 @@ gtag('config', 'G-C1J6R1KB4G', { 'anonymize_ip': true});
 <p>En el editor de script de python escribimos el código para generar la gráfica</p>
 <p><img src="imag7.png" class="img-fluid"></p>
 <p>El código que vamos a colocar en este script en este caso es el siguiente:</p>
-<div id="a70930b2" class="cell" data-execution_count="2">
+<div id="55cb43da" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Código</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -958,131 +964,132 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Joel Burbano</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2025-02-10</span></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Python, Power BI]</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu"># ¿Sé puede procesar datos con un script de python en power BI?</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>La respuesta es sí, veamoslo con el siguiente ejemplo sencillo</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Importamos datos desde un script en python </span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">### En obtener datos buscamos script de python.</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag1.png)</span>{}</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Escribimos el código necesario para importar los datos</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag2.png)</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>En esta ocasión el código que usaremos será el siguiente.</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Librerias a utilizar</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargamos los datos desde el archivo csv</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"StudentsPerformance.csv"</span>)</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Procesamos los datos </span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Cambio de nombre de las columnas </span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">'gender'</span>:<span class="st">'genero'</span>, <span class="st">'race/ethnicity'</span>: <span class="st">'raza'</span>,</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'parental level of education'</span>: <span class="st">'educacion padres'</span>,</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'lunch'</span>: <span class="st">'almuerzo'</span>, <span class="st">'test preparation course'</span>: <span class="st">'curso de preparacion'</span>,</span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'math score'</span>: <span class="st">'nota matematicas'</span>, <span class="st">'reading score'</span>: <span class="st">'nota lectura'</span>,</span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'writing score'</span>: <span class="st">'nota escritura'</span>})</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a><span class="co">#cambiamos los valores a español</span></span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'genero'</span>] <span class="op">=</span> np.where(df[<span class="st">'genero'</span>] <span class="op">==</span> <span class="st">'male'</span>, <span class="st">'masculino'</span>, <span class="st">'femenino'</span>)</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'raza'</span>] <span class="op">=</span> df[<span class="st">'raza'</span>].<span class="bu">str</span>.replace(<span class="st">'group'</span>,<span class="st">'grupo'</span>)</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'educacion padres'</span>] <span class="op">=</span> np.where(df[<span class="st">'educacion padres'</span>] <span class="op">==</span> <span class="st">'some college'</span>, <span class="st">'universidad incompleta'</span>,</span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>                                  np.where(df[<span class="st">'educacion padres'</span>] <span class="op">==</span> <span class="st">"associate's degree"</span>, <span class="st">'titulo de asociado'</span>,</span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>                                           np.where(df[<span class="st">'educacion padres'</span>]<span class="op">==</span><span class="st">'high school'</span>, <span class="st">'secundaria'</span>,</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>                                                    np.where(df[<span class="st">'educacion padres'</span>]<span class="op">==</span> <span class="st">'some high school'</span>, <span class="st">'secundaria incompleta'</span>,</span>
-<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>                                                             np.where(df[<span class="st">'educacion padres'</span>]<span class="op">==</span> <span class="st">"bachelor's degree"</span>, <span class="st">"licenciatura"</span>,</span>
-<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>                                                                      <span class="st">"maestria"</span>)))))</span>
-<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>                                                                      </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> imag10.png</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> Tutorial para Integración de Python en Power BI, aprende a cargar datos desde scripts de python y a crear visualizaciones avanzadas.</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu"># ¿Sé puede procesar datos con un script de python en power BI?</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>La respuesta es sí, veamoslo con el siguiente ejemplo sencillo</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Importamos datos desde un script en python </span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="fu">### En obtener datos buscamos script de python.</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag1.png)</span>{}</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### Escribimos el código necesario para importar los datos</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag2.png)</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>En esta ocasión el código que usaremos será el siguiente.</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Librerias a utilizar</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargamos los datos desde el archivo csv</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"StudentsPerformance.csv"</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Procesamos los datos </span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Cambio de nombre de las columnas </span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">'gender'</span>:<span class="st">'genero'</span>, <span class="st">'race/ethnicity'</span>: <span class="st">'raza'</span>,</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'parental level of education'</span>: <span class="st">'educacion padres'</span>,</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'lunch'</span>: <span class="st">'almuerzo'</span>, <span class="st">'test preparation course'</span>: <span class="st">'curso de preparacion'</span>,</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'math score'</span>: <span class="st">'nota matematicas'</span>, <span class="st">'reading score'</span>: <span class="st">'nota lectura'</span>,</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>                        <span class="st">'writing score'</span>: <span class="st">'nota escritura'</span>})</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="co">#cambiamos los valores a español</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'genero'</span>] <span class="op">=</span> np.where(df[<span class="st">'genero'</span>] <span class="op">==</span> <span class="st">'male'</span>, <span class="st">'masculino'</span>, <span class="st">'femenino'</span>)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'raza'</span>] <span class="op">=</span> df[<span class="st">'raza'</span>].<span class="bu">str</span>.replace(<span class="st">'group'</span>,<span class="st">'grupo'</span>)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'educacion padres'</span>] <span class="op">=</span> np.where(df[<span class="st">'educacion padres'</span>] <span class="op">==</span> <span class="st">'some college'</span>, <span class="st">'universidad incompleta'</span>,</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>                                  np.where(df[<span class="st">'educacion padres'</span>] <span class="op">==</span> <span class="st">"associate's degree"</span>, <span class="st">'titulo de asociado'</span>,</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>                                           np.where(df[<span class="st">'educacion padres'</span>]<span class="op">==</span><span class="st">'high school'</span>, <span class="st">'secundaria'</span>,</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>                                                    np.where(df[<span class="st">'educacion padres'</span>]<span class="op">==</span> <span class="st">'some high school'</span>, <span class="st">'secundaria incompleta'</span>,</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>                                                             np.where(df[<span class="st">'educacion padres'</span>]<span class="op">==</span> <span class="st">"bachelor's degree"</span>, <span class="st">"licenciatura"</span>,</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>                                                                      <span class="st">"maestria"</span>)))))</span>
 <span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>                                                                      </span>
-<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'almuerzo'</span>] <span class="op">=</span> np.where(df[<span class="st">'almuerzo'</span>] <span class="op">==</span> <span class="st">'standard'</span>, <span class="st">'estandar'</span>, <span class="st">'gratis/reducido'</span>)</span>
-<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'curso de preparacion'</span>] <span class="op">=</span> np.where(df[<span class="st">'curso de preparacion'</span>] <span class="op">==</span> <span class="st">'none'</span>, <span class="st">'ninguno'</span>, <span class="st">'completado'</span>)</span>
-<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>escribimos el código y damos clic en OK</span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag3.png)</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Seleccionamos el df y damos clic en cargar y tenemos nuestros datos listo para usarlos o si deseamos podemos realizar otras transformaciones a los datos.</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag4.png)</span></span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Sé puede insertar elementos visuales de python en Power BI?</span></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>Sí, veamos un ejemplo:</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>En el panel de visualizaciones seleccionamos Py</span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag5.png)</span></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>Pasamos como valores las variables que vamos a graficar <span class="co">[</span><span class="ot">Alerta:</span><span class="co">]</span>{style="color:red"} como Power BI elimina duplicados automáticamente necesitamos pasar una variable index</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag6.png)</span></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>                                                                      </span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'almuerzo'</span>] <span class="op">=</span> np.where(df[<span class="st">'almuerzo'</span>] <span class="op">==</span> <span class="st">'standard'</span>, <span class="st">'estandar'</span>, <span class="st">'gratis/reducido'</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'curso de preparacion'</span>] <span class="op">=</span> np.where(df[<span class="st">'curso de preparacion'</span>] <span class="op">==</span> <span class="st">'none'</span>, <span class="st">'ninguno'</span>, <span class="st">'completado'</span>)</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>escribimos el código y damos clic en OK</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag3.png)</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="fu">### Seleccionamos el df y damos clic en cargar y tenemos nuestros datos listo para usarlos o si deseamos podemos realizar otras transformaciones a los datos.</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag4.png)</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a><span class="fu">## ¿Sé puede insertar elementos visuales de python en Power BI?</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>Sí, veamos un ejemplo:</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>En el panel de visualizaciones seleccionamos Py</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag5.png)</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>Pasamos como valores las variables que vamos a graficar <span class="co">[</span><span class="ot">Alerta:</span><span class="co">]</span>{style="color:red"} como Power BI elimina duplicados automáticamente necesitamos pasar una variable index</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag6.png)</span></span>
 <span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>En el editor de script de python escribimos el código para generar la gráfica</span>
-<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag7.png)</span></span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>El código que vamos a colocar en este script en este caso es el siguiente:</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">2</span>, ncols <span class="op">=</span><span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">7</span>))</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>sb.histplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota matematicas'</span>, ax<span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">0</span>],color<span class="op">=</span><span class="st">'lightblue'</span>)</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>sb.histplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota escritura'</span>, ax <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">1</span>], color<span class="op">=</span><span class="st">'lightgray'</span>)</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>sb.histplot(data<span class="op">=</span>dataset, x <span class="op">=</span> <span class="st">'nota lectura'</span>, ax <span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">2</span>], color <span class="op">=</span><span class="st">'turquoise'</span>)</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a><span class="co"># Añadimos la media a cada gráfico</span></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>p_mate <span class="op">=</span>dataset[<span class="st">'nota matematicas'</span>].mean()</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>p_escr <span class="op">=</span> dataset[<span class="st">'nota escritura'</span>].mean()</span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>p_lect <span class="op">=</span> dataset[<span class="st">'nota lectura'</span>].mean()</span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].axvline(p_mate, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].axvline(p_escr, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].axvline(p_lect, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a><span class="co">#añadimos una etiqueta a la media</span></span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].annotate(<span class="ss">f'</span><span class="sc">{</span>p_mate<span class="sc">: .2f}</span><span class="ss">'</span>, (p_mate,<span class="dv">0</span>), color<span class="op">=</span><span class="st">'red'</span>,size<span class="op">=</span> <span class="dv">18</span>)</span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].annotate(<span class="ss">f'</span><span class="sc">{</span>p_escr<span class="sc">: .2f}</span><span class="ss">'</span>, (p_escr,<span class="dv">0</span>), color<span class="op">=</span><span class="st">'red'</span>,size<span class="op">=</span> <span class="dv">18</span>)</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].annotate(<span class="ss">f'</span><span class="sc">{</span>p_lect<span class="sc">: .2f}</span><span class="ss">'</span>, (p_lect,<span class="dv">0</span>), color<span class="op">=</span><span class="st">'red'</span>,size<span class="op">=</span> <span class="dv">18</span>)</span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a><span class="co"># Añadimos los titulos</span></span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_title(<span class="st">'Histograma de notas de Matemáticas'</span>)</span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].set_title(<span class="st">'Histograma de notas de Escritura'</span>)</span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].set_title(<span class="st">'Histograma de notas de Lectura'</span>)</span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a><span class="co">#Boxplots</span></span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>sb.boxplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota matematicas'</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">0</span>], showmeans<span class="op">=</span><span class="va">True</span>, color <span class="op">=</span> <span class="st">'lightblue'</span>)</span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>sb.boxplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota lectura'</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">1</span>], showmeans<span class="op">=</span><span class="va">True</span>, color <span class="op">=</span><span class="st">'lightgray'</span>)</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>sb.boxplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota escritura'</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">2</span>], showmeans<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span> <span class="st">'turquoise'</span>)</span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>En el editor de script de python escribimos el código para generar la gráfica</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag7.png)</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>El código que vamos a colocar en este script en este caso es el siguiente:</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sb</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">2</span>, ncols <span class="op">=</span><span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">7</span>))</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>sb.histplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota matematicas'</span>, ax<span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">0</span>],color<span class="op">=</span><span class="st">'lightblue'</span>)</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>sb.histplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota escritura'</span>, ax <span class="op">=</span> ax[<span class="dv">0</span>,<span class="dv">1</span>], color<span class="op">=</span><span class="st">'lightgray'</span>)</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>sb.histplot(data<span class="op">=</span>dataset, x <span class="op">=</span> <span class="st">'nota lectura'</span>, ax <span class="op">=</span>ax[<span class="dv">0</span>,<span class="dv">2</span>], color <span class="op">=</span><span class="st">'turquoise'</span>)</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="co"># Añadimos la media a cada gráfico</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>p_mate <span class="op">=</span>dataset[<span class="st">'nota matematicas'</span>].mean()</span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>p_escr <span class="op">=</span> dataset[<span class="st">'nota escritura'</span>].mean()</span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>p_lect <span class="op">=</span> dataset[<span class="st">'nota lectura'</span>].mean()</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].axvline(p_mate, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].axvline(p_escr, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].axvline(p_lect, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a><span class="co">#añadimos una etiqueta a la media</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].annotate(<span class="ss">f'</span><span class="sc">{</span>p_mate<span class="sc">: .2f}</span><span class="ss">'</span>, (p_mate,<span class="dv">0</span>), color<span class="op">=</span><span class="st">'red'</span>,size<span class="op">=</span> <span class="dv">18</span>)</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].annotate(<span class="ss">f'</span><span class="sc">{</span>p_escr<span class="sc">: .2f}</span><span class="ss">'</span>, (p_escr,<span class="dv">0</span>), color<span class="op">=</span><span class="st">'red'</span>,size<span class="op">=</span> <span class="dv">18</span>)</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].annotate(<span class="ss">f'</span><span class="sc">{</span>p_lect<span class="sc">: .2f}</span><span class="ss">'</span>, (p_lect,<span class="dv">0</span>), color<span class="op">=</span><span class="st">'red'</span>,size<span class="op">=</span> <span class="dv">18</span>)</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Añadimos los titulos</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">0</span>].set_title(<span class="st">'Histograma de notas de Matemáticas'</span>)</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">1</span>].set_title(<span class="st">'Histograma de notas de Escritura'</span>)</span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>ax[<span class="dv">0</span>,<span class="dv">2</span>].set_title(<span class="st">'Histograma de notas de Lectura'</span>)</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="co">#Boxplots</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>sb.boxplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota matematicas'</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">0</span>], showmeans<span class="op">=</span><span class="va">True</span>, color <span class="op">=</span> <span class="st">'lightblue'</span>)</span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>sb.boxplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota lectura'</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">1</span>], showmeans<span class="op">=</span><span class="va">True</span>, color <span class="op">=</span><span class="st">'lightgray'</span>)</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>sb.boxplot(data<span class="op">=</span>dataset, x<span class="op">=</span><span class="st">'nota escritura'</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>,<span class="dv">2</span>], showmeans<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span> <span class="st">'turquoise'</span>)</span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>Finalmente creamos el dashboard de control añadiendo algunos segmentadores o lo que necesitemos</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag8.png)</span></span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>De esta manera podemos combinar python y Power BI para tener un tablero interactivo </span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag9.png)</span></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>Finalmente creamos el dashboard de control añadiendo algunos segmentadores o lo que necesitemos</span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag8.png)</span></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>De esta manera podemos combinar python y Power BI para tener un tablero interactivo </span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag9.png)</span></span>
 <span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag10.png)</span></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a><span class="al">![](imag10.png)</span></span>
 </code><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
