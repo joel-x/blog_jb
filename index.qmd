@@ -2,7 +2,7 @@
 title: "Joel Burbano"
 about:
   template: trestles
-  image: jxbs_clean.jpg
+  image: jxbs2026.jpg
   links:
     - icon: linkedin
       href: https://www.linkedin.com/in/jxbsjb
@@ -14,7 +14,7 @@ code-fold: false
 code-tools: false
 ---
 
-Ingeniero Matemático \| Analista de Datos \| Científico de Datos
+Auditor Datos \| Ingeniero Matemático \| Analista de Datos \| Científico de Datos
 
 ## Perfil
 
@@ -27,8 +27,9 @@ reportes en Power BI. Amplia experiencia en el uso de herramientas
 avanzadas como Python y R para realizar análisis predictivo y
 exploratorio. Apasionado por resolver problemas complejos mediante el
 análisis de datos y aportar soluciones innovadoras basadas en
-evidencia.
+evidencia. Actualmente, apasionado por crear valor agregado mediante analítica
+de datos en proyectos de auditoría.
 
 ## Competencias
 
-`R` `Python` `SQL` `MongoDB` `Power BI` `Excel(VBA)`
+`R` `Python` `SQL` `MongoDB` `Power BI` `Excel(VBA)` `TIBCO`

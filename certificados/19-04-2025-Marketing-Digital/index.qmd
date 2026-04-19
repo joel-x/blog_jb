@@ -1,0 +1,9 @@
+---
+title: Marketing Digital
+date: "04-29-2025"
+categories: [R, Marketing, Análisis de Datos]
+image: BID-Certificado_Joel_burbano.svg
+description: "  "
+---
+
+![](BID - Certificado_Joel_burbano.pdf){width="9in" height="7in"}

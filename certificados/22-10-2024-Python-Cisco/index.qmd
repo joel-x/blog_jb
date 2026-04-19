@@ -1,0 +1,9 @@
+---
+title: Python Essentials
+date: "10-22-2024"
+categories: [Python, Programación]
+image: Python_Essentials_1_Joel_burbano.svg
+description: "  "
+---
+
+![](Python_Essentials_1_Joel_burbano.pdf){width="9in" height="7in"}

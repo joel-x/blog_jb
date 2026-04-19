@@ -1,5 +1,5 @@
 ---
-title: Dimplomado Técnico Big Data
+title: Diplomado Técnico Big Data
 date: "06-12-2024"
 categories: [R, Python, MySQL, BI, Power BI, ML, DL, DBA]
 image: Joel_Burbano_Diplomado_Big_data.svg
